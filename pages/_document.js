@@ -1,6 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
+import {theme} from '../theme/globalStyle';
+import styled from 'styled-components';
 
 import { ServerStyleSheet, createGlobalStyle } from 'styled-components';
+
+const Body = styled.body`
+  background: ${theme.secondary}
+`
 
 const GlobalStyle = createGlobalStyle`
   @font-face {
@@ -16,6 +22,14 @@ const GlobalStyle = createGlobalStyle`
     src: url('/static/fonts/Quador-ExtraBold.otf');
     src: url('/static/fonts/Quador-ExtraBold.woff');
     src: url('/static/fonts/Quador-ExtraBold.woff2');
+  }
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
   }
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -36,6 +50,13 @@ const GlobalStyle = createGlobalStyle`
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
+  }
+  a,
+  a:hover,
+  a:focus,
+  a:visited{
+    text-decoration: none;
+    color: inherit;
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 
@@ -98,11 +119,11 @@ export default class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           />
         </Head>
-        <body>
+        <Body>
           <GlobalStyle />
           <Main />
           <NextScript />
-        </body>
+        </Body>
       </Html>
     );
   }

@@ -2,6 +2,9 @@ export const theme = {
     primary: '#053457',
     secondary: '#FFEBDD',
     baseUnit: '10px',
+    baseUnit2: '20px',
+    baseUnit4: '40px',
+    baseUnit8: '80px',
     font:{
         fontFamily: "'Quador', Georgia, Times New Roman, serif",
         size:{
@@ -11,9 +14,14 @@ export const theme = {
             xLarge: '32px',
         }
     },
-    breakPoints:{
+    minBreakPoints:{
+        small: '451px',
+        medium: '769px',
+        large: '961px'
+    },
+    maxBreakPoints:{
         small: '450px',
         medium: '768px',
-        large: '1280px'
+        large: '960px'
     }
 }

@@ -3,16 +3,23 @@ import { theme } from '../../theme/globalStyle';
 import styled from 'styled-components';
 
 const Block = styled.div`
-    padding: ${theme.baseUnit};
+    box-sizing: border-box;
+    padding: ${props => props.padding ? theme.baseUnit : 0};
     width: ${props => 100/props.col}%;
-    @media screen and (min-width: ${theme.breakPoints.small}){
-        width: ${props => 100/props.colSmall}%;
+    @media screen and (min-width: ${theme.minBreakPoints.small}){
+        ${({ colSmall }) => colSmall && `
+            width: ${(100/colSmall)+'%'};
+        `}
     }
-    @media screen and (min-width: ${theme.breakPoints.medium}){
-        width: ${props => 100/props.colMedium}%;
+    @media screen and (min-width: ${theme.minBreakPoints.medium}){
+        ${({ colMedium }) => colMedium && `
+            width: ${(100/colMedium)+'%'};
+        `}
     }
-    @media screen and (min-width: ${theme.breakPoints.large}){
-        width: ${props => 100/props.colLarge}%;
+    @media screen and (min-width: ${theme.minBreakPoints.large}){
+        ${({ colLarge }) => colLarge && `
+            width: ${(100/colLarge)+'%'};
+        `}
     }
 `;
 
@@ -23,6 +30,7 @@ class GridBlock extends React.Component {
                     colSmall={this.props.colSmall}
                     colMedium={this.props.colMedium}
                     colLarge={this.props.colLarge}
+                    padding={this.props.padding}
                 >
                     {this.props.children}
                 </Block>
