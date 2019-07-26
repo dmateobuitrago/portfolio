@@ -31,7 +31,7 @@ const Items = styled.div`
 const MenuButton = styled.div`
   cursor: pointer;
   position: relative;
-  z-index: 5;
+  z-index: 20;
   @media screen and (min-width: ${theme.minBreakPoints.medium}) {
     display: none;
   }

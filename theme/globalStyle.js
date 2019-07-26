@@ -1,6 +1,7 @@
 export const theme = {
     primary: '#053457',
     secondary: '#FFEBDD',
+    grid: 8,
     baseUnitHalf: '5px',
     baseUnit: '10px',
     baseUnit2: '20px',

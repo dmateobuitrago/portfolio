@@ -18,7 +18,7 @@ const StyledHeader = styled(GridContainer)`
 
 const Logo = styled(Typography)`
   position: relative;
-  z-index: 6;
+  z-index: 20;
 `;
 
 class Header extends React.Component {
@@ -40,7 +40,7 @@ class Header extends React.Component {
   render() {
     return (
       <StyledHeader>
-        <GridBlock col="2" colLarge="8" padding>
+        <GridBlock col="4" colLarge="1" padding>
           <Link href="/">
             <Logo type="subtitle" bold dark={!this.state.menuOpen}>
               Mateo Buitrago
@@ -50,13 +50,9 @@ class Header extends React.Component {
             I’m a Colombian designer and coder living in Barcelona.
           </Typography>
         </GridBlock>
-        <GridBlock col="0" colLarge="8" />
-        <GridBlock col="0" colLarge="8" />
-        <GridBlock col="0" colLarge="8" />
-        <GridBlock col="0" colLarge="8" />
-        <GridBlock col="0" colLarge="8" />
-        <GridBlock col="0" colMedium="4" colLarge="8" />
-        <GridBlock col="2" colMedium="4" colLarge="8" padding>
+        <GridBlock col="0" colLarge="5" />
+        <GridBlock col="0" colMedium="2" colLarge="1" />
+        <GridBlock col="4" colMedium="2" colLarge="1" padding>
           <Menu
             open={this.state.menuOpen}
             handleMenuClick={this.handleMenuOpen}

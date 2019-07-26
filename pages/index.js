@@ -9,8 +9,8 @@ function Index() {
   return (
     <Layout>
       <GridContainer>
-        <GridBlock col="0" colSmall="0" colMedium="4"></GridBlock>
-        <GridBlock col="1" colSmall="2" colMedium="3" padding>
+        <GridBlock col="0" colSmall="0" colMedium="2"></GridBlock>
+        <GridBlock col="8" colSmall="4" colMedium="3" padding>
           <ProjectCard
             name="Juan-on-Juan"
             tagline="I designed a website for an sports magazine. →"
@@ -19,7 +19,7 @@ function Index() {
             id="1"
           />
         </GridBlock>
-        <GridBlock col="1" colSmall="2" colMedium="6"  padding>
+        <GridBlock col="8" colSmall="4" colMedium="2"  padding>
           <ProjectCard
             name="Print.Eat"
             tagline="How would we eat in 2080? →"
@@ -28,8 +28,8 @@ function Index() {
             id="2"
           />
         </GridBlock>
-        <GridBlock col="0" colSmall="0" colMedium="4"></GridBlock>
-        <GridBlock col="1" colSmall="2" colMedium="3"  padding>
+        <GridBlock col="0" colSmall="0" colMedium="1"></GridBlock>
+        <GridBlock col="8" colSmall="4" colMedium="3"  padding>
           <ProjectCard
             name="Agruppa apps"
             tagline="Delivering fruits and vegetables to colombian mom-and-pop shops. →"
@@ -37,8 +37,7 @@ function Index() {
             img={imgPath+'agruppa.png'}
           />
         </GridBlock>
-        <GridBlock col="0" colSmall="0" colMedium="8"></GridBlock>
-        <GridBlock col="1" colSmall="2" colMedium="6"  padding>
+        <GridBlock col="8" colSmall="4" colMedium="2"  padding>
           <ProjectCard
             name="VirtuaBroker"
             tagline="Let some bots trade for you on the cryptomarket. →"
@@ -46,8 +45,8 @@ function Index() {
             img={imgPath+'virtua.png'}
           />
         </GridBlock>
-        <GridBlock col="0" colSmall="0" colMedium="8"></GridBlock>
-        <GridBlock col="1" colSmall="2" colMedium="6"  padding>
+        <GridBlock col="0" colSmall="0" colMedium="1"></GridBlock>
+        <GridBlock col="8" colSmall="4" colMedium="2"  padding>
           <ProjectCard
             name="Broken Symmetry"
             tagline="Wes Anderson retrospective screening. →"
