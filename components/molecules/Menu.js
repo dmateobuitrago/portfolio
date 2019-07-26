@@ -11,16 +11,25 @@ const Menu = styled.div`
   }
 `;
 
+const MenuItems = styled(Typography)`
+  @media screen and (max-width: ${theme.maxBreakPoints.medium}) {
+    opacity: ${props => (props.open ? "1" : "0")};
+    transition: opacity 0.2s ease 2s;
+  }
+` 
+
 const Items = styled.div`
   @media screen and (max-width: ${theme.maxBreakPoints.medium}) {
-    display: ${props => (props.open ? "flex" : "none")};
-    position: absolute;
+    display: flex;
+    position: fixed;
     background: ${theme.primary};
-    top: 0;
+    top: ${props => (props.open ? "0" : "-100%")};
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 10;
+    z-index: ${props => (props.open ? "10" : "-10")};
+    opacity: ${props => (props.open ? "1" : "0")};
+    transition: all 0.5s ease-in;
     padding: 40% ${theme.baseUnit4};
     // display: flex;
     flex-direction: column;
@@ -36,6 +45,8 @@ const MenuButton = styled.div`
     display: none;
   }
 `;
+
+
 
 class MyMenu extends React.Component {
   constructor(props) {
@@ -57,22 +68,22 @@ class MyMenu extends React.Component {
           {this.renderButton()}
         </MenuButton>
         <Items open={this.props.open}>
-          <Typography type={this.props.open ? "title" : "body"} bold={!this.props.open} dark={!this.props.open}>
+          <MenuItems open={this.props.open} delay="1s" type={this.props.open ? "title" : "body"} bold={!this.props.open} dark={!this.props.open}>
             <Link href="/work">work →</Link>
-          </Typography>
-          <Typography type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
+          </MenuItems>
+          <MenuItems open={this.props.open} delay="2s" type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
             <Link href="/about">about →</Link>
-          </Typography>
-          <Typography type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
+          </MenuItems>
+          <MenuItems open={this.props.open} delay="3s" type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
             <Link href="https://www.instagram.com/buitragojara" target="_blank">
               instagram ↗
             </Link>
-          </Typography>
-          <Typography type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
+          </MenuItems>
+          <MenuItems open={this.props.open} delay="4s" type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
             <Link href="https://dribbble.com/mateobuitrago" target="_blank">
               dribbble ↗
             </Link>
-          </Typography>
+          </MenuItems>
         </Items>
       </Menu>
     );
