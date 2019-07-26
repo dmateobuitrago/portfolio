@@ -5,6 +5,7 @@ import GridContainer from "../../components/atoms/GridContainer";
 import GridBlock from "../../components/atoms/GridBlock";
 import fetch from "isomorphic-unfetch";
 import Typography from "../../components/atoms/Typography";
+import DataPair from "../../components/molecules/DataPair";
 
 const imgPath = "/static/images/";
 
@@ -12,16 +13,32 @@ class Project extends React.Component {
   constructor() {
     super();
   }
+
+  renderSummary() {
+    debugger
+    let summary = [];
+    const s = this.props.summary;
+    for (let key in this.props.summary) {
+      if (s.hasOwnProperty(key)) {
+        summary.push(<DataPair name={key} value={s[key]} />);
+      }
+    }
+    return summary;
+  }
+
   render() {
     return (
       <Layout>
         <GridContainer>
-          <GridBlock col="0" colMedium="8" />
-          <GridBlock col="0" colMedium="2">
+          <GridBlock col="0" colMedium="1" />
+          <GridBlock col="8" colMedium="6">
             <Typography type="title" dark>
               {this.props.title}
             </Typography>
+            <DataPair name="tl;dr" value={this.props.tldr} />
+            {this.renderSummary()}
           </GridBlock>
+          <GridBlock col="0" colMedium="1" />
         </GridContainer>
       </Layout>
     );
