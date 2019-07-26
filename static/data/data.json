@@ -1,0 +1,39 @@
+{
+    "projects": [
+        {
+            "title": "Juan-on-Juan",
+            "id": "1",
+            "slug": "juan-on-juan",
+            "tagline": "I designed a website for an sports magazine. →",
+            "tags": "ui design",
+            "image": "juan.png",
+            "tldr": "Our fictional client was an online publication exploring life and culture through thematic , visually-oriented international coverage and commentary. They were part of a large publishing organization and they were an small team writing about several topics, focusing on releasing stories daily (about 4 or 6) and one long form weekly story.",
+            "summary": {
+                "year": "2019",
+                "timeframe":"3 weeks",
+                "tools": "keynote, sketch, pen & paper",
+                "teacher": "anton repponen",
+                "client": "school project at harbour.space",
+                "role": "ui design, branding"
+            }
+        },
+        {
+            "title": "Print.Eat",
+            "id": "2",
+            "slug":"print-eat",
+            "tagline": "How would we eat in 2080? →",
+            "tags": "speculative design",
+            "image": "print.png",
+            "tldr": "Our fictional client was an online publication exploring life and culture through thematic , visually-oriented international coverage and commentary. They were part of a large publishing organization and they were an small team writing about several topics, focusing on releasing stories daily (about 4 or 6) and one long form weekly story.",
+            "summary": {
+                "year": "2019",
+                "timeframe":"3 weeks",
+                "tools": "keynote, sketch, pen & paper",
+                "teacher": "anton repponen",
+                "client": "school project at harbour.space",
+                "role": "ui design, branding"
+            }
+        }
+    ]
+}
+

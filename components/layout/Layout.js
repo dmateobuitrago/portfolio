@@ -7,6 +7,11 @@ const StyledLayout = styled.div`
     background: ${theme.secondary}
 `;
 
+const Content = styled.div`
+    position:relative;
+    z-index: 2;
+`
+
 class Layout extends React.Component {
     constructor() {
       super();
@@ -16,9 +21,9 @@ class Layout extends React.Component {
         return(
             <StyledLayout>
                 <Header></Header>
-                <div className="content">
+                <Content>
                     {this.props.children}
-                </div>
+                </Content>
             </StyledLayout>
         )
     }

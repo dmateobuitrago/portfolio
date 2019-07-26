@@ -43,10 +43,10 @@ class Typography extends React.Component {
         return <Subtitle className={this.props.className} bold={bold} align={align} dark={dark}>{this.props.children}</Subtitle>
         break;
       case 'body':
-        return<Body className={this.props.className} bold={bold} align={align}  dark={dark}>{this.props.children}</Body>
+        return <Body className={this.props.className} bold={bold} align={align}  dark={dark}>{this.props.children}</Body>
         break;
       case 'small':
-        return<Small className={this.props.className} bold={bold} align={align}  dark={dark}>{this.props.children}</Small>
+        return <Small className={this.props.className} bold={bold} align={align}  dark={dark}>{this.props.children}</Small>
         break;
       default:
         return <Body className={this.props.className} bold={bold} align={align}  dark={dark}>{this.props.children}</Body>

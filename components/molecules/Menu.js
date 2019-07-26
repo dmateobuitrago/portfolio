@@ -20,7 +20,7 @@ const Items = styled.div`
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 1;
+    z-index: 10;
     padding: 40% ${theme.baseUnit4};
     // display: flex;
     flex-direction: column;
@@ -31,7 +31,7 @@ const Items = styled.div`
 const MenuButton = styled.div`
   cursor: pointer;
   position: relative;
-  z-index: 2;
+  z-index: 5;
   @media screen and (min-width: ${theme.minBreakPoints.medium}) {
     display: none;
   }
@@ -57,18 +57,18 @@ class MyMenu extends React.Component {
           {this.renderButton()}
         </MenuButton>
         <Items open={this.props.open}>
-          <Typography type={this.props.open ? "title" : "body"} bold dark={!this.props.open}>
-            <Link href="/">work →</Link>
+          <Typography type={this.props.open ? "title" : "body"} bold={!this.props.open} dark={!this.props.open}>
+            <Link href="/work">work →</Link>
           </Typography>
-          <Typography type={this.props.open ? "title" : "body"}  bold dark={!this.props.open}>
+          <Typography type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
             <Link href="/about">about →</Link>
           </Typography>
-          <Typography type={this.props.open ? "title" : "body"}  bold dark={!this.props.open}>
+          <Typography type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
             <Link href="https://www.instagram.com/buitragojara" target="_blank">
               instagram ↗
             </Link>
           </Typography>
-          <Typography type={this.props.open ? "title" : "body"}  bold dark={!this.props.open}>
+          <Typography type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
             <Link href="https://dribbble.com/mateobuitrago" target="_blank">
               dribbble ↗
             </Link>

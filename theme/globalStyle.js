@@ -1,6 +1,7 @@
 export const theme = {
     primary: '#053457',
     secondary: '#FFEBDD',
+    baseUnitHalf: '5px',
     baseUnit: '10px',
     baseUnit2: '20px',
     baseUnit4: '40px',

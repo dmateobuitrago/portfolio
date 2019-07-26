@@ -4,11 +4,21 @@ import GridBlock from "../atoms/GridBlock";
 import Typography from "../atoms/Typography";
 import Menu from "../molecules/Menu";
 import Link from "next/link";
+import {theme} from '../../theme/globalStyle'
 import styled from "styled-components";
+
+const StyledHeader = styled(GridContainer)`
+  @media screen and (min-width: ${theme.minBreakPoints.medium}){
+    // position absolute;
+    position relative;
+    width: 100%;
+    z-index: 12;
+  }
+`
 
 const Logo = styled(Typography)`
   position: relative;
-  z-index: 2;
+  z-index: 6;
 `;
 
 class Header extends React.Component {
@@ -29,7 +39,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <GridContainer>
+      <StyledHeader>
         <GridBlock col="2" colLarge="8" padding>
           <Link href="/">
             <Logo type="subtitle" bold dark={!this.state.menuOpen}>
@@ -37,7 +47,7 @@ class Header extends React.Component {
             </Logo>
           </Link>
           <Typography type="body" dark>
-            I’m a Colombian designer and technologist living in Barcelona.
+            I’m a Colombian designer and coder living in Barcelona.
           </Typography>
         </GridBlock>
         <GridBlock col="0" colLarge="8" />
@@ -52,7 +62,7 @@ class Header extends React.Component {
             handleMenuClick={this.handleMenuOpen}
           />
         </GridBlock>
-      </GridContainer>
+      </StyledHeader>
     );
   }
 }

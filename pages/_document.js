@@ -4,10 +4,6 @@ import styled from 'styled-components';
 
 import { ServerStyleSheet, createGlobalStyle } from 'styled-components';
 
-const Body = styled.body`
-  background: ${theme.secondary}
-`
-
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Quador';
@@ -65,6 +61,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     line-height: 1;
+    background: ${theme.secondary} 
   }
   ol, ul {
     list-style: none;
@@ -80,6 +77,9 @@ const GlobalStyle = createGlobalStyle`
   table {
     border-collapse: collapse;
     border-spacing: 0;
+  }
+  img{
+    max-width:100%;
   }
 `;
 
@@ -119,11 +119,11 @@ export default class MyDocument extends Document {
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           />
         </Head>
-        <Body>
+        <body>
           <GlobalStyle />
           <Main />
           <NextScript />
-        </Body>
+        </body>
       </Html>
     );
   }

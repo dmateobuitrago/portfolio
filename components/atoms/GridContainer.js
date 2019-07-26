@@ -6,4 +6,4 @@ const GridContainer = styled.div`
 `;
 
 
-export default (props) => <GridContainer>{props.children}</GridContainer>
+export default (props) => <GridContainer className={props.className}>{props.children}</GridContainer>
