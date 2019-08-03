@@ -33,9 +33,10 @@ class ProjectCard extends React.Component{
         }
         return(
             <Link href="/work/[id]" as={`/work/${this.props.id}`}>            
-                <StyledProjectCard style={margin}>
+                {/* <StyledProjectCard style={margin}> */}
+                <StyledProjectCard>
                     <img src={this.props.img}></img>
-                    <Typography type="subtitle" dark bold>{this.props.name}</Typography>
+                    <Typography mb="0" type="body" dark bold>{this.props.name}</Typography>
                     <Typography type="body" dark>{this.props.tagline}</Typography>
                     <Tag>{this.props.tag}</Tag>
                 </StyledProjectCard>

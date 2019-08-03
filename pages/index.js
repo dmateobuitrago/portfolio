@@ -9,8 +9,8 @@ function Index() {
   return (
     <Layout>
       <GridContainer>
-        <GridBlock col="0" colSmall="0" colMedium="2"></GridBlock>
-        <GridBlock col="8" colSmall="4" colMedium="3" padding>
+        <GridBlock col="0" colSmall="0" colMedium="1"></GridBlock>
+        <GridBlock col="8" colSmall="4" colMedium="2" padding>
           <ProjectCard
             name="Juan-on-Juan"
             tagline="I designed a website for an sports magazine. →"
@@ -24,34 +24,34 @@ function Index() {
             name="Print.Eat"
             tagline="How would we eat in 2080? →"
             tag="speculative design"
-            img={imgPath+'print.png'}
+            img={imgPath+'juan.png'}
             id="2"
           />
         </GridBlock>
-        <GridBlock col="0" colSmall="0" colMedium="1"></GridBlock>
-        <GridBlock col="8" colSmall="4" colMedium="3"  padding>
+        <GridBlock col="8" colSmall="4" colMedium="2"  padding>
           <ProjectCard
             name="Agruppa apps"
             tagline="Delivering fruits and vegetables to colombian mom-and-pop shops. →"
             tag="ux design"
-            img={imgPath+'agruppa.png'}
+            img={imgPath+'juan.png'}
           />
         </GridBlock>
+        <GridBlock col="0" colSmall="0" colMedium="1"></GridBlock>
+        <GridBlock col="0" colSmall="0" colMedium="1"></GridBlock>
         <GridBlock col="8" colSmall="4" colMedium="2"  padding>
           <ProjectCard
             name="VirtuaBroker"
             tagline="Let some bots trade for you on the cryptomarket. →"
             tag="ux design"
-            img={imgPath+'virtua.png'}
+            img={imgPath+'juan.png'}
           />
         </GridBlock>
-        <GridBlock col="0" colSmall="0" colMedium="1"></GridBlock>
         <GridBlock col="8" colSmall="4" colMedium="2"  padding>
           <ProjectCard
             name="Broken Symmetry"
             tagline="Wes Anderson retrospective screening. →"
             tag="branding"
-            img={imgPath+'broken.png'}
+            img={imgPath+'juan.png'}
           />
         </GridBlock>
       </GridContainer>

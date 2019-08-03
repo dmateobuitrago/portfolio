@@ -1,32 +1,41 @@
 import React from "react";
-import Header from './Header';
-import { theme } from '../../theme/globalStyle';
-import styled from 'styled-components';
+import MainMenu from "./MainMenu";
+import Header from "./Header";
+import { theme } from "../../theme/globalStyle";
+import styled from "styled-components";
 
 const StyledLayout = styled.div`
-    background: ${theme.secondary}
+  background: ${theme.secondary};
 `;
 
 const Content = styled.div`
-    position:relative;
-    z-index: 2;
-`
+  position: relative;
+`;
 
 class Layout extends React.Component {
-    constructor() {
-      super();
-    }
+  constructor() {
+    super();
+    this.handleMenuOpen = this.handleMenuOpen.bind(this);
+  }
 
-    render(){
-        return(
-            <StyledLayout>
-                <Header></Header>
-                <Content>
-                    {this.props.children}
-                </Content>
-            </StyledLayout>
-        )
-    }
+  state = {
+    menuOpen: false
+  };
+
+  handleMenuOpen(e) {
+    event.preventDefault();
+    this.setState({ menuOpen: !this.state.menuOpen });
+  }
+
+  render() {
+    return (
+      <StyledLayout>
+        <Header open={this.state.menuOpen} />
+        <MainMenu open={this.state.menuOpen} nuevafuncion={this.handleMenuOpen} />
+        <Content>{this.props.children}</Content>
+      </StyledLayout>
+    );
+  }
 }
 
 export default Layout;

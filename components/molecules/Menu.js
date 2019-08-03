@@ -23,13 +23,13 @@ const Items = styled.div`
     display: flex;
     position: fixed;
     background: ${theme.primary};
-    top: ${props => (props.open ? "0" : "-100%")};
+    top: ${props => (props.open ? "0" : "-10%")};
     bottom: 0;
     right: 0;
     left: 0;
     z-index: ${props => (props.open ? "10" : "-10")};
     opacity: ${props => (props.open ? "1" : "0")};
-    transition: all 0.5s ease-in;
+    transition: all 0.2s ease-in;
     padding: 40% ${theme.baseUnit4};
     // display: flex;
     flex-direction: column;

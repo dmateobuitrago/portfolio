@@ -7,7 +7,7 @@ const Base = styled.div`
   font-family: ${theme.font.fontFamily};
   font-weight: ${props => props.bold ? '700' : '300'};
   text-align: ${props => props.align ? props.align : 'left'};
-  margin-bottom: ${theme.baseUnit}
+  margin-bottom: ${props => props.mb ? props.mb : theme.baseUnit}
 `;
 
 const Title = styled(Base)`
@@ -35,21 +35,23 @@ class Typography extends React.Component {
     const bold = this.props.bold;
     const dark = this.props.dark;
     const align = this.props.align;
+    const mb = this.props.mb;
+
     switch (type) {
       case 'title':
-        return <Title className={this.props.className} bold={bold} align={align} dark={dark}>{this.props.children}</Title>
+        return <Title className={this.props.className} bold={bold} align={align} dark={dark} mb={mb}>{this.props.children}</Title>
         break;
       case 'subtitle':
-        return <Subtitle className={this.props.className} bold={bold} align={align} dark={dark}>{this.props.children}</Subtitle>
+        return <Subtitle className={this.props.className} bold={bold} align={align} dark={dark} mb={mb}>{this.props.children}</Subtitle>
         break;
       case 'body':
-        return <Body className={this.props.className} bold={bold} align={align}  dark={dark}>{this.props.children}</Body>
+        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{this.props.children}</Body>
         break;
       case 'small':
-        return <Small className={this.props.className} bold={bold} align={align}  dark={dark}>{this.props.children}</Small>
+        return <Small className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{this.props.children}</Small>
         break;
       default:
-        return <Body className={this.props.className} bold={bold} align={align}  dark={dark}>{this.props.children}</Body>
+        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{this.props.children}</Body>
         break;
     }
 

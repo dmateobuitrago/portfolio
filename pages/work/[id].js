@@ -15,12 +15,15 @@ class Project extends React.Component {
   }
 
   renderSummary() {
-    debugger
     let summary = [];
     const s = this.props.summary;
     for (let key in this.props.summary) {
       if (s.hasOwnProperty(key)) {
-        summary.push(<DataPair name={key} value={s[key]} />);
+        summary.push(
+          <GridBlock col="4" colSmall="4" colMedium="3">
+            <DataPair name={key} value={s[key]} />
+          </GridBlock>
+        );
       }
     }
     return summary;
@@ -32,11 +35,22 @@ class Project extends React.Component {
         <GridContainer>
           <GridBlock col="0" colMedium="1" />
           <GridBlock col="8" colMedium="6">
-            <Typography type="title" dark>
+            <Typography type="title" dark bold>
               {this.props.title}
             </Typography>
-            <DataPair name="tl;dr" value={this.props.tldr} />
-            {this.renderSummary()}
+            <Typography type="subtitle" dark>
+              {this.props.tagline}
+            </Typography>
+            <GridContainer>
+              <GridBlock col="8" colSmall="8" colMedium="5">
+                <DataPair name="tl;dr" value={this.props.tldr} />
+              </GridBlock>
+              <GridBlock col="8" colSmall="8" colMedium="3">
+                <GridContainer>
+                  {this.renderSummary()}
+                </GridContainer>
+              </GridBlock>
+            </GridContainer>
           </GridBlock>
           <GridBlock col="0" colMedium="1" />
         </GridContainer>

@@ -26,6 +26,7 @@ const Block = styled.div`
 class GridBlock extends React.Component {
     render(){
         return <Block
+                    className={this.props.className}
                     col={this.props.col}
                     colSmall={this.props.colSmall}
                     colMedium={this.props.colMedium}

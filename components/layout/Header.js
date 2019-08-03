@@ -1,64 +1,40 @@
 import React from "react";
-import GridContainer from "../atoms/GridContainer";
 import GridBlock from "../atoms/GridBlock";
 import Typography from "../atoms/Typography";
-import Menu from "../molecules/Menu";
 import Link from "next/link";
-import {theme} from '../../theme/globalStyle'
 import styled from "styled-components";
+import { theme } from '../../theme/globalStyle';
 
-const StyledHeader = styled(GridContainer)`
+const HeaderBlock = styled(GridBlock)`
   @media screen and (min-width: ${theme.minBreakPoints.medium}){
-    // position absolute;
-    position relative;
-    width: 100%;
-    z-index: 12;
+    position: fixed;
   }
 `
 
 const Logo = styled(Typography)`
   position: relative;
-  z-index: 20;
+  z-index: 30;
 `;
 
 class Header extends React.Component {
   constructor() {
     super();
-    this.handleMenuOpen = this.handleMenuOpen.bind(this);
+    // this.handleMenuOpen = this.handleMenuOpen.bind(this);
   }
 
-  state = {
-    menuOpen: false
-  };
-
-  handleMenuOpen(e) {
-    event.preventDefault();
-    console.log(this.state.menuOpen);
-    this.setState({ menuOpen: !this.state.menuOpen });
-  }
 
   render() {
     return (
-      <StyledHeader>
-        <GridBlock col="4" colLarge="1" padding>
-          <Link href="/">
-            <Logo type="subtitle" bold dark={!this.state.menuOpen}>
-              Mateo Buitrago
-            </Logo>
-          </Link>
-          <Typography type="body" dark>
-            I’m a Colombian designer and coder living in Barcelona.
-          </Typography>
-        </GridBlock>
-        <GridBlock col="0" colLarge="5" />
-        <GridBlock col="0" colMedium="2" colLarge="1" />
-        <GridBlock col="4" colMedium="2" colLarge="1" padding>
-          <Menu
-            open={this.state.menuOpen}
-            handleMenuClick={this.handleMenuOpen}
-          />
-        </GridBlock>
-      </StyledHeader>
+      <HeaderBlock col="4" colLarge="1" padding>
+        <Link href="/">
+          <Logo type="subtitle" bold dark={!this.props.open}>
+            Mateo Buitrago
+          </Logo>
+        </Link>
+        <Typography type="body" dark>
+          I’m a Colombian designer and coder living in Barcelona.
+        </Typography>
+      </HeaderBlock>
     );
   }
 }
