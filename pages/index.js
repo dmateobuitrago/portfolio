@@ -7,7 +7,7 @@ const imgPath = '/static/images/';
 
 function Index() {
   return (
-    <Layout>
+    <Layout home={true}>
       <GridContainer>
         <GridBlock col="0" colSmall="0" colMedium="1"></GridBlock>
         <GridBlock col="8" colSmall="4" colMedium="2" padding>

@@ -1,10 +1,15 @@
 import Typography from "../atoms/Typography";
+import styled from 'styled-components';
+
+const Label = styled(Typography)`
+  opacity: 0.7
+`
 
 export default props => (
   <div>
-    <Typography type="small" dark mb="0">
+    <Label type="small" dark mb="0">
       {props.name}
-    </Typography>
+    </Label>
     <Typography type="body" dark>
       {props.value}
     </Typography>

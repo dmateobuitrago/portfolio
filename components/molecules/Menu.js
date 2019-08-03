@@ -16,7 +16,7 @@ const MenuItems = styled(Typography)`
     opacity: ${props => (props.open ? "1" : "0")};
     transition: opacity 0.2s ease 2s;
   }
-` 
+`;
 
 const Items = styled.div`
   @media screen and (max-width: ${theme.maxBreakPoints.medium}) {
@@ -46,8 +46,6 @@ const MenuButton = styled.div`
   }
 `;
 
-
-
 class MyMenu extends React.Component {
   constructor(props) {
     super(props);
@@ -55,9 +53,17 @@ class MyMenu extends React.Component {
 
   renderButton() {
     if (this.props.open) {
-      return <Typography type="subtitle" align="right">back →</Typography>;
+      return (
+        <Typography type="subtitle" align="right">
+          back →
+        </Typography>
+      );
     } else {
-      return <Typography type="subtitle" dark align="right">menu •••</Typography>;
+      return (
+        <Typography type="subtitle" dark align="right">
+          menu •••
+        </Typography>
+      );
     }
   }
 
@@ -68,20 +74,48 @@ class MyMenu extends React.Component {
           {this.renderButton()}
         </MenuButton>
         <Items open={this.props.open}>
-          <MenuItems open={this.props.open} delay="1s" type={this.props.open ? "title" : "body"} bold={!this.props.open} dark={!this.props.open}>
-            <Link href="/work">work →</Link>
-          </MenuItems>
-          <MenuItems open={this.props.open} delay="2s" type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
-            <Link href="/about">about →</Link>
-          </MenuItems>
-          <MenuItems open={this.props.open} delay="3s" type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
-            <Link href="https://www.instagram.com/buitragojara" target="_blank">
-              instagram ↗
+          <MenuItems
+            open={this.props.open}
+            delay="1s"
+            type={this.props.open ? "title" : "body"}
+            bold={!this.props.open}
+            dark={!this.props.open}
+          >
+            <Link href="/work">
+              <a>work →</a>
             </Link>
           </MenuItems>
-          <MenuItems open={this.props.open} delay="4s" type={this.props.open ? "title" : "body"}  bold={!this.props.open} dark={!this.props.open}>
+          <MenuItems
+            open={this.props.open}
+            delay="2s"
+            type={this.props.open ? "title" : "body"}
+            bold={!this.props.open}
+            dark={!this.props.open}
+          >
+            <Link href="/about">
+              <a>about →</a>
+            </Link>
+          </MenuItems>
+          <MenuItems
+            open={this.props.open}
+            delay="3s"
+            type={this.props.open ? "title" : "body"}
+            bold={!this.props.open}
+            dark={!this.props.open}
+          >
+            <Link href="https://www.instagram.com/buitragojara" target="_blank">
+              <a>instagram ↗</a>
+            </Link>
+          </MenuItems>
+          <MenuItems
+            open={this.props.open}
+            delay="4s"
+            type={this.props.open ? "title" : "body"}
+            bold={!this.props.open}
+            dark={!this.props.open}
+          >
             <Link href="https://dribbble.com/mateobuitrago" target="_blank">
-              dribbble ↗
+              <a>dribbble ↗</a>
             </Link>
           </MenuItems>
         </Items>
