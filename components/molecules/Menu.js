@@ -20,7 +20,7 @@ const MenuItems = styled(Typography)`
 
 const Items = styled.div`
   @media screen and (max-width: ${theme.maxBreakPoints.large}) {
-    display: flex;
+    display: none;
     position: fixed;
     background: ${theme.primary};
     top: ${props => (props.open ? "0" : "-10%")};

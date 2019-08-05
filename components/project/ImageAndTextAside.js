@@ -28,7 +28,7 @@ class ImageAndTextAside extends React.Component{
                 <GridBlock col="8" colMedium="4" padding>
                     <Image src={imgPath + "juan/hero.png"} />
                 </GridBlock>
-                <AlignCenterBlock col="8" colMedium="4" padding>
+                <AlignCenterBlock col="8" colMedium="4">
                     <Typography type="subtitle" dark>{this.props.title}</Typography>
                     <Typography type="body" dark>{this.props.body}</Typography>
                 </AlignCenterBlock>

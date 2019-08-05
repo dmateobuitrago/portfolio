@@ -1,6 +1,7 @@
 import React from "react";
 import MainMenu from "./MainMenu";
 import Header from "./Header";
+import Footer from "./Footer";
 import { theme } from "../../theme/globalStyle";
 import styled from "styled-components";
 
@@ -33,6 +34,7 @@ class Layout extends React.Component {
         <Header open={this.state.menuOpen} showDescription={this.props.home}/>
         <MainMenu open={this.state.menuOpen} nuevafuncion={this.handleMenuOpen} />
         <Content>{this.props.children}</Content>
+        <Footer></Footer>
       </StyledLayout>
     );
   }
