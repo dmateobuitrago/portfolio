@@ -1,11 +1,8 @@
 import React from "react";
 import Layout from "../../components/layout/Layout";
-import GridContainer from "../../components/atoms/GridContainer";
-import GridBlock from "../../components/atoms/GridBlock";
 import fetch from "isomorphic-unfetch";
-import ProjectIntro from "../../components/project/ProjectIntro"
-
-
+import ProjectIntro from "../../components/project/ProjectIntro";
+import TitleAndText from "../../components/project/TitleAndText";
 
 const imgPath = "/static/images/";
 
@@ -17,13 +14,13 @@ class Project extends React.Component {
   render() {
     return (
       <Layout>
-        <GridContainer>
-          <GridBlock col="0" colMedium="1" />
-          <GridBlock col="8" colMedium="6" padding>
-            <ProjectIntro title={this.props.title} tagline={this.props.tagline} tldr={this.props.tldr} summary={this.props.summary}></ProjectIntro>
-          </GridBlock>
-          <GridBlock col="0" colMedium="1" />
-        </GridContainer>
+        <ProjectIntro
+          title={this.props.title}
+          tagline={this.props.tagline}
+          tldr={this.props.tldr}
+          summary={this.props.summary}
+        />
+        <TitleAndText title="Aquí va un super titulo" body="Our fictional client was an online publication exploring life and culture through thematic , visually-oriented international coverage and commentary. They were part of a large publishing organization and they were an small team writing about several topics, focusing on releasing stories daily (about 4 or 6) and one long form weekly story."></TitleAndText>
       </Layout>
     );
   }

@@ -4,7 +4,7 @@ import { theme } from "../../theme/globalStyle";
 import styled from "styled-components";
 
 const Menu = styled.div`
-  @media screen and (min-width: ${theme.minBreakPoints.medium}) {
+  @media screen and (min-width: ${theme.minBreakPoints.large}) {
     .menuButton {
       display: none;
     }
@@ -12,14 +12,14 @@ const Menu = styled.div`
 `;
 
 const MenuItems = styled(Typography)`
-  @media screen and (max-width: ${theme.maxBreakPoints.medium}) {
+  @media screen and (max-width: ${theme.maxBreakPoints.large}) {
     opacity: ${props => (props.open ? "1" : "0")};
     transition: opacity 0.2s ease 2s;
   }
 `;
 
 const Items = styled.div`
-  @media screen and (max-width: ${theme.maxBreakPoints.medium}) {
+  @media screen and (max-width: ${theme.maxBreakPoints.large}) {
     display: flex;
     position: fixed;
     background: ${theme.primary};
@@ -41,7 +41,7 @@ const MenuButton = styled.div`
   cursor: pointer;
   position: relative;
   z-index: 20;
-  @media screen and (min-width: ${theme.minBreakPoints.medium}) {
+  @media screen and (min-width: ${theme.minBreakPoints.large}) {
     display: none;
   }
 `;

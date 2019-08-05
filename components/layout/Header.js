@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { theme } from "../../theme/globalStyle";
 
 const HeaderBlock = styled(GridBlock)`
-  @media screen and (min-width: ${theme.minBreakPoints.medium}) {
+  @media screen and (min-width: ${theme.minBreakPoints.large}) {
     position: fixed;
     z-index: 30;
   }
