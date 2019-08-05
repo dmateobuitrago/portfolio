@@ -13,7 +13,8 @@ const HeaderBlock = styled(GridBlock)`
 `;
 
 const Logo = styled(Typography)`
-  position: relative;
+  position: sticky;
+  top:0;
   z-index: 30;
 `;
 

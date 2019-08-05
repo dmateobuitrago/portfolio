@@ -7,11 +7,12 @@ export const theme = {
     baseUnit2: '20px',
     baseUnit4: '40px',
     baseUnit8: '80px',
+    baseUnit12: '120px',
     font:{
         fontFamily: "'Quador', Georgia, Times New Roman, serif",
         size:{
             small: '14px',
-            medium: '16px',
+            medium: '16.5px',
             large: '24px',
             xLarge: '32px',
         }

@@ -21,10 +21,11 @@ const Subtitle = styled(Base)`
 const Body = styled(Base)`
   font-size: ${theme.font.size.medium}
   line-height: 1.5;
-`
-
-const Small = styled(Base)`
+  `
+  
+  const Small = styled(Base)`
   font-size: ${theme.font.size.small}
+  line-height: 1.5;
 `
 
 class Typography extends React.Component {

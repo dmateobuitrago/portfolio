@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { theme } from '../../theme/globalStyle';
 
 const MenuBlock = styled(GridBlock)`
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 0;
     z-index:20;
