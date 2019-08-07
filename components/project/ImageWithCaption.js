@@ -29,7 +29,7 @@ class ImageWithCaption extends React.Component {
           </Typography>
         </GridBlock>
         <GridBlock col="8" colMedium="6" padding>
-          <img src={imgPath + "juan/hero.png"} />
+          <img src={imgPath + this.props.image} />
         </GridBlock>
       </OneBigColumn>
     );

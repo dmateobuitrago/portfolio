@@ -103,9 +103,7 @@ class MyMenu extends React.Component {
             bold={!this.props.open}
             dark={!this.props.open}
           >
-            <Link href="https://www.instagram.com/buitragojara" target="_blank">
-              <a>instagram ↗</a>
-            </Link>
+              <a href="https://www.instagram.com/buitragojara" target="_blank">instagram ↗</a>
           </MenuItems>
           <MenuItems
             open={this.props.open}
@@ -114,9 +112,7 @@ class MyMenu extends React.Component {
             bold={!this.props.open}
             dark={!this.props.open}
           >
-            <Link href="https://dribbble.com/mateobuitrago" target="_blank">
-              <a>dribbble ↗</a>
-            </Link>
+              <a href="https://www.instagram.com/buitragojara" target="_blank">dribbble ↗</a>
           </MenuItems>
         </Items>
       </Menu>

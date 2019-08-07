@@ -42,7 +42,7 @@ class ProjectIntro extends React.Component {
     return (
           <OneBigColumn>
             <GridBlock col="8" padding>
-              <Image src={imgPath + "juan/hero.png"} />
+              <Image src={imgPath + this.props.image} />
               <Typography type="title" dark bold>
                 {this.props.title}
               </Typography>

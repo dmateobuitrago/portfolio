@@ -1,20 +1,52 @@
 import React from "react";
 import Layout from "../../components/layout/Layout";
-import fetch from "isomorphic-unfetch";
+import { data } from "../../static/data/data";
 import ProjectIntro from "../../components/project/ProjectIntro";
 import TitleAndText from "../../components/project/TitleAndText";
 import ImageAndTextAside from "../../components/project/ImageAndTextAside";
 import ImageWithCaption from "../../components/project/ImageWithCaption";
 import Divider from "../../components/atoms/Divider";
 
-const imgPath = "/static/images/";
-
 class Project extends React.Component {
   constructor() {
     super();
   }
 
+  renderTitleAndText(item) {
+    return <TitleAndText title={item.title} body={item.content} />;
+  }
+
+  renderImageWithCaption(item) {
+    return <ImageWithCaption image={item.image} body={item.caption} />;
+  }
+
+  renderContent(content) {
+    if(!content){
+      return "";
+    }
+    let renderElement = []
+    content.map(item => {
+      let type = item.type;
+
+      switch (type) {
+        case "TitleAndText":
+          renderElement.push( this.renderTitleAndText(item));
+          break;
+        case "ImageWithCaption":
+          renderElement.push( this.renderImageWithCaption(item));
+          break;
+        case "Divider":
+          renderElement.push(<Divider/>);
+          break;
+        }
+      // renderElement.push( <Divider/>);
+    });
+
+    return renderElement;
+  }
+
   render() {
+    console.log(this.props.content);
     return (
       <Layout>
         <ProjectIntro
@@ -22,20 +54,11 @@ class Project extends React.Component {
           tagline={this.props.tagline}
           tldr={this.props.tldr}
           summary={this.props.summary}
+          image={this.props.image}
         />
         <Divider />
-        <TitleAndText
-          title="Aquí va un super titulo"
-          body="Our fictional client was an online publication exploring life and culture through thematic , visually-oriented international coverage and commentary. They were part of a large publishing organization and they were an small team writing about several topics, focusing on releasing stories daily (about 4 or 6) and one long form weekly story."
-        />
+          {this.renderContent(this.props.content)}
         <Divider />
-        {/* <ImageAndTextAside
-          title="Aquí va un super titulo"
-          body="Our fictional client was an online publication exploring life and culture through thematic , visually-oriented international coverage and commentary. They were part of a large publishing organization and they were an small team writing about several topics, focusing on releasing stories daily (about 4 or 6) and one long form weekly story."
-        />
-        <Divider />
-        */}
-        <ImageWithCaption body="Our fictional client was an online publication exploring "/>
       </Layout>
     );
   }
@@ -43,9 +66,6 @@ class Project extends React.Component {
 
 Project.getInitialProps = async function(context) {
   const { id } = context.query;
-  const res = await fetch("https://simplejsoncms.com/api/tyd6e1i4h5e");
-  const data = await res.json();
-
   return data.projects[id - 1];
 };
 
