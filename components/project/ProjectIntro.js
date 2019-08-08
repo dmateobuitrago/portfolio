@@ -29,7 +29,7 @@ class ProjectIntro extends React.Component {
     for (let key in this.props.summary) {
       if (s.hasOwnProperty(key)) {
         summary.push(
-          <GridBlock col="4" colSmall="4" colMedium="4">
+          <GridBlock key={key} col="4" colSmall="4" colMedium="4">
             <DataPair name={key} value={s[key]} />
           </GridBlock>
         );

@@ -9,20 +9,20 @@ class TitleAndText extends React.Component{
 
     renderList(listItems){
         let renderElement = []
-        listItems.map(listItem => {
-            renderElement.push(<Typography type="body" dark>* {listItem}</Typography>)
+        listItems.map((listItem,index) => {
+            renderElement.push(<Typography key={index} type="body" dark>* {listItem}</Typography>)
         });
         return renderElement;
     }
 
     renderContent(content){
         let renderElement = []
-        content.map(item => {
+        content.map((item,index) => {
           let type = item.type;
     
           switch (type) {
             case "body":
-              renderElement.push( <Typography type="body" dark>{item.text}</Typography>);
+              renderElement.push( <Typography key={index} type="body" dark>{item.text}</Typography>);
               break;
             case "list":
               renderElement.push( this.renderList(item.list));

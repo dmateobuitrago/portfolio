@@ -63,9 +63,18 @@ export const data = {
         },
         {
           type: "ImageWithCaption",
-          image: "juan/juan_hero.png",
+          image: "juan/logo.png",
           caption: "There is this stupid joke in English about two mexicans playing basketball. Somehow it ends with __Juan on Juan__"
         },
+        {
+          type: "Divider"
+        },
+        {
+          type: "ImageWithCaption",
+          image: "juan/typeandcolors.png",
+          caption:
+            "I went for Matrix, a serif-font very serious and rigid, with a contrasting color palette that would stand out from traditional sports media sites."
+        }
       ]
     },
     {

@@ -12,12 +12,12 @@ class Project extends React.Component {
     super();
   }
 
-  renderTitleAndText(item) {
-    return <TitleAndText title={item.title} body={item.content} />;
+  renderTitleAndText(item, index) {
+    return <TitleAndText key={index} title={item.title} body={item.content} />;
   }
 
-  renderImageWithCaption(item) {
-    return <ImageWithCaption image={item.image} body={item.caption} />;
+  renderImageWithCaption(item, index) {
+    return <ImageWithCaption key={index} image={item.image} body={item.caption} />;
   }
 
   renderContent(content) {
@@ -25,15 +25,15 @@ class Project extends React.Component {
       return "";
     }
     let renderElement = []
-    content.map(item => {
+    content.map((item,index) => {
       let type = item.type;
 
       switch (type) {
         case "TitleAndText":
-          renderElement.push( this.renderTitleAndText(item));
+          renderElement.push( this.renderTitleAndText(item, index));
           break;
         case "ImageWithCaption":
-          renderElement.push( this.renderImageWithCaption(item));
+          renderElement.push( this.renderImageWithCaption(item, index));
           break;
         case "Divider":
           renderElement.push(<Divider/>);
@@ -46,7 +46,6 @@ class Project extends React.Component {
   }
 
   render() {
-    console.log(this.props.content);
     return (
       <Layout>
         <ProjectIntro

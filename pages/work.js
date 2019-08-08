@@ -23,7 +23,7 @@ class Work extends React.Component {
               Work
             </Typography>
               {this.props.projects.map(project => (
-                  <Link> key={project.id} href="/work/[id]" as={`/work/${project.id}`}>
+                  <Link key={project.id} href="/work/[id]" as={`/work/${project.id}`}>
                     <a>{project.title}</a>
                   </Link>
               ))}
