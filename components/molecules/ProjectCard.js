@@ -12,6 +12,13 @@ const StyledProjectCard = styled.div`
     @media screen and (max-width: ${theme.maxBreakPoints.medium}){
         margin: ${theme.baseUnit4} auto !important;
     }
+    opacity:0;
+    ${props => !props.show && `
+        opacity: 1;
+        top:0;
+        transition: opacity 0.3s ease-in 1s;
+    `}
+
 `
 
 const Placeholder = styled.div`
@@ -56,7 +63,7 @@ class ProjectCard extends React.Component{
         }
         return(
             <Link href="/work/[id]" as={`/work/${this.props.id}`}>            
-                <StyledProjectCard>
+                <StyledProjectCard show={this.state.isLoading}>
                     {this.renderImage(this.props.img)}
                     <Typography mb="0" type="body" dark bold>{this.props.name}</Typography>
                     <Typography type="body" dark>{this.props.tagline}</Typography>
