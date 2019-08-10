@@ -20,18 +20,18 @@ const MenuItems = styled(Typography)`
 
 const Items = styled.div`
   @media screen and (max-width: ${theme.maxBreakPoints.large}) {
-    display: none;
     position: fixed;
     background: ${theme.primary};
-    top: ${props => (props.open ? "0" : "-10%")};
+    top: 0;
     bottom: 0;
     right: 0;
-    left: 0;
-    z-index: ${props => (props.open ? "10" : "-10")};
-    opacity: ${props => (props.open ? "1" : "0")};
-    transition: all 0.2s ease-in;
+    width: 100%;
+    left: ${props => (props.open ? "0" : "4%")};
+    opacity: ${props => (props.open ? '1' : "0")};
+    visibility: ${props => (props.open ? 'visible' : "hidden")};
+    transition: all 0.3s ease-in;
     padding: 40% ${theme.baseUnit4};
-    // display: flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
   }

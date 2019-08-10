@@ -2,7 +2,6 @@ import React from "react";
 import GridBlock from "../atoms/GridBlock";
 import Menu from "../molecules/Menu";
 import styled from "styled-components";
-import { theme } from '../../theme/globalStyle';
 
 const MenuBlock = styled(GridBlock)`
     position: absolute;
