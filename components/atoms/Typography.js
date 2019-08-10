@@ -10,6 +10,10 @@ const Base = styled.div`
   margin-bottom: ${props => props.mb ? props.mb : theme.baseUnit}
 `;
 
+const Huge = styled(Base)`
+  font-size: ${theme.font.size.xxLarge}
+`
+
 const Title = styled(Base)`
   font-size: ${theme.font.size.xLarge}
 `
@@ -29,9 +33,25 @@ const Body = styled(Base)`
 `
 
 class Typography extends React.Component {
+
+  formatContent(content){
+    let formatedContent;
+    if(typeof content === 'string' || content instanceof String){
+      formatedContent = content.replace("*(", '<strong>');
+      formatedContent = formatedContent.replace(")*", '</strong>');
+      formatedContent = formatedContent.replace("_(", '<i>');
+      formatedContent = formatedContent.replace(")_", '</i>');
+    }
+
+    return formatedContent
+  }
   
 
   render() {
+
+    // let content = this.formatContent(this.props.children)
+    let content = this.props.children
+
     const type = this.props.type;
     const bold = this.props.bold;
     const dark = this.props.dark;
@@ -40,19 +60,22 @@ class Typography extends React.Component {
 
     switch (type) {
       case 'title':
-        return <Title className={this.props.className} bold={bold} align={align} dark={dark} mb={mb}>{this.props.children}</Title>
+        return <Title className={this.props.className} bold={bold} align={align} dark={dark} mb={mb}>{content}</Title>
         break;
       case 'subtitle':
-        return <Subtitle className={this.props.className} bold={bold} align={align} dark={dark} mb={mb}>{this.props.children}</Subtitle>
+        return <Subtitle className={this.props.className} bold={bold} align={align} dark={dark} mb={mb}>{content}</Subtitle>
+        break;
+      case 'huge':
+        return <Huge className={this.props.className} bold={bold} align={align} dark={dark} mb={mb}>{content}</Huge>
         break;
       case 'body':
-        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{this.props.children}</Body>
+        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{content}</Body>
         break;
       case 'small':
-        return <Small className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{this.props.children}</Small>
+        return <Small className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{content}</Small>
         break;
       default:
-        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{this.props.children}</Body>
+        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{content}</Body>
         break;
     }
 

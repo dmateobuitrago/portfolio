@@ -12,9 +12,10 @@ export const theme = {
         fontFamily: "'Quador', Georgia, Times New Roman, serif",
         size:{
             small: '14px',
-            medium: '16.5px',
+            medium: '18px',
             large: '24px',
             xLarge: '32px',
+            xxLarge: '60px',
         }
     },
     minBreakPoints:{

@@ -3,7 +3,7 @@ import Layout from "../../components/layout/Layout";
 import { data } from "../../static/data/data";
 import ProjectIntro from "../../components/project/ProjectIntro";
 import TitleAndText from "../../components/project/TitleAndText";
-import ImageAndTextAside from "../../components/project/ImageAndTextAside";
+import BigImage from "../../components/project/BigImage";
 import ImageWithCaption from "../../components/project/ImageWithCaption";
 import Divider from "../../components/atoms/Divider";
 
@@ -20,6 +20,10 @@ class Project extends React.Component {
     return <ImageWithCaption key={index} image={item.image} body={item.caption} />;
   }
 
+  renderBigImage(item, index) {
+    return <BigImage key={index} image={item.image} />;
+  }
+
   renderContent(content) {
     if(!content){
       return "";
@@ -34,6 +38,9 @@ class Project extends React.Component {
           break;
         case "ImageWithCaption":
           renderElement.push( this.renderImageWithCaption(item, index));
+          break;
+        case "BigImage":
+          renderElement.push( this.renderBigImage(item, index));
           break;
         case "Divider":
           renderElement.push(<Divider/>);

@@ -54,27 +54,57 @@ export const data = {
             {
               type: "body",
               text:
-                "Since this was an international publication featuring latinamerican athletes, I decided to play with the languange. Also it was time to differentiate from all this black and white, rude male-only sports publications."
+                "Since this was an international publication featuring latinamerican athletes, I decided to play with the languange: Juan on Juan = two latinos playing basketball. Regarding typography and colors, it was necessary to differentiate the brand from all this black and white, rude male-only sports publications."
             }
           ]
         },
         {
-          type: "Divider"
-        },
-        {
           type: "ImageWithCaption",
           image: "juan/logo.png",
-          caption: "There is this stupid joke in English about two mexicans playing basketball. Somehow it ends with __Juan on Juan__"
+          caption: "Logo, typography and color palette."
         },
         {
           type: "Divider"
         },
         {
+          type: "TitleAndText",
+          title: "Sketches and initial explorations.",
+          content: [
+            {
+              type: "body",
+              text:
+                "For me, the best way to start a project is on paper because is a fast way to getting ideas real and start deciding what would work and what not. One of the *(key learnings)* from this class was that you can define a grid on paper and sketch over it, then when you start working on the computer it would be easier to design and layout your components."
+            }
+          ]
+        },
+        {
+          type: "BigImage",
+          image: "juan/sketches.png",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Daily stories",
+          content: [
+            {
+              type: "body",
+              text:
+                "Our client needed a short story format, which they could publish from the CMS, with predefined components that can be placed as thed wanted. They should be able to add text, images, quotes, etc."
+            },
+            {
+              type: "body",
+              text:
+                "Most of the components I decided to keep really simple: one column text, big quotes. The standing piece of the short story would be the opening. It would mix a court layout, that would change depending on the sport of the story, and photography, bringing a dynamic and always different design for each story, without needing to redesign it every time."
+            }
+          ]
+        },
+        {
           type: "ImageWithCaption",
-          image: "juan/typeandcolors.png",
-          caption:
-            "I went for Matrix, a serif-font very serious and rigid, with a contrasting color palette that would stand out from traditional sports media sites."
-        }
+          caption: "Daily story design about best latin american basketball players.",
+          image: "juan/short_story.gif",
+        },
       ]
     },
     {
