@@ -1,3 +1,4 @@
+import React from 'react';
 import Layout from "../components/layout/Layout";
 import GridBlock from "../components/atoms/GridBlock";
 import ProjectCard from "../components/molecules/ProjectCard";

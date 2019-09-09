@@ -23,6 +23,11 @@ const StyledProjectCard = styled(GridContainer)`
     `}
 `;
 
+const MyImg = styled.img`
+    max-width:100%;
+`;
+
+
 const Placeholder = styled.div`
   height: 250px;
   width: auto;
@@ -45,7 +50,7 @@ class ProjectCard extends React.Component {
     if (this.state.isLoading) {
       imageElement = <Placeholder />;
     } else {
-      imageElement = <img src={image} />;
+      imageElement = <MyImg src={image} />;
     }
 
     return imageElement;

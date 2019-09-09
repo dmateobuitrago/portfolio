@@ -1,11 +1,19 @@
 import React from "react";
 import GridBlock from "../atoms/GridBlock";
 import Typography from "../atoms/Typography";
-import MyLink from "../atoms/MyLink";
 import Link from "next/link";
+import MyLink from "../atoms/MyLink";
 import GridContainer from "../atoms/GridContainer";
 import Divider from "../atoms/Divider";
 import { data } from "../../static/data/data.js";
+import styled from 'styled-components';
+
+const Anchor = styled.a`
+  text-decoration: none;
+  &::visited {
+    color: red;
+  }
+`
 
 class Header extends React.Component {
   constructor() {
@@ -58,7 +66,7 @@ class Header extends React.Component {
           <div>
             <Typography type="subtitle" bold dark>
               <Link href="/">
-                <a>{this.props.isHome ? "Mateo Buitrago" : "← work"}</a>
+                <Anchor>{this.props.isHome ? "Mateo Buitrago" : "← work"}</Anchor>
               </Link>
             </Typography>
           </div>

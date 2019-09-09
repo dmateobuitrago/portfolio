@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import {theme} from '../theme/globalStyle';
-import styled from 'styled-components';
 
 import { ServerStyleSheet, createGlobalStyle } from 'styled-components';
 
@@ -78,36 +77,18 @@ const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
-  img{
-    max-width:100%;
-  }
 `;
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
-
-    try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
-        });
-
-      const initialProps = await Document.getInitialProps(ctx);
-      return {
-        ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        )
-      };
-    } finally {
-      sheet.seal();
-    }
+    const page = renderPage(App => props =>
+      sheet.collectStyles(<App {...props} />)
+    );
+    const styleTags = sheet.getStyleElement();
+    return { ...page, styleTags };
   }
+
 
   render() {
     return (
@@ -118,9 +99,10 @@ export default class MyDocument extends Document {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0"
           />
+          <GlobalStyle />
+          {this.props.styleTags}
         </Head>
         <body>
-          <GlobalStyle />
           <Main />
           <NextScript />
         </body>
