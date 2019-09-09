@@ -3,7 +3,7 @@ export const data = {
     ['instagram ↗', 'https://www.instagram.com/buitragojara'],
     ['linkedin ↗', 'https://www.linkedin.com/in/mateobuitrago/'],
     ['dribble ↗', 'https://dribbble.com/mateobuitrago'],
-    ['dmateobuitrago @ gmail.com', 'mailto:dmateobuitrago@gmail.com'],
+    ['dmateobuitrago [at] gmail.com', 'mailto:dmateobuitrago@gmail.com'],
   ],
   projects: [
     {
