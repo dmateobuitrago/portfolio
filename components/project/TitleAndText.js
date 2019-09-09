@@ -38,7 +38,7 @@ class TitleAndText extends React.Component{
             <OneBigColumn>
                 <GridBlock col="0" colMedium="2"></GridBlock>
                 <GridBlock col="8" colMedium="6" padding>
-                    <Typography type="huge" dark>{this.props.title}</Typography>
+                    <Typography type="subtitle" dark bold>{this.props.title}</Typography>
                 </GridBlock>
                 <GridBlock col="0" colMedium="2"></GridBlock>
                 <GridBlock col="8" colMedium="6" padding>
