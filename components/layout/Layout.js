@@ -31,8 +31,7 @@ class Layout extends React.Component {
   render() {
     return (
       <StyledLayout>
-        <Header open={this.state.menuOpen} showDescription={this.props.home}/>
-        <MainMenu open={this.state.menuOpen} nuevafuncion={this.handleMenuOpen} />
+        <Header open={this.state.menuOpen} isHome={this.props.home}/>
         <Content>{this.props.children}</Content>
         <Footer></Footer>
       </StyledLayout>

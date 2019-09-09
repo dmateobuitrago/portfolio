@@ -1,22 +1,11 @@
 import React from "react";
 import GridBlock from "../atoms/GridBlock";
 import Typography from "../atoms/Typography";
+import MyLink from "../atoms/MyLink";
 import Link from "next/link";
-import styled from "styled-components";
-import { theme } from "../../theme/globalStyle";
-
-const HeaderBlock = styled(GridBlock)`
-  @media screen and (min-width: ${theme.minBreakPoints.large}) {
-    position: fixed;
-    z-index: 30;
-  }
-`;
-
-const Logo = styled(Typography)`
-  position: sticky;
-  top:0;
-  z-index: 30;
-`;
+import GridContainer from "../atoms/GridContainer";
+import Divider from "../atoms/Divider";
+import { data } from "../../static/data/data.js";
 
 class Header extends React.Component {
   constructor() {
@@ -24,22 +13,60 @@ class Header extends React.Component {
     // this.handleMenuOpen = this.handleMenuOpen.bind(this);
   }
 
+  renderLinks() {
+    let linksToRender = [];
+    const links = data.links;
+
+    links.map((item, index) => {
+      linksToRender.push(
+        <GridBlock key={index} col="4" colSmall="4" colMedium="4">
+          <MyLink href={item[1]}>{item[0]}</MyLink>
+        </GridBlock>
+      );
+    });
+    return linksToRender;
+  }
+
   renderDescription() {
     return (
       <Typography type="body" dark>
-        I’m a Colombian designer and coder living in Barcelona.
+        I’m a Colombian designer and coder living in Barcelona. Currently
+        working at Verse as Lead Designer.
       </Typography>
+    );
+  }
+
+  renderInfo() {
+    return (
+      <GridContainer>
+        <GridBlock col="8" colMedium="4" pr>
+          {this.renderDescription()}
+        </GridBlock>
+        <GridBlock col="8" colMedium="4" isGridContainer>
+          {this.renderLinks()}
+        </GridBlock>
+      </GridContainer>
     );
   }
 
   render() {
     return (
-      <HeaderBlock col="4" colLarge="1" padding>
-        <Logo type="subtitle" bold dark={!this.props.open}>
-          <Link href="/"><a>Mateo Buitrago</a></Link>
-        </Logo>
-        {this.props.showDescription ? this.renderDescription() : ""}
-      </HeaderBlock>
+      <GridContainer>
+        <GridBlock col="0" colMedium="1" />
+        <GridBlock col="8" colMedium="6" padding>
+          {this.props.isHome ? <Divider /> : ""}
+          <div>
+            <Typography type="subtitle" bold dark>
+              <Link href="/">
+                <a>{this.props.isHome ? "Mateo Buitrago" : "← work"}</a>
+              </Link>
+            </Typography>
+          </div>
+          {this.props.isHome ? this.renderInfo() : ""}
+          {this.props.isHome ? <Divider /> : ""}
+        </GridBlock>
+        <GridBlock col="0" colMedium="1" />
+      </GridContainer>
     );
   }
 }

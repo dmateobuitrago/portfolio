@@ -3,7 +3,10 @@ import styled from 'styled-components';
 const GridContainer = styled.div`
     display:flex;
     flex-wrap:wrap;
+    ${props => props.reverse && `
+        flex-direction: column-reverse;
+    `}
 `;
 
 
-export default (props) => <GridContainer className={props.className}>{props.children}</GridContainer>
+export default (props) => <GridContainer className={props.className} reverse={props.reverse}>{props.children}</GridContainer>

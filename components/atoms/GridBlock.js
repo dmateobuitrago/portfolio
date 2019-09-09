@@ -6,17 +6,21 @@ const Block = styled.div`
     box-sizing: border-box;
     padding: ${props => props.padding ? theme.baseUnit : 0};
 
-    ${props => props.paddingTop && `
+    ${props => props.pt && `
         padding-top: ${theme.baseUnit};
     `}
-    ${props => props.paddingRight && `
+    ${props => props.pr && `
         padding-right: ${theme.baseUnit};
     `}
-    ${props => props.paddingBottom  && `
+    ${props => props.pb  && `
         padding-bottom: ${theme.baseUnit};
     `}
-    ${props => props.paddingLeft && `
+    ${props => props.pl && `
         padding-left: ${theme.baseUnit};
+    `}
+    ${props => props.isGridContainer && `
+        display:flex;
+        flex-wrap:wrap;
     `}
     
     width: ${props => 100*props.col/theme.grid}%;
@@ -46,10 +50,11 @@ class GridBlock extends React.Component {
                     colMedium={this.props.colMedium}
                     colLarge={this.props.colLarge}
                     padding={this.props.padding}
-                    pt={this.props.paddingTop}
-                    pr={this.props.paddingRight}
-                    pb={this.props.paddingBottom}
-                    pl={this.props.paddingLeft}
+                    pt={this.props.pt}
+                    pr={this.props.pr}
+                    pb={this.props.pb}
+                    pl={this.props.pl}
+                    isGridContainer={this.props.isGridContainer}
                 >
                     {this.props.children}
                 </Block>

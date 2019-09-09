@@ -11,7 +11,7 @@ class Footer extends React.Component{
     render(){
         return(
             <FooterBlock>
-                <Typography type="small" dark mb="0">*Last update: September 2019</Typography>
+                <Typography type="small" dark mb="0">®2019</Typography>
             </FooterBlock>
         )
     }

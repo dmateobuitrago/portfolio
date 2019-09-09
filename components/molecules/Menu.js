@@ -74,17 +74,6 @@ class MyMenu extends React.Component {
           {this.renderButton()}
         </MenuButton>
         <Items open={this.props.open}>
-          {/* <MenuItems
-            open={this.props.open}
-            delay="1s"
-            type={this.props.open ? "title" : "body"}
-            bold={!this.props.open}
-            dark={!this.props.open}
-          >
-            <Link href="/work">
-              <a>work →</a>
-            </Link>
-          </MenuItems> */}
           <MenuItems
             open={this.props.open}
             delay="2s"

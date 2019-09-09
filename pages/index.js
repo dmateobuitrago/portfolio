@@ -2,6 +2,7 @@ import Layout from "../components/layout/Layout";
 import GridBlock from "../components/atoms/GridBlock";
 import ProjectCard from "../components/molecules/ProjectCard";
 import OneBigColum from "../components/layout/OneBigColumn";
+import Divider from "../components/atoms/Divider";
 import { data } from "../static/data/data";
 
 const projects = data.projects;
@@ -14,7 +15,7 @@ function Index() {
   return (
     <Layout home={true}>
       <OneBigColum>
-        <GridBlock col="8" colSmall="4" colMedium="4" padding>
+        <GridBlock col="8" padding>
           <ProjectCard
             name={juan.title}
             tagline={juan.tagline}
@@ -23,8 +24,9 @@ function Index() {
             img={imgPath+juan.image}
             id={juan.id}
           />
+          <Divider/>
         </GridBlock>
-        <GridBlock col="8" colSmall="4" colMedium="4"  padding>
+        <GridBlock col="8" padding>
           <ProjectCard
             name={broken.title}
             tagline={broken.tagline}

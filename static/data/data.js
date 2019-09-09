@@ -1,4 +1,10 @@
 export const data = {
+  links: [
+    ['instagram ↗', 'https://www.instagram.com/buitragojara'],
+    ['linkedin ↗', '#'],
+    ['dribble ↗', 'https://www.dribble.com/mateobuitrago'],
+    ['dmateobuitrago @ gmail.com', 'mailto:dmateobuitrago@gmail.com'],
+  ],
   projects: [
     {
       title: "Juan-on-Juan",
@@ -13,7 +19,7 @@ export const data = {
         year: "2019",
         timeframe: "3 weeks",
         tools: "keynote, sketch, pen & paper",
-        teacher: "anton repponen",
+        // teacher: "anton repponen",
         client: "school project at harbour.space",
         role: "ui design, branding"
       },
@@ -120,7 +126,7 @@ export const data = {
         year: "2019",
         timeframe: "3 weeks",
         tools: "keynote, sketch, pen & paper",
-        teacher: "anton repponen",
+        // teacher: "anton repponen",
         client: "school project at harbour.space",
         role: "ui design, branding"
       }
