@@ -1,8 +1,8 @@
 export const data = {
   links: [
     ['instagram ↗', 'https://www.instagram.com/buitragojara'],
-    ['linkedin ↗', '#'],
-    ['dribble ↗', 'https://www.dribble.com/mateobuitrago'],
+    ['linkedin ↗', 'https://www.linkedin.com/in/mateobuitrago/'],
+    ['dribble ↗', 'https://dribbble.com/mateobuitrago'],
     ['dmateobuitrago @ gmail.com', 'mailto:dmateobuitrago@gmail.com'],
   ],
   projects: [
