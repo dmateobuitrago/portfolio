@@ -7,9 +7,6 @@ import GridContainer from "../atoms/GridContainer";
 import GridBlock from "../atoms/GridBlock";
 
 const StyledProjectCard = styled(GridContainer)`
-  * {
-    cursor: pointer;
-  }
   @media screen and (max-width: ${theme.maxBreakPoints.medium}) {
     margin: ${theme.baseUnit4} auto !important;
   }
@@ -21,17 +18,26 @@ const StyledProjectCard = styled(GridContainer)`
         top:0;
         transition: opacity 0.3s ease-in 1s;
     `}
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img,a {
+    cursor:pointer;
+  }
 `;
 
 const MyImg = styled.img`
-    max-width:100%;
+  max-width: 100%;
 `;
 
-
 const Placeholder = styled.div`
-  height: 250px;
+  height: 300px;
   width: auto;
-  background: red;
+  background: black;
+  opacity: 0.1;
 `;
 
 class ProjectCard extends React.Component {
@@ -56,24 +62,25 @@ class ProjectCard extends React.Component {
     return imageElement;
   }
 
-
   render() {
     return (
-      <Link href="/work/[id]" as={`/work/${this.props.id}`}>
-        <StyledProjectCard show={this.state.isLoading}>
-          <GridBlock col="8" colMedium="2" pr>
-            <Typography mb="0" type="body" dark bold>
-              {this.props.name}
-            </Typography>
-            <Typography type="body" dark>
-              {this.props.tagline}
-            </Typography>
-          </GridBlock>
-          <GridBlock col="8" colMedium="6">
+      <StyledProjectCard>
+        <GridBlock col="8" colMedium="2" pr>
+          <Typography mb="0" type="body" dark bold>
+            <Link href="/work/[id]" as={`/work/${this.props.id}`}>
+              <a>{this.props.name}</a>
+            </Link>
+          </Typography>
+          <Typography type="body" dark>
+            {this.props.tagline}
+          </Typography>
+        </GridBlock>
+        <GridBlock col="8" colMedium="6">
+          <Link href="/work/[id]" as={`/work/${this.props.id}`}>
             {this.renderImage(this.props.img)}
-          </GridBlock>
-        </StyledProjectCard>
-      </Link>
+          </Link>
+        </GridBlock>
+      </StyledProjectCard>
     );
   }
 }

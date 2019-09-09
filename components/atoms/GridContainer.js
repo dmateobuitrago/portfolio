@@ -6,6 +6,10 @@ const GridContainer = styled.div`
     ${props => props.reverse && `
         flex-direction: column-reverse;
     `}
+
+    img {
+        max-width: 100%;
+    }
 `;
 
 

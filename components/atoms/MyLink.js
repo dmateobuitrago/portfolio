@@ -5,6 +5,13 @@ import Link from 'next/link';
 
 const StyledLink = styled(Typography)`
     text-decoration: underline;
+    &:visited{
+      color: red;
+    }
+
+    a {
+      color: inherit;
+    }
 `
 
 class MyLink extends React.Component {

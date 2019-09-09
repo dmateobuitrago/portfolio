@@ -77,6 +77,9 @@ const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  img {
+    max-width: 100%;
+  }
 `;
 
 export default class MyDocument extends Document {

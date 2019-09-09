@@ -46,7 +46,6 @@ class Project extends React.Component {
           renderElement.push(<Divider/>);
           break;
         }
-      // renderElement.push( <Divider/>);
     });
 
     return renderElement;
