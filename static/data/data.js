@@ -193,21 +193,58 @@ export const data = {
       ]
     },
     {
-      title: "Broken Symmetry",
+      title: "Print.eat",
       id: "2",
+      slug: "print-eat",
+      tagline: "How would we eat in 2080? →",
+      tags: "speculative design",
+      image: "printeat/hero.png",
+      tldr:
+        "The planet is suffering and as a society we need to change our habits in order to save it. Within a more controlled dynamics, where meat and imported fruits are almost forbidden, we would adapt our dietary habits and thanks to technology and food printing we would be able to enjoy every meal.",
+      summary: {
+        year: "2019",
+        timeframe: "6 weeks",
+        tools: "keynote, sketch, pen & paper",
+        team: "Rodrigo Salmerón and Vasudha Mundra",
+        // teacher: "anton repponen",
+        client: "school project at harbour.space",
+        role: "brand and concept, ui design"
+      }
+    },
+    {
+      title: "Broken Symmetry",
+      id: "3",
       slug: "broken-symmetry",
       tagline: "Wes Anderson retrospective screening →",
       tags: "branding and graphic design",
       image: "broken/hero.png",
       tldr:
-        "Our fictional client was an online publication exploring life and culture through thematic , visually-oriented international coverage and commentary. They were part of a large publishing organization and they were an small team writing about several topics, focusing on releasing stories daily (about 4 or 6) and one long form weekly story.",
+        "Wes Anderson's films are mostly recognized by his art direction: symmetric shots and a high detailed film craft. In the other hand his characters lack of this super organized attributes. Broken Symmetry is the retrospective screening where the audience see beyond the visual style and realize how his messed up characters break into that symmetry creating an engaging story. ",
+      summary: {
+        year: "2015",
+        timeframe: "4 weeks",
+        tools: "scanner, Adobe Illustrator, Adobe Photoshop",
+        // teacher: "anton repponen",
+        client: "Monotype - D&AD New Blood Awards",
+        role: "concepting and art direction"
+      }
+    },
+    {
+      title: "TMB Trivia",
+      id: "4",
+      slug: "tmb-trivia",
+      tagline: "Daily challenges for Barcelona's public transport system →",
+      tags: "branding and graphic design",
+      image: "tmb/hero.png",
+      tldr:
+        "Commuting shouldn't be the same boring thing everyday. With the TMB Daily Trivia we bring fun and competition between riders, while they can learn about the city.",
       summary: {
         year: "2019",
         timeframe: "3 weeks",
-        tools: "keynote, sketch, pen & paper",
-        // teacher: "anton repponen",
+        tools: "Skecth, pen & paper, Keynote",
+        team: "Alex Sasov, Bilal Shabbir, Felix Peeck",
         client: "school project at harbour.space",
-        role: "ui design, branding"
+        role: "concepting, art direction, ui design"
       }
     }
   ]

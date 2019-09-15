@@ -10,7 +10,9 @@ import Typography from '../components/atoms/Typography';
 
 const projects = data.projects;
 const juan = projects[0];
-const broken = projects[1];
+const print = projects[1];
+const broken = projects[2];
+const tmb = projects[3];
 
 const imgPath = '/static/images/';
 
@@ -31,6 +33,17 @@ function Index() {
         </GridBlock>
         <GridBlock col="8" padding>
           <ProjectCard
+            name={print.title}
+            tagline={print.tagline}
+            tag={print.tags}
+            slug={print.slug}
+            img={imgPath+print.image}
+            id={print.id}
+          />
+          <Divider/>
+        </GridBlock>
+        <GridBlock col="8" padding>
+          <ProjectCard
             name={broken.title}
             tagline={broken.tagline}
             tag={broken.tags}
@@ -38,6 +51,18 @@ function Index() {
             img={imgPath+broken.image}
             id={broken.id}
           />
+          <Divider/>
+        </GridBlock>
+        <GridBlock col="8" padding>
+          <ProjectCard
+            name={tmb.title}
+            tagline={tmb.tagline}
+            tag={tmb.tags}
+            slug={tmb.slug}
+            img={imgPath+tmb.image}
+            id={tmb.id}
+          />
+          <Divider/>
         </GridBlock>
       </OneBigColum> 
     </Layout>
