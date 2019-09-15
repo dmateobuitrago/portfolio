@@ -1,12 +1,10 @@
 import React from "react";
-import MainMenu from "./MainMenu";
 import Header from "./Header";
 import Footer from "./Footer";
-import { theme } from "../../theme/globalStyle";
 import styled from "styled-components";
 
 const StyledLayout = styled.div`
-  background: ${theme.secondary};
+  background: ${props => props.theme.secondary};
 `;
 
 const Content = styled.div`

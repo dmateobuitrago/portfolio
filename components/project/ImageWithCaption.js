@@ -2,7 +2,6 @@ import React from "react";
 import Typography from "../atoms/Typography";
 import GridBlock from "../atoms/GridBlock";
 import OneBigColumn from "../layout/OneBigColumn";
-import { theme } from "../../theme/globalStyle";
 import styled from "styled-components";
 
 const imgPath = "/static/images/";
@@ -11,7 +10,7 @@ const Arrow = styled(Typography)`
   ::before {
     content: "↑";
   }
-  @media screen and (min-width: ${theme.minBreakPoints.medium}) {
+  @media screen and (min-width: ${props => props.theme.minBreakPoints.medium}) {
     &::before {
       content: "→";
     }

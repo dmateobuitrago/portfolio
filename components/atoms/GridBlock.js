@@ -1,42 +1,44 @@
 import React from 'react';
-import { theme } from '../../theme/globalStyle';
 import styled from 'styled-components';
 
 const Block = styled.div`
     box-sizing: border-box;
-    padding: ${props => props.padding ? theme.baseUnit : 0};
+    
+    ${props => props.padding && `
+        padding: ${props.theme.baseUnit};
+    `}
 
     ${props => props.pt && `
-        padding-top: ${theme.baseUnit};
+        padding-top: ${props.theme.baseUnit};
     `}
     ${props => props.pr && `
-        padding-right: ${theme.baseUnit};
+        padding-right: ${props.theme.baseUnit};
     `}
     ${props => props.pb  && `
-        padding-bottom: ${theme.baseUnit};
+        padding-bottom: ${props.theme.baseUnit};
     `}
     ${props => props.pl && `
-        padding-left: ${theme.baseUnit};
+        padding-left: ${props.theme.baseUnit};
     `}
     ${props => props.isGridContainer && `
         display:flex;
         flex-wrap:wrap;
     `}
     
-    width: ${props => 100*props.col/theme.grid}%;
-    @media screen and (min-width: ${theme.minBreakPoints.small}){
-        ${({ colSmall }) => colSmall && `
-            width: ${(100*colSmall/theme.grid)+'%'};
+    width: ${props => 100*props.col/props.theme.grid}%;
+    @media screen and (min-width: ${props => props.theme.minBreakPoints.small}){
+        ${props => props.colSmall && `
+            width: ${100*props.colSmall/props.theme.grid + '%'};
         `}
     }
-    @media screen and (min-width: ${theme.minBreakPoints.medium}){
-        ${({ colMedium }) => colMedium && `
-            width: ${(100*colMedium/theme.grid)+'%'};
+    @media screen and (min-width: ${props => props.theme.minBreakPoints.medium}){
+        ${props => props.colMedium && `
+            width: ${100*props.colMedium/props.theme.grid + '%'};
         `}
     }
-    @media screen and (min-width: ${theme.minBreakPoints.large}){
-        ${({ colLarge }) => colLarge && `
-            width: ${(100*colLarge/theme.grid)+'%'};
+    @media screen and (min-width: ${props => props.theme.minBreakPoints.large}){
+        ${props => props.colLarge && `
+            width: ${100*props.colLarge/props.theme.grid + '%'};
         `}
     }
 `;

@@ -1,14 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Typography from "../../components/atoms/Typography";
-import { theme } from "../../theme/globalStyle";
 import styled from "styled-components";
 import GridContainer from "../atoms/GridContainer";
 import GridBlock from "../atoms/GridBlock";
 
 const StyledProjectCard = styled(GridContainer)`
-  @media screen and (max-width: ${theme.maxBreakPoints.medium}) {
-    margin: ${theme.baseUnit4} auto !important;
+  @media screen and (max-width: ${props => props.theme.maxBreakPoints.medium}) {
+    margin: ${props => props.theme.baseUnit4} auto !important;
   }
   opacity: 0;
   ${props =>

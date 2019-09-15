@@ -1,11 +1,10 @@
 import React from "react";
 import GridContainer from "../atoms/GridContainer";
 import GridBlock from "../atoms/GridBlock";
-import { theme } from '../../theme/globalStyle';
 import styled from 'styled-components';
 
 const ReverseGridContainter = styled(GridContainer)`
-  @media screen and (max-width: ${theme.maxBreakPoints.medium}){
+  @media screen and (max-width: ${props => props.theme.maxBreakPoints.medium}){
     flex-direction: column-reverse;
   }
 `;

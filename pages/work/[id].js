@@ -5,6 +5,7 @@ import ProjectIntro from "../../components/project/ProjectIntro";
 import TitleAndText from "../../components/project/TitleAndText";
 import BigImage from "../../components/project/BigImage";
 import ImageWithCaption from "../../components/project/ImageWithCaption";
+import VideoWithCaption from "../../components/project/VideoWithCaption";
 import Divider from "../../components/atoms/Divider";
 
 class Project extends React.Component {
@@ -18,6 +19,10 @@ class Project extends React.Component {
 
   renderImageWithCaption(item, index) {
     return <ImageWithCaption key={index} image={item.image} body={item.caption} />;
+  }
+
+  renderVideoWithCaption(item, index) {
+    return <VideoWithCaption key={index} video={item.video} body={item.caption} />;
   }
 
   renderBigImage(item, index) {
@@ -38,6 +43,10 @@ class Project extends React.Component {
           break;
         case "ImageWithCaption":
           renderElement.push( this.renderImageWithCaption(item, index));
+          break;
+        case "VideoWithCaption":
+          renderElement.push( this.renderVideoWithCaption(item, index));
+          debugger
           break;
         case "BigImage":
           renderElement.push( this.renderBigImage(item, index));

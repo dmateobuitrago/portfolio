@@ -1,34 +1,33 @@
 import React from 'react';
-import { theme } from '../../theme/globalStyle';
 import styled from 'styled-components';
 
 const Base = styled.div`
-  color: ${props => props.dark ? theme.primary : theme.secondary};
-  font-family: ${theme.font.fontFamily};
+  color: ${props => props.dark ? props.theme.primary : props.theme.secondary};
+  font-family: ${props => props.theme.font.fontFamily};
   font-weight: ${props => props.bold ? '700' : '300'};
   text-align: ${props => props.align ? props.align : 'left'};
-  margin-bottom: ${props => props.mb ? props.mb : theme.baseUnit}
+  margin-bottom: ${props => props.mb ? props.mb : props.theme.baseUnit}
 `;
 
 const Huge = styled(Base)`
-  font-size: ${theme.font.size.xxLarge}
+  font-size: ${props => props.theme.font.size.xxLarge}
 `
 
 const Title = styled(Base)`
-  font-size: ${theme.font.size.xLarge}
+  font-size: ${props => props.theme.font.size.xLarge}
 `
 
 const Subtitle = styled(Base)`
-  font-size: ${theme.font.size.large}
+  font-size: ${props => props.theme.font.size.large}
 `
 
 const Body = styled(Base)`
-  font-size: ${theme.font.size.medium}
+  font-size: ${props => props.theme.font.size.medium}
   line-height: 1.5;
   `
   
   const Small = styled(Base)`
-  font-size: ${theme.font.size.small}
+  font-size: ${props => props.theme.font.size.small}
   line-height: 1.5;
 `
 

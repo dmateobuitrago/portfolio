@@ -1,10 +1,9 @@
 import Link from "next/link";
 import Typography from "../../components/atoms/Typography";
-import { theme } from "../../theme/globalStyle";
 import styled from "styled-components";
 
 const Menu = styled.div`
-  @media screen and (min-width: ${theme.minBreakPoints.large}) {
+  @media screen and (min-width: ${props => props.theme.minBreakPoints.large}) {
     .menuButton {
       display: none;
     }
@@ -12,16 +11,16 @@ const Menu = styled.div`
 `;
 
 const MenuItems = styled(Typography)`
-  @media screen and (max-width: ${theme.maxBreakPoints.large}) {
+  @media screen and (max-width: ${props => props.theme.maxBreakPoints.large}) {
     opacity: ${props => (props.open ? "1" : "0")};
     transition: opacity 0.2s ease 2s;
   }
 `;
 
 const Items = styled.div`
-  @media screen and (max-width: ${theme.maxBreakPoints.large}) {
+  @media screen and (max-width: ${props => props.theme.maxBreakPoints.large}) {
     position: fixed;
-    background: ${theme.primary};
+    background: ${props => props.theme.primary};
     top: 0;
     bottom: 0;
     right: 0;
@@ -30,7 +29,7 @@ const Items = styled.div`
     opacity: ${props => (props.open ? '1' : "0")};
     visibility: ${props => (props.open ? 'visible' : "hidden")};
     transition: all 0.3s ease-in;
-    padding: 40% ${theme.baseUnit4};
+    padding: 40% ${props => props.theme.baseUnit4};
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -41,7 +40,7 @@ const MenuButton = styled.div`
   cursor: pointer;
   position: relative;
   z-index: 20;
-  @media screen and (min-width: ${theme.minBreakPoints.large}) {
+  @media screen and (min-width: ${props => props.theme.minBreakPoints.large}) {
     display: none;
   }
 `;

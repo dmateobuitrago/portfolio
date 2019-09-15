@@ -2,13 +2,12 @@ import React from 'react';
 import Typography from '../atoms/Typography';
 import GridBlock from '../atoms/GridBlock';
 import GridContainer from '../atoms/GridContainer';
-import { theme } from "../../theme/globalStyle";
 import styled from "styled-components";
 
 const imgPath = "/static/images/";
 
 const Image = styled.img`
-  margin-bottom: ${theme.baseUnit2};
+  margin-bottom: ${props => props.theme.baseUnit2};
   height: calc(100vh - 20px);
   position: sticky;
   top:10px;

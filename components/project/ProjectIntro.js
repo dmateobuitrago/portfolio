@@ -3,22 +3,21 @@ import Typography from "../../components/atoms/Typography";
 import DataPair from "../molecules/DataPair";
 import GridContainer from "../atoms/GridContainer";
 import GridBlock from "../atoms/GridBlock";
-import OneBigColumn from "../layout/OneBigColumn"
-import { theme } from "../../theme/globalStyle";
+import OneBigColumn from "../layout/OneBigColumn";
 import styled from "styled-components";
 
 const imgPath = "/static/images/";
 
 const Image = styled.img`
-  margin-bottom: ${theme.baseUnit2};
+  margin-bottom: ${props => props.theme.baseUnit2};
 `;
 
 const SummaryContainer = styled(GridContainer)`
   > div:nth-child(odd) {
-    padding-right: ${theme.baseUnit};
+    padding-right: ${props => props.theme.baseUnit};
   }
   > div:nth-child(even) {
-    padding-left: ${theme.baseUnit};
+    padding-left: ${props => props.theme.baseUnit};
   }
 `;
 

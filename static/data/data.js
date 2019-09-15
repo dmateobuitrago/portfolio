@@ -92,7 +92,7 @@ export const data = {
         },
         {
           type: "TitleAndText",
-          title: "Daily stories",
+          title: "Daily stories - short form",
           content: [
             {
               type: "body",
@@ -111,6 +111,63 @@ export const data = {
           caption: "Daily story design about best latin american basketball players.",
           image: "juan/short_story.gif",
         },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Special story - long form",
+          content: [
+            {
+              type: "body",
+              text:
+                "Manu Ginobili, one of the greatest latin american NBA players announced his retirement in 2018, and a journalist wrote an special story about how his career was so similar to Mo Rivera, one MLB latin american legend. I found this piece so interesting that I decided this to be my long story to pitch my design."
+            },
+            {
+              type: "body",
+              text:
+                "Long story form is the dream of any designer, you would be in a team of developers, writers and producers to create an special story. So there were no limits at all. (At least in class)."
+            },
+            {
+              type: "body",
+              text:
+                "Long story form is the dream of any designer, you would be in a team of developers, writers and producers to create an special story. So there were no limits at all. (At least in class)."
+            }
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Long story intro about the comparison between Manu Ginobilli and Mo Rivera.",
+          image: "juan/juan_long_story.png",
+        },
+        {
+          type: "VideoWithCaption",
+          caption: "Interactive quiz where readers had to guess facts about the players, as if they were playing with trading cards.",
+          video: "juan/video.mp4",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Homepage and navigation",
+          content: [
+            {
+              type: "body",
+              text:
+                "The homepage is the place where our publisher would be able to highlight stories, videos, and even writers. Also the visitors of Juan-on-Juan would be able to see and follow livescores from the top leagues."
+            },
+            {
+              type: "body",
+              text: "The navigation of the website was very short and simple, we would rely on the leagues: NBA, NFL, MLS, Fútbol ('cause that's they way you say it), NCAA and More. Supporting pages such as About us, Terms of use and so on would live in the footer with a lower visual hierarchy."
+            }
+          ]
+        },
+        {
+          type: "BigImage",
+          image: "juan/homepage_navigation.png",
+        },
+
       ]
     },
     {
