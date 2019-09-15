@@ -19,7 +19,6 @@ export const data = {
         year: "2019",
         timeframe: "3 weeks",
         tools: "keynote, sketch, pen & paper",
-        // teacher: "anton repponen",
         client: "school project at harbour.space",
         role: "ui design, branding"
       },
@@ -127,11 +126,6 @@ export const data = {
               type: "body",
               text:
                 "Long story form is the dream of any designer, you would be in a team of developers, writers and producers to create an special story. So there were no limits at all. (At least in class)."
-            },
-            {
-              type: "body",
-              text:
-                "Long story form is the dream of any designer, you would be in a team of developers, writers and producers to create an special story. So there were no limits at all. (At least in class)."
             }
           ]
         },
@@ -167,7 +161,35 @@ export const data = {
           type: "BigImage",
           image: "juan/homepage_navigation.png",
         },
-
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Presenting",
+          content: [
+            {
+              type: "body",
+              text:
+                "One of the biggest misconceptions that I had about working in Design, is that the work should speak by itself so you shouldn't have to sell it, because it was so well done that no words or presentations were needed. WRONG!"
+            },
+            {
+              type: "body",
+              text:
+                "A big part of working as a Designer is selling your ideas. Yes! Presenting it in front of your clients or colleagues. The idea is as important as the story you tell when you present it. And no presentation would be awesome without preparing it."
+            }
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Sharing the framework of your design is important to support your decisions on the screen.",
+          image: "juan/grid.gif",
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Even if it is 'just a ui project', storytelling is important when presenting an idea. ",
+          image: "juan/presentation.png",
+        },
       ]
     },
     {

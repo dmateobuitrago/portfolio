@@ -66,7 +66,7 @@ class ProjectCard extends React.Component {
       <StyledProjectCard>
         <GridBlock col="8" colMedium="2" pr>
           <Typography mb="0" type="body" dark bold>
-            <Link href="/work/[id]" as={`/work/${this.props.id}`}>
+            <Link href="/[id]" as={`/${this.props.slug}`}>
               <a>{this.props.name}</a>
             </Link>
           </Typography>
@@ -75,7 +75,7 @@ class ProjectCard extends React.Component {
           </Typography>
         </GridBlock>
         <GridBlock col="8" colMedium="6">
-          <Link href="/work/[id]" as={`/work/${this.props.id}`}>
+          <Link href="/[id]" as={`/${this.props.slug}`}>
             {this.renderImage(this.props.img)}
           </Link>
         </GridBlock>

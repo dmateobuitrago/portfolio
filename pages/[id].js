@@ -1,12 +1,12 @@
 import React from "react";
-import Layout from "../../components/layout/Layout";
-import { data } from "../../static/data/data";
-import ProjectIntro from "../../components/project/ProjectIntro";
-import TitleAndText from "../../components/project/TitleAndText";
-import BigImage from "../../components/project/BigImage";
-import ImageWithCaption from "../../components/project/ImageWithCaption";
-import VideoWithCaption from "../../components/project/VideoWithCaption";
-import Divider from "../../components/atoms/Divider";
+import Layout from "../components/layout/Layout";
+import { data } from "../static/data/data";
+import ProjectIntro from "../components/project/ProjectIntro";
+import TitleAndText from "../components/project/TitleAndText";
+import BigImage from "../components/project/BigImage";
+import ImageWithCaption from "../components/project/ImageWithCaption";
+import VideoWithCaption from "../components/project/VideoWithCaption";
+import Divider from "../components/atoms/Divider";
 
 class Project extends React.Component {
   constructor() {
@@ -46,7 +46,6 @@ class Project extends React.Component {
           break;
         case "VideoWithCaption":
           renderElement.push( this.renderVideoWithCaption(item, index));
-          debugger
           break;
         case "BigImage":
           renderElement.push( this.renderBigImage(item, index));
@@ -80,7 +79,8 @@ class Project extends React.Component {
 
 Project.getInitialProps = async function(context) {
   const { id } = context.query;
-  return data.projects[id - 1];
+  let index = data.projects.findIndex(project => project.slug == id)
+  return data.projects[index];
 };
 
 export default Project;
