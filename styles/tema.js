@@ -21,11 +21,13 @@ export const tema = {
     minBreakPoints:{
         small: '451px',
         medium: '769px',
-        large: '961px'
+        large: '961px',
+        xlarge: '1281px'
     },
     maxBreakPoints:{
         small: '450px',
         medium: '768px',
-        large: '960px'
+        large: '960px',
+        xLarge: '1280px'
     }
 }

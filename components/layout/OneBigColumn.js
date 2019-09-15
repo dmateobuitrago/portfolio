@@ -9,6 +9,11 @@ const ReverseGridContainter = styled(GridContainer)`
   }
 `;
 
+const BigColum = styled(GridContainer)`
+  max-width: ${props => props.theme.maxBreakPoints.xLarge};
+  margin: 0 auto;
+`
+
 class OneBigColumn extends React.Component {
   renderContent(){
     let content;
@@ -22,13 +27,13 @@ class OneBigColumn extends React.Component {
   }
   render() {
     return (
-      <GridContainer>
-        <GridBlock col="0" colMedium="1" />
-        <GridBlock col="8" colMedium="6">
+      <BigColum>
+        <GridBlock col="0" colMedium="1" colXlarge="0" />
+        <GridBlock col="8" colMedium="6" colXlarge="8">
           {this.renderContent()}
         </GridBlock>
-        <GridBlock col="0" colMedium="1" />
-      </GridContainer>
+        <GridBlock col="0" colMedium="1" colXlarge="0" />
+      </BigColum>
     );
   }
 }

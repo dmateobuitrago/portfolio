@@ -41,6 +41,11 @@ const Block = styled.div`
             width: ${100*props.colLarge/props.theme.grid + '%'};
         `}
     }
+    @media screen and (min-width: ${props => props.theme.minBreakPoints.xlarge}){
+        ${props => props.colXlarge && `
+            width: ${100*props.colXlarge/props.theme.grid + '%'};
+        `}
+    }
 `;
 
 class GridBlock extends React.Component {
@@ -51,6 +56,7 @@ class GridBlock extends React.Component {
                     colSmall={this.props.colSmall}
                     colMedium={this.props.colMedium}
                     colLarge={this.props.colLarge}
+                    colXlarge={this.props.colXlarge}
                     padding={this.props.padding}
                     pt={this.props.pt}
                     pr={this.props.pr}
