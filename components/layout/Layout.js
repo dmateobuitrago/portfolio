@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { initGA, logPageView } from "./GoogleAnalytics" 
 import styled from "styled-components";
 
 const StyledLayout = styled.div`
@@ -16,6 +17,14 @@ class Layout extends React.Component {
     super();
     this.handleMenuOpen = this.handleMenuOpen.bind(this);
   }
+
+  componentDidMount() {
+    if (!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
+  } 
 
   state = {
     menuOpen: false
