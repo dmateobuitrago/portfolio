@@ -24,7 +24,7 @@ const Subtitle = styled(Base)`
 const Body = styled(Base)`
   font-size: ${props => props.theme.font.size.medium}
   line-height: 1.5;
-  `
+`
   
   const Small = styled(Base)`
   font-size: ${props => props.theme.font.size.small}
@@ -33,16 +33,25 @@ const Body = styled(Base)`
 
 class Typography extends React.Component {
 
+  parseFromString(markup){
+			let  doc = document.implementation.createHTMLDocument("");
+	      		if (markup.toLowerCase().indexOf('<!doctype') > -1) {
+        			doc.documentElement.innerHTML = markup;
+      			}
+      			else {
+        			doc.body.innerHTML = markup;
+      			}
+			return doc;
+		}
+
   formatContent(content){
     let formatedContent;
     if(typeof content === 'string' || content instanceof String){
-      formatedContent = content.replace("*(", '<strong>');
-      formatedContent = formatedContent.replace(")*", '</strong>');
-      formatedContent = formatedContent.replace("_(", '<i>');
-      formatedContent = formatedContent.replace(")_", '</i>');
+      formatedContent = content.replace("*(", '&lt;strong&gt;');
+      formatedContent = formatedContent.replace(")*", '&lt;/strong&gt;');
     }
 
-    return formatedContent
+    return this.parseFromString(formatedContent);
   }
   
 
@@ -68,7 +77,7 @@ class Typography extends React.Component {
         return <Huge className={this.props.className} bold={bold} align={align} dark={dark} mb={mb}>{content}</Huge>
         break;
       case 'body':
-        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{content}</Body>
+        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{this.formatContent(content)}</Body>
         break;
       case 'small':
         return <Small className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{content}</Small>

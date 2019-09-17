@@ -209,7 +209,23 @@ export const data = {
         // teacher: "anton repponen",
         client: "school project at harbour.space",
         role: "brand and concept, ui design"
-      }
+      },
+      content: [
+        {
+          type: "TitleAndText",
+          title: "The brief",
+          content: [
+            {
+              type: "body",
+              text: "The year is 2080. Our planet is in the best shape it's been in sixty years. It's recovering from the ecological emergency of 2020 and, as a global society, we're managing natural resources better thanks to a new economy."
+            },
+            {
+              type: "body",
+              text: "Create a framework for a new ecology-based *(economy)* in order to design and develop innovation concepts (products, services, experiences) that generate and redefine personal wellbeing through this new economy. Your new-to-the-world concepts will act as proof of people and the planet living in balance."
+            } 
+          ]
+        }
+      ]
     },
     {
       title: "Broken Symmetry",

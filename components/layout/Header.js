@@ -62,7 +62,7 @@ class Header extends React.Component {
   render() {
     return (
         <OneBigColumn>
-          {this.props.isHome ? <Divider /> : ""}
+          {this.props.isHome ? <Divider  /> : ""}
           <div>
             <Typography type="subtitle" bold dark>
               <Link href="/">

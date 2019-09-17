@@ -40,7 +40,7 @@ class ProjectIntro extends React.Component {
   render() {
     return (
           <OneBigColumn>
-            <GridBlock col="8" padding>
+            <GridBlock col="8">
               <Image src={imgPath + this.props.image} />
               <Typography type="title" dark bold>
                 {this.props.title}
