@@ -7,6 +7,7 @@ import GridContainer from "../atoms/GridContainer";
 import Divider from "../atoms/Divider";
 import { data } from "../../static/data/data.js";
 import styled from 'styled-components';
+import OneBigColumn from "./OneBigColumn";
 
 const Anchor = styled.a`
   text-decoration: none;
@@ -60,9 +61,7 @@ class Header extends React.Component {
 
   render() {
     return (
-      <GridContainer>
-        <GridBlock col="0" colMedium="1" />
-        <GridBlock col="8" colMedium="6" padding>
+        <OneBigColumn>
           {this.props.isHome ? <Divider /> : ""}
           <div>
             <Typography type="subtitle" bold dark>
@@ -73,9 +72,7 @@ class Header extends React.Component {
           </div>
           {this.props.isHome ? this.renderInfo() : ""}
           {this.props.isHome ? <Divider /> : ""}
-        </GridBlock>
-        <GridBlock col="0" colMedium="1" />
-      </GridContainer>
+        </OneBigColumn>
     );
   }
 }

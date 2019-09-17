@@ -20,7 +20,7 @@ function Index() {
   return (
     <Layout home={true}>
       <OneBigColum>
-        <GridBlock col="8" padding>
+        <GridBlock col="8">
           <ProjectCard
             name={juan.title}
             tagline={juan.tagline}
@@ -31,7 +31,7 @@ function Index() {
           />
           <Divider/>
         </GridBlock>
-        <GridBlock col="8" padding>
+        <GridBlock col="8">
           <ProjectCard
             name={print.title}
             tagline={print.tagline}
@@ -42,7 +42,7 @@ function Index() {
           />
           <Divider/>
         </GridBlock>
-        <GridBlock col="8" padding>
+        <GridBlock col="8">
           <ProjectCard
             name={broken.title}
             tagline={broken.tagline}
@@ -53,7 +53,7 @@ function Index() {
           />
           <Divider/>
         </GridBlock>
-        <GridBlock col="8" padding>
+        <GridBlock col="8">
           <ProjectCard
             name={tmb.title}
             tagline={tmb.tagline}
