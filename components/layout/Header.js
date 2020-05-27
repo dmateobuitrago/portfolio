@@ -66,7 +66,7 @@ class Header extends React.Component {
           <div>
             <Typography type="subtitle" bold dark>
               <Link href="/">
-                <Anchor>{this.props.isHome ? "Mateo Buitrago" : "← work"}</Anchor>
+                <Anchor>{this.props.isHome ? "Mateo Buitrago Jara" : "← work"}</Anchor>
               </Link>
             </Typography>
           </div>
