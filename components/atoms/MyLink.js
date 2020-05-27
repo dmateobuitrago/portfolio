@@ -18,9 +18,7 @@ class MyLink extends React.Component {
     render() {
       return (
         <StyledLink type="body" dark>
-            <Link href={this.props.href}>
-                <a>{this.props.children}</a>
-            </Link>
+                <a href={this.props.href}>{this.props.children}</a>
         </StyledLink>
       );
     }

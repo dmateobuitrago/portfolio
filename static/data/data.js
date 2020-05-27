@@ -1,3 +1,45 @@
+
+// {
+//   type: "TitleAndText",
+//   title: "Title here",
+//   content: [
+//     {
+//       type: "body",
+//       text:
+//         "Text here"
+//     },
+//     {
+//       type: "list",
+//       list: [
+//         "#1",
+//         "#n"
+//       ]
+//     }
+//   ]
+// },
+
+
+// {
+//   type: "Divider"
+// },
+
+// {
+//   type: "ImageWithCaption",
+//   image: "juan/logo.png",
+//   caption: "Logo, typography and color palette."
+// },
+
+// {
+//   type: "VideoWithCaption",
+//   caption: "Interactive quiz where readers had to guess facts about the players, as if they were playing with trading cards.",
+//   video: "juan/video.mp4",
+// },
+
+// {
+//   type: "BigImage",
+//   image: "juan/sketches.png",
+// },
+
 export const data = {
   links: [
     ['instagram ↗', 'https://www.instagram.com/buitragojara'],
@@ -206,7 +248,6 @@ export const data = {
         timeframe: "6 weeks",
         tools: "keynote, sketch, pen & paper",
         team: "Rodrigo Salmerón and Vasudha Mundra",
-        // teacher: "anton repponen",
         client: "school project at harbour.space",
         role: "brand and concept, ui design"
       },
@@ -224,6 +265,86 @@ export const data = {
               text: "Create a framework for a new ecology-based *(economy)* in order to design and develop innovation concepts (products, services, experiences) that generate and redefine personal wellbeing through this new economy. Your new-to-the-world concepts will act as proof of people and the planet living in balance."
             } 
           ]
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Research",
+          content: [
+            {
+              type: "body",
+              text: "TBD."
+            }
+          ]
+        },
+        {
+          type: "BigImage",
+          image: "printeat/research.jpg",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Opportunities",
+          content: [
+            {
+              type: "body",
+              text: "TBD."
+            },
+            {
+              type: "list",
+              list: [
+                "#1",
+                "#2",
+                "#3",
+                "#4",
+                "#5"
+              ]
+            }
+          ]
+        },
+        {
+          type: "TitleAndText",
+          title: "2080: New dietary habits",
+          content: [
+            {
+              type: "body",
+              text: "TBD."
+            }
+          ]
+        },
+        {
+          type: "TitleAndText",
+          title: "Brand",
+          content: [
+            {
+              type: "body",
+              text: "TBD."
+            }
+          ]
+        },
+        {
+          type: "TitleAndText",
+          title: "Printer",
+          content: [
+            {
+              type: "body",
+              text: "TBD."
+            }
+          ]
+        },
+        {
+          type: "TitleAndText",
+          title: "App",
+          content: [
+            {
+              type: "body",
+              text: "TBD."
+            }
+          ]
         }
       ]
     },
@@ -240,7 +361,6 @@ export const data = {
         year: "2015",
         timeframe: "4 weeks",
         tools: "scanner, Adobe Illustrator, Adobe Photoshop",
-        // teacher: "anton repponen",
         client: "Monotype - D&AD New Blood Awards",
         role: "concepting and art direction"
       }

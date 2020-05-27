@@ -10,6 +10,7 @@ class TitleAndText extends React.Component{
     renderList(listItems){
         let renderElement = []
         listItems.map((listItem,index) => {
+            debugger
             renderElement.push(<Typography key={index} type="body" dark>* {listItem}</Typography>)
         });
         return renderElement;

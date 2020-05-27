@@ -33,17 +33,6 @@ const Body = styled(Base)`
 
 class Typography extends React.Component {
 
-  parseFromString(markup){
-			let  doc = document.implementation.createHTMLDocument("");
-	      		if (markup.toLowerCase().indexOf('<!doctype') > -1) {
-        			doc.documentElement.innerHTML = markup;
-      			}
-      			else {
-        			doc.body.innerHTML = markup;
-      			}
-			return doc;
-		}
-
   formatContent(content){
     let formatedContent;
     if(typeof content === 'string' || content instanceof String){
@@ -51,7 +40,7 @@ class Typography extends React.Component {
       formatedContent = formatedContent.replace(")*", '&lt;/strong&gt;');
     }
 
-    return this.parseFromString(formatedContent);
+    return formatedContent;
   }
   
 
@@ -77,7 +66,7 @@ class Typography extends React.Component {
         return <Huge className={this.props.className} bold={bold} align={align} dark={dark} mb={mb}>{content}</Huge>
         break;
       case 'body':
-        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{this.formatContent(content)}</Body>
+        return <Body className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{content}</Body>
         break;
       case 'small':
         return <Small className={this.props.className} bold={bold} align={align}  dark={dark} mb={mb}>{content}</Small>
