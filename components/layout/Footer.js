@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Typography from '../atoms/Typography';
+import OneBigColumn from "./OneBigColumn";
 
 const FooterBlock = styled.div`
     padding: ${props => props.theme.baseUnit}
@@ -9,9 +10,11 @@ const FooterBlock = styled.div`
 class Footer extends React.Component{
     render(){
         return(
-            <FooterBlock>
-                <Typography type="small" dark mb="0">®2019</Typography>
-            </FooterBlock>
+            <OneBigColumn>
+                <FooterBlock>
+                    <Typography type="small" dark mb="0">®{new Date().getFullYear()}</Typography>
+                </FooterBlock>
+            </OneBigColumn>
         )
     }
 }

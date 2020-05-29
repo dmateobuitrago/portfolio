@@ -18,11 +18,16 @@ const Arrow = styled(Typography)`
 `;
 
 class ImageWithCaption extends React.Component {
+  renderArrow(){
+    if(this.props.body){
+      return <Arrow type="body" dark mb="0" />
+    }
+  }
   render() {
     return (
       <OneBigColumn reverse>
         <GridBlock col="8" colMedium="2" padding>
-          <Arrow type="body" dark mb="0" />
+          {this.renderArrow()}
           <Typography type="small" dark mb="0">
             {this.props.body}
           </Typography>

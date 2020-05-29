@@ -11,8 +11,8 @@ export const tema = {
     font:{
         fontFamily: "'Quador', Georgia, Times New Roman, serif",
         size:{
-            small: '14px',
-            medium: '18px',
+            small: '16px',
+            medium: '20px',
             large: '24px',
             xLarge: '32px',
             xxLarge: '60px',

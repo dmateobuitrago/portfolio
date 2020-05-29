@@ -40,8 +40,8 @@ class Header extends React.Component {
   renderDescription() {
     return (
       <Typography type="body" dark>
-        I’m a Colombian designer and coder living in Barcelona. Currently
-        working at Verse as Lead Designer.
+        I’m a product designer living in Barcelona. Currently
+        working at Verse.
       </Typography>
     );
   }
@@ -62,7 +62,7 @@ class Header extends React.Component {
   render() {
     return (
         <OneBigColumn>
-          {this.props.isHome ? <Divider  /> : ""}
+          <Divider  />
           <div>
             <Typography type="subtitle" bold dark>
               <Link href="/">
@@ -71,7 +71,7 @@ class Header extends React.Component {
             </Typography>
           </div>
           {this.props.isHome ? this.renderInfo() : ""}
-          {this.props.isHome ? <Divider /> : ""}
+          <Divider />
         </OneBigColumn>
     );
   }

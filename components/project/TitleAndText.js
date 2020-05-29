@@ -17,6 +17,9 @@ class TitleAndText extends React.Component{
     }
 
     renderContent(content){
+        if(!content){
+            return;
+        }
         let renderElement = []
         content.map((item,index) => {
           let type = item.type;

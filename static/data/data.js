@@ -1,45 +1,4 @@
 
-// {
-//   type: "TitleAndText",
-//   title: "Title here",
-//   content: [
-//     {
-//       type: "body",
-//       text:
-//         "Text here"
-//     },
-//     {
-//       type: "list",
-//       list: [
-//         "#1",
-//         "#n"
-//       ]
-//     }
-//   ]
-// },
-
-
-// {
-//   type: "Divider"
-// },
-
-// {
-//   type: "ImageWithCaption",
-//   image: "juan/logo.png",
-//   caption: "Logo, typography and color palette."
-// },
-
-// {
-//   type: "VideoWithCaption",
-//   caption: "Interactive quiz where readers had to guess facts about the players, as if they were playing with trading cards.",
-//   video: "juan/video.mp4",
-// },
-
-// {
-//   type: "BigImage",
-//   image: "juan/sketches.png",
-// },
-
 export const data = {
   links: [
     ['instagram ↗', 'https://www.instagram.com/buitragojara'],
@@ -262,7 +221,7 @@ export const data = {
             },
             {
               type: "body",
-              text: "Create a framework for a new ecology-based *(economy)* in order to design and develop innovation concepts (products, services, experiences) that generate and redefine personal wellbeing through this new economy. Your new-to-the-world concepts will act as proof of people and the planet living in balance."
+              text: "Design and develop innovation concepts (products, services, experiences) that generate and redefine personal wellbeing through this new economy. Your new-to-the-world concepts will act as proof of people and the planet living in balance."
             } 
           ]
         },
@@ -275,9 +234,19 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "TBD."
+              text: "To approach this future design project, we did research to find out how would a preferred future would looke like and which challenges we will have to face as a society. We did this through:"
+            },
+            {
+              type: "list",
+              list: [
+                "Desk research: news articles, scientific papers, documentaries, etc",
+                "Interviews with: Environmental scientists, Biologists, Lawyers, Internationalists, Organic shops owners, Common people",
+              ]
             }
           ]
+        },
+        {
+          type: "Divider"
         },
         {
           type: "BigImage",
@@ -288,20 +257,17 @@ export const data = {
         },
         {
           type: "TitleAndText",
-          title: "Opportunities",
+          title: "Opportunities - How our future would look like?",
           content: [
             {
               type: "body",
-              text: "TBD."
+              text: "One of the main takeaways of the research is to clearly define a problem to identify opportunities. The areas we decided to focus were:"
             },
             {
               type: "list",
               list: [
-                "#1",
-                "#2",
-                "#3",
-                "#4",
-                "#5"
+                "Dietary Shift: Livestock is responsible for over 15% of greenhouse gas emissions. 70% of global agricultural land is used for livestock production. All of this while 800 million people live chronically hungry, this cropland use is unacceptable.",
+                "The closer the better: Local farming requires fewer chemicals, water, energy, and transportation compared to large scale agricultural practices that depend on heavy pesticides, monoculture, and account for 70% of Earth's fresh water usage.",
               ]
             }
           ]
@@ -311,59 +277,128 @@ export const data = {
           title: "2080: New dietary habits",
           content: [
             {
-              type: "body",
-              text: "TBD."
+              type: "list",
+              list: [
+                "A local farm in every neighbourhood",
+                "A membership to belong to the shared community",
+                "A communal kitchen for every farm",
+                "Meat is expensive",
+                "Availability of foreign ingredients is limited",
+                "Creating dishes and cooking has become dull"
+              ]
             }
           ]
         },
         {
           type: "TitleAndText",
-          title: "Brand",
+          title: "2080: New age, new needs",
           content: [
             {
               type: "body",
-              text: "TBD."
+              text: "Cooking and eating has become boring in 2080. The joy of tasting has been dissapearing while we saved the planet. New ways of creating food will be needed and here's where our service was born. "
             }
           ]
         },
         {
+          type: "Divider"
+        },
+        {
           type: "TitleAndText",
-          title: "Printer",
+          title: "Our solution for the preferred future: Print.eat",
           content: [
             {
               type: "body",
-              text: "TBD."
+              text: "An on demand 3D food printing platform that helps people innovate."
+            },
+            {
+              type: "list",
+              list: [
+                "Create new food and flavors",
+                "Print it in your shared kitchen",
+                "Cook it or take it to your favorite restaurant"
+              ]
             }
           ]
         },
         {
+          type: "Divider"
+        },
+        {
+          type: "ImageWithCaption",
+          image: "printeat/printeat.gif",
+          caption: "Logo, typography and color palette."
+        },
+        {
+          type: "Divider"
+        },
+        {
           type: "TitleAndText",
-          title: "App",
+          title: "Create",
           content: [
             {
               type: "body",
-              text: "TBD."
+              text: "We allow chefs and any person to experiment, play and crete new food and flavors never seen before. They will be able to have a small personal printer, when they can try their creations. Later they will be able to publish them in the Print.ear marketplace."
             }
           ]
-        }
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Personal printer for chefs and creators",
+          image: "printeat/printer.png",
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "",
+          image: "printeat/printer ui.png",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Print"
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "People will be able to browse and find new recipes and flavors.",
+          image: "printeat/marketplace 1.png",
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "As soon as they decide what to get, they can place a printing order that later can be pick in their commnual kitchen",
+          image: "printeat/marketplace 2.png",
+        },
+        {
+          type: "TitleAndText",
+          title: "Enjoy",
+          // content: [
+          //   {
+          //     type: "body",
+          //     text: "TBD."
+          //   }
+          // ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "People will pick their orders in the commnual kitchen, ready to cook.",
+          image: "printeat/kitchen.png",
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "",
+          image: "printeat/paperbag.png",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "BigImage",
+          image: "printeat/bonappetit.png",
+        },
+        {
+          type: "Divider"
+        },
       ]
-    },
-    {
-      title: "Broken Symmetry",
-      id: "3",
-      slug: "broken-symmetry",
-      tagline: "Wes Anderson retrospective screening →",
-      tags: "branding and graphic design",
-      image: "broken/hero.png",
-      tldr:
-        "Wes Anderson's films are mostly recognized by his art direction: symmetric shots and a high detailed film craft. In the other hand his characters lack of this super organized attributes. Broken Symmetry is the retrospective screening where the audience see beyond the visual style and realize how his messed up characters break into that symmetry creating an engaging story. ",
-      summary: {
-        year: "2015",
-        timeframe: "4 weeks",
-        tools: "scanner, Adobe Illustrator, Adobe Photoshop",
-        client: "Monotype - D&AD New Blood Awards",
-        role: "concepting and art direction"
-      }
     },
     {
       title: "TMB Trivia",
@@ -382,6 +417,23 @@ export const data = {
         client: "school project at harbour.space",
         role: "concepting, art direction, ui design"
       }
-    }
+    },
+    {
+      title: "Broken Symmetry",
+      id: "3",
+      slug: "broken-symmetry",
+      tagline: "Wes Anderson retrospective screening →",
+      tags: "branding and graphic design",
+      image: "broken/hero.png",
+      tldr:
+        "Wes Anderson's films are mostly recognized by his art direction: symmetric shots and a high detailed film craft. In the other hand his characters lack of this super organized attributes. Broken Symmetry is the retrospective screening where the audience see beyond the visual style and realize how his messed up characters break into that symmetry creating an engaging story. ",
+      summary: {
+        year: "2015",
+        timeframe: "4 weeks",
+        tools: "scanner, Adobe Illustrator, Adobe Photoshop",
+        client: "Monotype - D&AD New Blood Awards",
+        role: "concepting and art direction"
+      }
+    },
   ]
 };

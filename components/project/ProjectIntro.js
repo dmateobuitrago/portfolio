@@ -41,13 +41,13 @@ class ProjectIntro extends React.Component {
     return (
           <OneBigColumn>
             <GridBlock col="8">
-              <Image src={imgPath + this.props.image} />
               <Typography type="title" dark bold>
                 {this.props.title}
               </Typography>
               <Typography type="subtitle" dark>
                 {this.props.tagline}
               </Typography>
+              <Image src={imgPath + this.props.image} />
             </GridBlock>
             <GridContainer>
               <GridBlock col="8" colSmall="8" colMedium="4" padding>
