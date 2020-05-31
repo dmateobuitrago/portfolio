@@ -8,6 +8,94 @@ export const data = {
   ],
   projects: [
     {
+      title: "Verse App",
+      id: "5",
+      slug: "verse-app",
+      tagline: "Currently working as Product Designer. →",
+      tags: "ui design",
+      image: "verse/hero.png",
+      tldr:
+        "Verse allow friends to send money between them, to pay their debts and share expenses easily by just sharing a phone number or an username.I work closely with PMs, developers and our CEO to improve and develop new experiences for our users. Most of my time I work on our mobile app (Android and iOS), some times in web experiences and few times helping our Marketing department.",
+      summary: {
+        year: "2019-20",
+        role: "product design, ux - ui"
+      },
+      content: [
+        {
+          type: "TitleAndText",
+          title: "User research",
+          content: [
+            {
+              type: "body",
+              text: "At Verse our users are one of the most important factors. I've been working closely with Customer Success and CRM teams to understand and know our users better through user interviews. In the other hand, it's also important to constantly test the usability of our app, of current and new features."
+            },
+          ]
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Onboarding and KYC",
+          content: [
+            {
+              type: "body",
+              text: "Creating a seamless experience is critical for a payments app and we want to make it as easy as possible for our users."
+            },
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Tracking intereactions with tools such as Firebase is essential to improve the experience.",
+          image: "verse/onboarding.png",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Groups feature",
+          content: [
+            {
+              type: "body",
+              text: "One of Verse differential features is Groups. Friends are able to easily share expenses and keep track of them. It's super useful for flatmates, trips and even to collect money for a present. We are constantly improving this feature, that much that people say that Verse is 'Spiltwise with Bizum(most popular payment app in Spain)'."
+            },
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Our users have a clear view of the expenses they are sharing and the balance of the group.",
+          image: "verse/groups1.png",
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Users can choose if they want to settle their debts in the app or outside the app. This helps groups of friends where not all of them are Verse users.",
+          image: "verse/groups2.png",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "VerseCard",
+          content: [
+            {
+              type: "body",
+              text: "Having a card for a fintech seems something trivial, but delivering the perfect card is essential. We are in the making of this card and it's experience both in and outside the app."
+            },
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "",
+          image: "verse/versecard.png",
+        },
+        {
+          type: "Divider"
+        },
+      ]
+    },
+    {
       title: "Juan-on-Juan",
       id: "1",
       slug: "juan-on-juan",

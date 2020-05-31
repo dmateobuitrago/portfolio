@@ -9,10 +9,11 @@ import { data } from "../static/data/data";
 import Typography from '../components/atoms/Typography';
 
 const projects = data.projects;
-const juan = projects[0];
-const print = projects[1];
-const broken = projects[2];
-const tmb = projects[3];
+const verse = projects[0];
+const juan = projects[1];
+const print = projects[2];
+const broken = projects[3];
+const tmb = projects[4];
 
 const imgPath = '/static/images/';
 
@@ -20,6 +21,17 @@ function Index() {
   return (
     <Layout home={true}>
       <OneBigColum>
+        <GridBlock col="8">
+          <ProjectCard
+            name={verse.title}
+            tagline={verse.tagline}
+            tag={verse.tags}
+            slug={verse.slug}
+            img={imgPath+verse.image}
+            id={verse.id}
+          />
+          <Divider/>
+        </GridBlock>
         <GridBlock col="8">
           <ProjectCard
             name={juan.title}
