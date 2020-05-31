@@ -29,6 +29,7 @@ function Index() {
             slug={verse.slug}
             img={imgPath+verse.image}
             id={verse.id}
+            isExternal={verse.isExternal}
           />
           <Divider/>
         </GridBlock>
@@ -40,6 +41,7 @@ function Index() {
             slug={juan.slug}
             img={imgPath+juan.image}
             id={juan.id}
+            isExternal={juan.isExternal}
           />
           <Divider/>
         </GridBlock>
@@ -51,6 +53,7 @@ function Index() {
             slug={print.slug}
             img={imgPath+print.image}
             id={print.id}
+            isExternal={print.isExternal}
           />
           <Divider/>
         </GridBlock>
@@ -62,6 +65,8 @@ function Index() {
             slug={broken.slug}
             img={imgPath+broken.image}
             id={broken.id}
+            isExternal={broken.isExternal}
+            externalUrl={broken.externalUrl}
           />
           <Divider/>
         </GridBlock>
@@ -73,6 +78,7 @@ function Index() {
             slug={tmb.slug}
             img={imgPath+tmb.image}
             id={tmb.id}
+            isExternal={tmb.isExternal}
           />
           <Divider/>
         </GridBlock>
