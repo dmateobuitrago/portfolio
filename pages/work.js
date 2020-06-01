@@ -37,9 +37,9 @@ class Work extends React.Component {
 Work.getInitialProps = async function() {
   const res = await fetch("https://simplejsoncms.com/api/tyd6e1i4h5e");
   const data = await res.json();
-  console.log(data);
+  // console.log(data);
 
-  console.log(`Show data fetched. Count: ${data.length}`);
+  // console.log(`Show data fetched. Count: ${data.length}`);
 
   return data;
 };

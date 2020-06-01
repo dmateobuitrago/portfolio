@@ -66,7 +66,6 @@ class ProjectCard extends React.Component {
     }
 
     renderTitle() {
-      console.log(this.props)
         if (this.props.isExternal) {
             return (
                 <a href={URLBROKEN} target="_blank">

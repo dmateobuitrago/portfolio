@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { initGA, logPageView } from "./GoogleAnalytics" 
+import { initGA, logPageView } from "../GoogleAnalytics.js" 
 import styled from "styled-components";
 
 const StyledLayout = styled.div`
