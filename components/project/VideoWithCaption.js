@@ -16,24 +16,30 @@ const Arrow = styled(Typography)`
   }
   @media screen and (min-width: ${props => props.theme.minBreakPoints.medium}) {
     &::before {
-      content: "→";
+      content: "←";
     }
   }
+`;
+
+
+const GridBlockJustifyEnd = styled(GridBlock)`
+  flex-direction: column;
+  justify-content: end;
 `;
 
 class VideoWithCaption extends React.Component {
   render() {
     return (
       <OneBigColumn reverse>
-        <GridBlock col="8" colMedium="2" padding>
+        <GridBlock col="8" colMedium="6" padding>
+          <MyVideo src={imgPath + this.props.video} controls></MyVideo>
+        </GridBlock>
+        <GridBlockJustifyEnd col="8" colMedium="2" padding isGridContainer>
           <Arrow type="body" dark mb="0" />
           <Typography type="small" dark mb="0">
             {this.props.body}
           </Typography>
-        </GridBlock>
-        <GridBlock col="8" colMedium="6" padding>
-          <MyVideo src={imgPath + this.props.video} controls></MyVideo>
-        </GridBlock>
+        </GridBlockJustifyEnd>
       </OneBigColumn>
     );
   }

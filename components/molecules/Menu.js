@@ -81,7 +81,7 @@ class MyMenu extends React.Component {
             dark={!this.props.open}
           >
             <Link href="/about">
-              <a>about →</a>
+              about →
             </Link>
           </MenuItems>
           <MenuItems

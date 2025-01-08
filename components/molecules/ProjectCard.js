@@ -41,8 +41,6 @@ const Placeholder = styled.div`
     opacity: 0.1;
 `;
 
-const URLBROKEN = "https://www.behance.net/gallery/25519569/Broken-Symmetry-(D-AD-New-Blood-2015-Monotype)"
-
 class ProjectCard extends React.Component {
     constructor() {
         super();
@@ -68,14 +66,14 @@ class ProjectCard extends React.Component {
     renderTitle() {
         if (this.props.isExternal) {
             return (
-                <a href={URLBROKEN} target="_blank">
+                <a href={this.props.externalUrl} target="_blank" rel="noopener noreferrer">
                     {this.props.name}
                 </a>
             );
         } else {
             return (
                 <Link href="/[id]" as={`/${this.props.slug}`}>
-                    <a>{this.props.name}</a>
+                    {this.props.name}
                 </Link>
             );
         }
@@ -84,7 +82,7 @@ class ProjectCard extends React.Component {
     renderHero() {
         if (this.props.isExternal) {
           return(
-            <a href={URLBROKEN} target="_blank">
+            <a href={this.props.externalUrl} target="_blank" rel="noopener noreferrer">
                 {this.renderImage(this.props.img)}
             </a>
           )

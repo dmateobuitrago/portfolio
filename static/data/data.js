@@ -1,18 +1,36 @@
 
 export const data = {
   links: [
-    ['instagram ↗', 'https://www.instagram.com/buitragojara'],
+    // ['instagram ↗', 'https://www.instagram.com/buitragojara'],
     ['linkedin ↗', 'https://www.linkedin.com/in/mateobuitrago/'],
-    ['dribble ↗', 'https://dribbble.com/mateobuitrago'],
+    // ['dribble ↗', 'https://dribbble.com/mateobuitrago'],
     ['dmateobuitrago [at] gmail.com', 'mailto:dmateobuitrago@gmail.com'],
   ],
   projects: [
+    {
+      title: "Friction free checkout",
+      id:"7",
+      slug:"travelperk-checkout",
+      isExternal: true,
+      tagline: "Reduced friction for people booking travel on TravelPerk, while enhancing design patterns.",
+      image: "checkout/hero.png",
+      externalUrl:"https://travelperk.design",
+    },
+    {
+      title: "TravelPerk Design Tokens",
+      id:"6",
+      slug:"travelperk-design-tokens",
+      isExternal: true,
+      tagline: "Designed and built the structure to manage design tokens on TravelPerk design system",
+      image: "tokens/hero.png",
+      externalUrl:"https://travelperk.github.io/frontend/?path=/docs/design-tokens-overview--docs",
+    },
     {
       title: "Verse App",
       id: "5",
       slug: "verse-app",
       isExternal: false,
-      tagline: "Currently working as Product Designer. →",
+      tagline: "Worked as Product Designer →",
       tags: "ui design",
       image: "verse/hero.png",
       tldr:
@@ -101,7 +119,7 @@ export const data = {
       id: "1",
       slug: "juan-on-juan",
       isExternal: false,
-      tagline: "I designed a website for an sports magazine. →",
+      tagline: "I designed a website for an sports magazine →",
       tags: "ui design",
       image: "juan/juan_hero.png",
       tldr:

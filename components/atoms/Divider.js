@@ -1,12 +1,17 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Divider = styled.div`
-    height: ${props => props.theme.baseUnit4};
+    height: ${(props) =>
+    props.size === "small"
+      ? props.theme.baseUnit2
+      : props.theme.baseUnit4};
     width:100%;
-    @media screen and (min-width: ${props => props.theme.minBreakPoints.small}){
-        height: ${props => props.theme.baseUnit8}
+    height: ${(props) =>
+        props.size === "small"
+          ? props.theme.baseUnit4
+          : props.theme.baseUnit8};
     }
-`;
+;`
 
 
-export default (props) => <Divider className={props.className}></Divider>
+export default (props) => <Divider size={props.size} className={props.className}></Divider>

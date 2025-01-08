@@ -10,6 +10,7 @@ const GridContainer = styled.div`
     img {
         max-width: 100%;
     }
+    
 `;
 
 
