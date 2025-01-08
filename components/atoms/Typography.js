@@ -22,12 +22,12 @@ const Subtitle = styled(Base)`
 `
 
 const Body = styled(Base)`
-  font-size: ${props => props.theme.font.size.medium}
+  font-size: ${props => props.theme.font.size.medium};
   line-height: 1.5;
 `
   
   const Small = styled(Base)`
-  font-size: ${props => props.theme.font.size.small}
+  font-size: ${props => props.theme.font.size.small};
   line-height: 1.5;
 `
 
