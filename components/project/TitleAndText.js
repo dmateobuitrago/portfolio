@@ -40,11 +40,10 @@ class TitleAndText extends React.Component{
     render(){
         return(
             <OneBigColumn>
-                <GridBlock col="8" colMedium="6" padding>
+                <GridBlock col="8" colMedium="6" pt pr pl>
                     <Typography type="subtitle" dark bold>{this.props.title}</Typography>
                 </GridBlock>
-                <GridBlock col="0" colMedium="2"></GridBlock>
-                <GridBlock col="8" colMedium="6" padding>
+                <GridBlock col="8" colMedium="6" pl pr pb>
                     {this.renderContent(this.props.body)}
                 </GridBlock>
                 <GridBlock col="0" colMedium="2"></GridBlock>

@@ -37,7 +37,7 @@ const Header = ({ isHome }) => {
   const renderNavHeader = () => (
     <OneBigColumn>
       <Typography type="subtitle" bold dark>
-        <Link href="/">← work</Link>
+        <Link href="/">← back</Link>
       </Typography>
     </OneBigColumn>
   );

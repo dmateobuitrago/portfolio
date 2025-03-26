@@ -20,10 +20,93 @@ export const data = {
       title: "TravelPerk Design Tokens",
       id:"6",
       slug:"travelperk-design-tokens",
-      isExternal: true,
-      tagline: "Designed and built the structure to manage design tokens on TravelPerk design system",
+      isExternal: false,
+      tagline: "Designed and built the structure to manage design tokens →",
       image: "tokens/hero.png",
-      externalUrl:"https://travelperk.github.io/frontend/?path=/docs/design-tokens-overview--docs",
+      tldr:"Design tokens store the foundational design decisions, such as colors or text styles, in a single source of truth; so they can be used consistently across platforms (web, Android, iOS, Figma, etc).",
+      summary: {
+        year: "2023",
+        role: "lead designer"
+      },
+      content: [
+        {
+          type: "TitleAndText",
+          title: "Some context",
+          content: [
+            {
+              type: "body",
+              text: "TravelPerk is a business travel software, giving travellers tools to book whatever they need for their trips, from flights to car rentals, while giving the company full control and visibility."
+            },
+          ]
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "My role",
+          content: [
+            {
+              type: "body",
+              text: "During this project, I led the Design System team to build a design token solution so we improve the way we build UI, both from the design and engineering side. So let me walk you through the key improvements we achieve by implementing design tokens"
+            },
+          ]
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Intentional design decisions",
+          content: [
+            {
+              type: "body",
+              text: "Design tokens helped us to have more objective design decisions when building our products. Instead of choosing a color because how it looks, the decision will be based on the intention of the color, so we ensure consistency across features owned by different teams."
+            },
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Before, we'd choose colors based on personal taste from a wide palette. This was a be a good system to begin, but proved to be a door for inconsistencies.",
+          image: "tokens/01.png",
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "With design tokens, colors are narrowed to the UI element they will modify and its intention.",
+          image: "tokens/02.png",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "A real source of truth",
+          content: [
+            {
+              type: "body",
+              text: "Design tokens distribute these decisions across platforms so that we can ensure consistency across touchpoints (e.g. web, mobile, .com) and handle centralised updates."
+            },
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Along with engineers, we implemented a set of workflows centralised from Figma to create/edit/delete design tokens.",
+          image: "tokens/03.png",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Accessible color pairings",
+          content: [
+            {
+              type: "body",
+              text: "Yellow text over white is not great and we knew it. We took this opportunity to audit components and it's color pairings to ensure at least AA contrast ratio compliance."
+            },
+          ]
+        },
+      ]
     },
     {
       title: "Verse App",

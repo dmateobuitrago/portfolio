@@ -5,20 +5,20 @@ const Block = styled.div`
     box-sizing: border-box;
     
     ${props => props.$padding && `
-        padding: ${props.theme.baseUnit};
+        padding: ${props.theme.baseUnit2};
     `}
 
     ${props => props.$pt && `
-        padding-top: ${props.theme.baseUnit};
+        padding-top: ${props.theme.baseUnit2};
     `}
     ${props => props.$pr && `
-        padding-right: ${props.theme.baseUnit};
+        padding-right: ${props.theme.baseUnit2};
     `}
     ${props => props.$pb  && `
-        padding-bottom: ${props.theme.baseUnit};
+        padding-bottom: ${props.theme.baseUnit2};
     `}
     ${props => props.$pl && `
-        padding-left: ${props.theme.baseUnit};
+        padding-left: ${props.theme.baseUnit2};
     `}
     ${props => props.$isGridContainer && `
         display:flex;
