@@ -47,7 +47,6 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="../static/images/assets/favicon/favicon.ico"/>
           <meta name="msapplication-TileColor" content="#053457"/>
           <meta name="theme-color" content="#FFEBDD"/>
-          <title>Mateo Buitrago Jara</title>
           <GlobalStyles />
           {this.props.styleTags}
         </Head>

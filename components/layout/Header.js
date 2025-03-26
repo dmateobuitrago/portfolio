@@ -10,7 +10,7 @@ import OneBigColumn from "./OneBigColumn";
 const Header = ({ isHome }) => {
   const renderLinks = () =>
     data.links.map((item, index) => (
-        <MyLink href={item[1]}>{item[0]}</MyLink>
+        <MyLink key={index} href={item[1]}>{item[0]}</MyLink>
     ));
 
   const renderDescription = () => (

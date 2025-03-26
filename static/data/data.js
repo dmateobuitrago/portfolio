@@ -2,8 +2,8 @@
 export const data = {
   links: [
     // ['instagram ↗', 'https://www.instagram.com/buitragojara'],
+    ['about me', '/about'],
     ['linkedin ↗', 'https://www.linkedin.com/in/mateobuitrago/'],
-    // ['dribble ↗', 'https://dribbble.com/mateobuitrago'],
     ['dmateobuitrago [at] gmail.com', 'mailto:dmateobuitrago@gmail.com'],
   ],
   projects: [
