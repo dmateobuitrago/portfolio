@@ -26,7 +26,8 @@ export const data = {
       tldr:"Design tokens store the foundational design decisions, such as colors or text styles, in a single source of truth; so they can be used consistently across platforms (web, Android, iOS, Figma, etc).",
       summary: {
         year: "2023",
-        role: "lead designer"
+        role: "lead designer",
+        team: "closely collaborated with frontend engineers and other product designers"
       },
       content: [
         {
@@ -48,7 +49,7 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "During this project, I led the Design System team to build a design token solution so we improve the way we build UI, both from the design and engineering side. So let me walk you through the key improvements we achieve by implementing design tokens"
+              text: "During this project, I led the Design System team to build a design token solution to improve the way we build UI, both from the design and engineering side. So let me walk you through the key improvements we achieve by implementing design tokens"
             },
           ]
         },
@@ -67,7 +68,7 @@ export const data = {
         },
         {
           type: "ImageWithCaption",
-          caption: "Before, we'd choose colors based on personal taste from a wide palette. This was a be a good system to begin, but proved to be a door for inconsistencies.",
+          caption: "Before, we'd choose colors based on personal taste from a wide palette. This was a good system to begin, but proved to be a door for inconsistencies as the team grew.",
           image: "tokens/01.png",
         },
         {
@@ -102,9 +103,14 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "Yellow text over white is not great and we knew it. We took this opportunity to audit components and it's color pairings to ensure at least AA contrast ratio compliance."
+              text: "Yellow text on white background? Yeah, not the best... So, we used this opportunity to audit our components and their color pairings to ensure they meet at least AA contrast ratio compliance."
             },
           ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "We had several componets failing on AA contrast ratio, so we made sure Background and Text color tokens were compliant at least with AA contrast ratios.",
+          image: "tokens/04.png",
         },
       ]
     },
