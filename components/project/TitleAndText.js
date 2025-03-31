@@ -40,7 +40,7 @@ class TitleAndText extends React.Component {
                     );
                 case "quote":
                     return (
-                        <QuoteContainer pl pt pb>
+                        <QuoteContainer padding>
                             <Typography key={index} type="subtitle" dark italic>
                                 “{item.text}”
                             </Typography>
