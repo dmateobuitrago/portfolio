@@ -7,7 +7,6 @@ const Base = styled.div`
   font-family: ${(props) => props.theme.font.fontFamily};
   font-weight: ${(props) => (props.$bold ? "700" : "300")};
   text-align: ${(props) => (props.$align ? props.$align : "left")};
-  margin-bottom: ${(props) => (props.$mb ? props.$mb : props.theme.baseUnit)};
 `;
 
 const Huge = styled(Base)`
@@ -16,10 +15,12 @@ const Huge = styled(Base)`
 
 const Title = styled(Base)`
   font-size: ${(props) => props.theme.font.size.xLarge};
+  line-height: 1.2;
 `;
 
 const Subtitle = styled(Base)`
   font-size: ${(props) => props.theme.font.size.large};
+  line-height: 1.5;
 `;
 
 const Body = styled(Base)`

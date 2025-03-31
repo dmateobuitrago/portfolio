@@ -20,6 +20,9 @@ const Block = styled.div`
     ${props => props.$pl && `
         padding-left: ${props.theme.baseUnit2};
     `}
+    ${props => props.$gap && `
+        gap: ${props.theme.baseUnit2};
+    `}
     ${props => props.$isGridContainer && `
         display:flex;
         flex-wrap:wrap;
@@ -62,6 +65,7 @@ class GridBlock extends React.Component {
                     $pr={this.props.pr}
                     $pb={this.props.pb}
                     $pl={this.props.pl}
+                    $gap={this.props.gap}
                     $isGridContainer={this.props.isGridContainer}
                 >
                     {this.props.children}

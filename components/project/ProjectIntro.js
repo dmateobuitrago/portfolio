@@ -9,15 +9,15 @@ import styled from "styled-components";
 const imgPath = "/static/images/";
 
 const Image = styled.img`
-  margin-bottom: ${props => props.theme.baseUnit2};
+  margin-bottom: ${(props) => props.theme.baseUnit2};
 `;
 
 const SummaryContainer = styled(GridContainer)`
   > div:nth-child(odd) {
-    padding-right: ${props => props.theme.baseUnit};
+    padding-right: ${(props) => props.theme.baseUnit};
   }
   > div:nth-child(even) {
-    padding-left: ${props => props.theme.baseUnit};
+    padding-left: ${(props) => props.theme.baseUnit};
   }
 `;
 
@@ -39,25 +39,25 @@ class ProjectIntro extends React.Component {
 
   render() {
     return (
-          <OneBigColumn>
-            <GridBlock col="8">
-              <Typography type="title" dark bold>
-                {this.props.title}
-              </Typography>
-              <Typography type="subtitle" dark>
-                {this.props.tagline}
-              </Typography>
-              <Image src={imgPath + this.props.image} />
-            </GridBlock>
-            <GridContainer>
-              <GridBlock col="8" colSmall="8" colMedium="4" padding>
-                <DataPair name="tl;dr" value={this.props.tldr} />
-              </GridBlock>
-              <GridBlock col="8" colSmall="8" colMedium="4" padding>
-                <SummaryContainer>{this.renderSummary()}</SummaryContainer>
-              </GridBlock>
-            </GridContainer>
-          </OneBigColumn>
+      <OneBigColumn>
+          <GridBlock col="8" padding>
+            <Typography type="title" dark bold>
+              {this.props.title}
+            </Typography>
+            <Typography type="subtitle" dark>
+              {this.props.tagline}
+            </Typography>
+            <Image src={imgPath + this.props.image} />
+          </GridBlock>
+        <GridContainer>
+          <GridBlock col="8" colSmall="8" colMedium="4" padding>
+            <DataPair name="tl;dr" value={this.props.tldr} />
+          </GridBlock>
+          <GridBlock col="8" colSmall="8" colMedium="4" padding>
+            <SummaryContainer>{this.renderSummary()}</SummaryContainer>
+          </GridBlock>
+        </GridContainer>
+      </OneBigColumn>
     );
   }
 }

@@ -11,10 +11,73 @@ export const data = {
       title: "Friction free checkout",
       id:"7",
       slug:"travelperk-checkout",
-      isExternal: true,
-      tagline: "Reduced friction for people booking travel on TravelPerk, while enhancing design patterns.",
+      tagline: "Reduced friction for people booking travel on TravelPerk, while enhancing design patterns. →",
       image: "checkout/hero.png",
-      externalUrl:"https://travelperk.design",
+      isExternal: false,
+      tldr: "We revamped the checkout experience on TravelPerk, in order to reduce friction by improving UX and clarity for people booking business trips, while building scalable design patterns.",
+      summary: {
+        year: "2024-25",
+        role: "product designer",
+        team: "collaborated with PM, engineers and designers across the org"
+      },
+      content: [
+        {
+          type: "TitleAndText",
+          title: "What is TravelPerk?",
+          content: [
+            {
+              type: "body",
+              text: "TravelPerk is an all-in-one business travel platform that empowers employees to easily book every aspect of their trips—from flights and hotels to trains and car rentals—while giving companies full control, visibility, and compliance over travel management."
+            },
+          ]
+        },
+        {
+          type: "TitleAndText",
+          title: "The problem from the user perspective",
+          content: [
+            {
+              type: "body",
+              text: "On TravelPerk we've implemented continuous feedback, using methods such as NPS ans CES (customer effort score), which gave us a lot of insights on what's not working and we were ignoring. The most critical issues under my team's domain were:"
+            },
+            {
+              type: "list",
+              list: [
+                "People thinking the booking was done, when it wasn't",
+                "The process felt too lenghty",
+                "People found it difficult to navigate",
+              ]
+            },
+            {
+              type: "body",
+              text: "We we're getting low scores and comments like:"
+            },
+            {
+              type: "quote",
+              text: "I thought I booked this flight, but only realised a week before the trip it was in drafts"
+            },
+          ]
+        },
+        {
+          type: "TitleAndText",
+          title: "The problem from the design perspective",
+          content: [
+            {
+              type: "body",
+              text: "Yep, the design wasn't great"
+            },
+          ]
+        },
+        {
+          type: "TitleAndText",
+          title: "Heuristic review and research triangulation",
+          content: [
+            {
+              type: "body",
+              text: "Yep, the design wasn't great"
+            },
+          ]
+        },
+      ]
     },
     {
       title: "TravelPerk Design Tokens",
@@ -32,11 +95,11 @@ export const data = {
       content: [
         {
           type: "TitleAndText",
-          title: "Some context",
+          title: "What is TravelPerk?",
           content: [
             {
               type: "body",
-              text: "TravelPerk is a business travel software, giving travellers tools to book whatever they need for their trips, from flights to car rentals, while giving the company full control and visibility."
+              text: "TravelPerk is an all-in-one business travel platform that empowers employees to easily book every aspect of their trips—from flights and hotels to trains and car rentals—while giving companies full control, visibility, and compliance over travel management."
             },
           ]
         },
