@@ -19,7 +19,7 @@ class Project extends React.Component {
   }
 
   renderImageWithCaption(item, index) {
-    return <ImageWithCaption key={index} image={item.image} body={item.caption} />;
+    return <ImageWithCaption key={index} image={item.image} body={item.caption} layout={item.layout} />;
   }
 
   renderVideoWithCaption(item, index) {

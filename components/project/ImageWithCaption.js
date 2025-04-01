@@ -29,13 +29,28 @@ class ImageWithCaption extends React.Component {
       return <Arrow type="body" dark mb="0" />;
     }
   }
+
+  getImageColumn(){
+    if (this.props.layout == "half"){
+      return "4"
+    }
+    return "6"
+  }
+
+  getCaptionColumn(){
+    if (this.props.layout == "half"){
+      return "4"
+    }
+    return "2"
+  }
+
   render() {
     return (
       <OneBigColumn reverse>
-        <GridBlock col="8" colMedium="6" padding>
+        <GridBlock col="8" colMedium={this.getImageColumn()} padding>
           <img src={imgPath + this.props.image} />
         </GridBlock>
-        <GridBlockJustifyEnd col="8" colMedium="2" padding isGridContainer>
+        <GridBlockJustifyEnd col="8" colMedium={this.getCaptionColumn()} padding isGridContainer>
           {this.renderArrow()}
           <Typography type="small" dark mb="0">
             {this.props.body}

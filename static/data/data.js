@@ -173,20 +173,60 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "With the findings in mind and a couple of design critiques, we went to work on a first version to hand it over to our engineers."
+              text: "I defined a set of patterns, that helped me design, take decisions and later help people to contribute to the page."
+            },
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "An improved layout, where the main content and actions are on the main column.",
+          image: "checkout/06.png",
+          layout: "half"
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "An expand and collapse pattern, to surface primary content, while keeping secondary content accessible.",
+          image: "checkout/07.png",
+          layout: "half"
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "A sticky price breakdown, always visible to give piece of mind while booking.",
+          image: "checkout/08.png",
+          layout: "half"
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Consistency across service cards",
+          content: [
+            {
+              type: "body",
+              text: "Working with Flights, Trains, Hotels and Car rentals has the challenge to aim for consistency while keeping the particullarities of each one."
             },
           ]
         },
         {
           type: "ImageGallery",
           images: [
-            "checkout/05.png",
-            "checkout/05.png",
-            "checkout/05.png",
-            "checkout/05.png",
-            "checkout/05.png",
+            "checkout/FlightCard.png",
+            "checkout/TrainCard.png",
+            "checkout/StayCard.png",
+            "checkout/CarCard.png",
           ],
           columns: 4
+        },
+        {
+          type: "ImageGallery",
+          images: [
+            "checkout/FlightCardExpanded.png",
+            "checkout/TrainCardExpanded.png",
+            "checkout/StayCardExpanded.png",
+            "checkout/CarCardExpanded.png",
+          ],
+          columns: 2
         },
         {
           type: "TitleAndText",
