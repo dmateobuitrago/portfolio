@@ -6,6 +6,14 @@ import Link from "next/link";
 import MyLink from "../atoms/MyLink";
 import { data } from "../../static/data/data.js";
 import OneBigColumn from "./OneBigColumn";
+import styled from "styled-components";
+
+const imgPath = "/static/images/";
+
+const LinksBlock = styled(GridBlock)`
+  align-items: flex-end;
+  gap: ${(props) => props.theme.baseUnit2};
+`;
 
 const Header = ({ isHome }) => {
   const renderLinks = () =>
@@ -22,15 +30,16 @@ const Header = ({ isHome }) => {
 
   const renderHomeHeader = () => (
     <OneBigColumn>
-      <GridBlock col="8" colMedium="2" pr>
+      <GridBlock col="8" colLarge="2" pr>
+        <img src={imgPath + 'me/Portrait.png'} width={80} />
         <Typography type="subtitle" bold dark>
           Mateo Buitrago Jara
         </Typography>
         {renderDescription()}
       </GridBlock>
-      <GridBlock col="8" colMedium="6">
+      <LinksBlock col="8" colLarge="6" isGridContainer pt>
         {renderLinks()}
-      </GridBlock>
+      </LinksBlock>
     </OneBigColumn>
   );
 

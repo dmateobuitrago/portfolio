@@ -34,13 +34,13 @@ const Block = styled.div`
             width: ${100*props.$colSmall/props.theme.grid + '%'};
         `}
     }
-    @media screen and (min-width: ${props => props.theme.minBreakPoints.medium}){
+    @media screen and (min-width: ${props => props.theme.minBreakPoints.medium}) {
         ${props => props.$colMedium && `
             width: ${100*props.$colMedium/props.theme.grid + '%'};
         `}
     }
     @media screen and (min-width: ${props => props.theme.minBreakPoints.large}){
-        ${props => props.colLarge && `
+        ${props => props.$colLarge && `
             width: ${100*props.$colLarge/props.theme.grid + '%'};
         `}
     }

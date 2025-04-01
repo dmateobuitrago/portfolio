@@ -4,6 +4,8 @@ import Typography from "../components/atoms/Typography";
 import OneBigColumn from "../components/layout/OneBigColumn";
 import GridBlock from "../components/atoms/GridBlock";
 
+const imgPath = "/static/images/";
+
 function calculateJobExperience(startDate = new Date("2017-01-01")) {
   const now = new Date();
   const diffInMilliseconds = now - startDate;
@@ -17,6 +19,8 @@ function About() {
     <Layout>
       <OneBigColumn>
         <GridBlock col="8" colMedium="6" pt pr pl>
+          <img src={imgPath + 'me/Portrait.png'} width={160} />
+          <Divider size="small"/>
           <Typography type="title" dark bold>
             I'm Mateo
           </Typography>

@@ -98,7 +98,7 @@ class ProjectCard extends React.Component {
     render() {
         return (
             <StyledProjectCard>
-                <GridBlock col="8" colMedium="2" pr>
+                <GridBlock col="8" colMedium="4" colLarge="2" pr>
                     <Typography mb="0" type="body" dark bold>
                         {this.renderTitle()}
                     </Typography>
@@ -106,7 +106,7 @@ class ProjectCard extends React.Component {
                         {this.props.tagline}
                     </Typography>
                 </GridBlock>
-                <GridBlock col="8" colMedium="6">
+                <GridBlock col="8" colMedium="4" colLarge="6">
                     {this.renderHero()}
                 </GridBlock>
             </StyledProjectCard>
