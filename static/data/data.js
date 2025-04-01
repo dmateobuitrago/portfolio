@@ -8,20 +8,254 @@ export const data = {
   ],
   projects: [
     {
-      title: "Friction free checkout",
+      title: "Travelperk : Checkout",
       id:"7",
       slug:"travelperk-checkout",
-      isExternal: true,
       tagline: "Reduced friction for people booking travel on TravelPerk, while enhancing design patterns.",
       image: "checkout/hero.png",
-      externalUrl:"https://travelperk.design",
+      isExternal: false,
+      tldr: "We revamped the checkout experience on TravelPerk, in order to reduce friction by improving UX and clarity for people booking business trips, while building scalable design patterns.",
+      summary: {
+        year: "2024-25",
+        role: "product designer",
+        team: "collaborated with PM, engineers, researchers and designers across the org"
+      },
+      content: [
+        {
+          type: "TitleAndText",
+          title: "What is TravelPerk?",
+          content: [
+            {
+              type: "body",
+              text: "TravelPerk is an all-in-one business travel platform that empowers employees to easily book every aspect of their trips—from flights and hotels to trains and car rentals—while giving companies full control, visibility, and compliance over travel management."
+            },
+          ]
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "The problem from the user perspective",
+          content: [
+            {
+              type: "body",
+              text: "At TravelPerk, we used continuous feedback tools like NPS and CES, but noticed key insights weren’t reaching the right teams. Some of the biggest issues in our area were:"
+            },
+            {
+              type: "list",
+              list: [
+                "Users thinking they’d finished booking when they hadn’t",
+                "The flow feeling too long",
+                "Navigation being confusing",
+              ]
+            },
+            {
+              type: "body",
+              text: "We we're getting low scores and comments like:"
+            },
+            {
+              type: "quote",
+              text: "I thought I was done but it was still under drafts. I had to edit the draft to get to the confirmation page."
+            },
+            {
+              type: "quote",
+              text: "It's never really clear if the booking is finalised or not!"
+            },
+          ]
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "The problem from the design perspective",
+          content: [
+            {
+              type: "body",
+              text: "The booking experience was far from optimal. An design that didn't scale well and several teams working on it, wasn't helping users complete their bookings smoothly. "
+            },
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "A checkout page that worked when TravelPerk started worked well, but with time, new products offerings and a growing team, the page needed a review.",
+          image: "checkout/01.png",
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "The page was handling too many use cases and user types, leading to feature overload and a lack of clear structure.",
+          image: "checkout/02.png",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Heuristic review and reserach triangulation ",
+          content: [
+            {
+              type: "body",
+              text: "We knew checkout wasn’t working great, but needed proof and a way to make it clear to the rest of the team. So we:"
+            },
+            {
+              type: "list",
+              list: [
+                "Ran a heuristic review with designers and PMs",
+                "Cross-checked it with user feedback (NPS, CES, research, Fullstory)",
+                "Summarized and prioritized the key issues"
+              ]
+            }
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "The heuristic review was the opportunity for each designer and PM to raise issues from their domain but weren't able to prioritize.",
+          image: "checkout/03.png",
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "With help from our researcher, we triangulated the findings with customer feedback and grouped the issues. Giving each one a clear name and severity rating helped the message land across the team.",
+          image: "checkout/04.png",
+        },
+        {
+          type: "TitleAndText",
+          title: "Prioritization",
+          content: [
+            {
+              type: "body",
+              text: "From the heuristic review, several initiatives were prioritized, like improving booking speed, or fixing ambigous booking confirmation. But for the sake of this case study, I'll focus on the checkout redesign"
+            }
+          ]
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Early validation with customers",
+          content: [
+            {
+              type: "body",
+              text: "We put together a first version of a revamped checkout page, prioritizing two things:"
+            },
+            {
+              type: "list",
+              list: [
+                "Making it clear that this was the last step to complete the booking",
+                "A layout that helped users to efficiently review and fill any missing information"
+              ]
+            },
+            {
+              type: "body",
+              text: "And with that concept, we run a research study to make sure we were in the right direction. We found that:"
+            },
+            {
+              type: "list",
+              list: [
+                "Users preferred the new checkout concept for its clearer, step-by-step flow and helpful confirmations.",
+                "However, they found parts of the information repetitive."
+              ]
+            },
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "We asked customers to complete a couple of tasks, both on the current checkout and the new concept.",
+          image: "checkout/05.png",
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Design direction and scalable patterns",
+          content: [
+            {
+              type: "body",
+              text: "I defined a set of patterns, that helped me design, take decisions and later help people to contribute to the page."
+            },
+          ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "An improved layout, where the main content and actions are on the main column.",
+          image: "checkout/06.png",
+          layout: "half"
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "An expand and collapse pattern, to surface primary content, while keeping secondary content accessible.",
+          image: "checkout/07.png",
+          layout: "half"
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "A sticky price breakdown, always visible to give piece of mind while booking.",
+          image: "checkout/08.png",
+          layout: "half"
+        },
+        {
+          type: "Divider"
+        },
+        {
+          type: "TitleAndText",
+          title: "Consistency across service cards",
+          content: [
+            {
+              type: "body",
+              text: "Working with Flights, Trains, Hotels and Car rentals has the challenge to aim for consistency while keeping the particullarities of each one."
+            },
+          ]
+        },
+        {
+          type: "ImageGallery",
+          images: [
+            "checkout/FlightCard.png",
+            "checkout/TrainCard.png",
+            "checkout/StayCard.png",
+            "checkout/CarCard.png",
+          ],
+          columns: 4
+        },
+        {
+          type: "ImageGallery",
+          images: [
+            "checkout/FlightCardExpanded.png",
+            "checkout/TrainCardExpanded.png",
+            "checkout/StayCardExpanded.png",
+            "checkout/CarCardExpanded.png",
+          ],
+          columns: 2
+        },
+        {
+          type: "TitleAndText",
+          title: "Continuous release",
+          content: [
+            {
+              type: "body",
+              text: "Yep, the design wasn't great"
+            },
+          ]
+        },
+        {
+          type: "TitleAndText",
+          title: "How we managed to reduce friction",
+          content: [
+            {
+              type: "body",
+              text: "Yep, the design wasn't great"
+            },
+          ]
+        },
+      ]
     },
     {
-      title: "TravelPerk Design Tokens",
+      title: "TravelPerk : Design Tokens",
       id:"6",
       slug:"travelperk-design-tokens",
       isExternal: false,
-      tagline: "Designed and built the structure to manage design tokens →",
+      tagline: "Designed and built the structure to manage design tokens ",
       image: "tokens/hero.png",
       tldr:"Design tokens store the foundational design decisions, such as colors or text styles, in a single source of truth; so they can be used consistently across platforms (web, Android, iOS, Figma, etc).",
       summary: {
@@ -32,11 +266,11 @@ export const data = {
       content: [
         {
           type: "TitleAndText",
-          title: "Some context",
+          title: "What is TravelPerk?",
           content: [
             {
               type: "body",
-              text: "TravelPerk is a business travel software, giving travellers tools to book whatever they need for their trips, from flights to car rentals, while giving the company full control and visibility."
+              text: "TravelPerk is an all-in-one business travel platform that empowers employees to easily book every aspect of their trips—from flights and hotels to trains and car rentals—while giving companies full control, visibility, and compliance over travel management."
             },
           ]
         },
@@ -119,7 +353,7 @@ export const data = {
       id: "5",
       slug: "verse-app",
       isExternal: false,
-      tagline: "Worked as Product Designer →",
+      tagline: "Worked as Product Designer ",
       tags: "ui design",
       image: "verse/hero.png",
       tldr:
@@ -208,7 +442,7 @@ export const data = {
       id: "1",
       slug: "juan-on-juan",
       isExternal: false,
-      tagline: "I designed a website for an sports magazine →",
+      tagline: "I designed a website for an sports magazine ",
       tags: "ui design",
       image: "juan/juan_hero.png",
       tldr:
@@ -395,7 +629,7 @@ export const data = {
       id: "2",
       slug: "print-eat",
       isExternal: false,
-      tagline: "How would we eat in 2080? →",
+      tagline: "How would we eat in 2080? ",
       tags: "speculative design",
       image: "printeat/hero.png",
       tldr:
@@ -603,7 +837,7 @@ export const data = {
       id: "4",
       slug: "tmb-trivia",
       isExternal: false,
-      tagline: "Daily challenges for Barcelona's public transport system →",
+      tagline: "Daily challenges for Barcelona's public transport system ",
       tags: "branding and graphic design",
       image: "tmb/hero.png",
       tldr:
@@ -623,7 +857,7 @@ export const data = {
       slug: "broken-symmetry",
       isExternal: true,
       externalUrl:"https://www.behance.net/gallery/25519569/Broken-Symmetry-(D-AD-New-Blood-2015-Monotype)",
-      tagline: "Wes Anderson retrospective screening →",
+      tagline: "Wes Anderson retrospective screening ",
       tags: "branding and graphic design",
       image: "broken/hero.png",
       tldr:
