@@ -7,6 +7,7 @@ import BigImage from "../components/project/BigImage";
 import ImageWithCaption from "../components/project/ImageWithCaption";
 import VideoWithCaption from "../components/project/VideoWithCaption";
 import Divider from "../components/atoms/Divider";
+import ImageGallery from "../components/project/ImageGallery";
 
 class Project extends React.Component {
   constructor() {
@@ -29,6 +30,10 @@ class Project extends React.Component {
     return <BigImage key={index} image={item.image} />;
   }
 
+  renderImageGallery(item, index) {
+    return <ImageGallery key={index} images={item.images} columns={item.columns} />;
+  }
+
   renderContent(content) {
     if(!content){
       return "";
@@ -49,6 +54,9 @@ class Project extends React.Component {
           break;
         case "BigImage":
           renderElement.push( this.renderBigImage(item, index));
+          break;
+        case "ImageGallery":
+          renderElement.push( this.renderImageGallery(item, index));
           break;
         case "Divider":
           renderElement.push(<Divider/>);

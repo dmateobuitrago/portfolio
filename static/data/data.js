@@ -8,7 +8,7 @@ export const data = {
   ],
   projects: [
     {
-      title: "Friction free checkout",
+      title: "Travelperk : Checkout",
       id:"7",
       slug:"travelperk-checkout",
       tagline: "Reduced friction for people booking travel on TravelPerk, while enhancing design patterns.",
@@ -30,6 +30,9 @@ export const data = {
               text: "TravelPerk is an all-in-one business travel platform that empowers employees to easily book every aspect of their trips—from flights and hotels to trains and car rentals—while giving companies full control, visibility, and compliance over travel management."
             },
           ]
+        },
+        {
+          type: "Divider"
         },
         {
           type: "TitleAndText",
@@ -62,6 +65,9 @@ export const data = {
           ]
         },
         {
+          type: "Divider"
+        },
+        {
           type: "TitleAndText",
           title: "The problem from the design perspective",
           content: [
@@ -78,7 +84,7 @@ export const data = {
         },
         {
           type: "ImageWithCaption",
-          caption: "The page was also handling toooooo many things. Different jobs to be done, different user types with different needs where using the same template, which forced teams to add features on top of it, without a clear direction.",
+          caption: "The page was handling too many use cases and user types, leading to feature overload and a lack of clear structure.",
           image: "checkout/02.png",
         },
         {
@@ -123,17 +129,43 @@ export const data = {
           ]
         },
         {
-          type: "divider"
+          type: "Divider"
         },
         {
           type: "TitleAndText",
-          title: "Testing the first concept with customers",
+          title: "Early validation with customers",
           content: [
             {
               type: "body",
-              text: "Yep, the design wasn't great"
+              text: "We put together a first version of a revamped checkout page, prioritizing two things:"
+            },
+            {
+              type: "list",
+              list: [
+                "Making it clear that this was the last step to complete the booking",
+                "A layout that helped users to efficiently review and fill any missing information"
+              ]
+            },
+            {
+              type: "body",
+              text: "And with that concept, we run a research study to make sure we were in the right direction. We found that:"
+            },
+            {
+              type: "list",
+              list: [
+                "Users preferred the new checkout concept for its clearer, step-by-step flow and helpful confirmations.",
+                "However, they found parts of the information repetitive."
+              ]
             },
           ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "We asked customers to complete a couple of tasks, both on the current checkout and the new concept.",
+          image: "checkout/05.png",
+        },
+        {
+          type: "Divider"
         },
         {
           type: "TitleAndText",
@@ -141,19 +173,20 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "Yep, the design wasn't great"
+              text: "With the findings in mind and a couple of design critiques, we went to work on a first version to hand it over to our engineers."
             },
           ]
         },
         {
-          type: "TitleAndText",
-          title: "Devil is on the details",
-          content: [
-            {
-              type: "body",
-              text: "Yep, the design wasn't great"
-            },
-          ]
+          type: "ImageGallery",
+          images: [
+            "checkout/05.png",
+            "checkout/05.png",
+            "checkout/05.png",
+            "checkout/05.png",
+            "checkout/05.png",
+          ],
+          columns: 4
         },
         {
           type: "TitleAndText",
@@ -178,7 +211,7 @@ export const data = {
       ]
     },
     {
-      title: "TravelPerk Design Tokens",
+      title: "TravelPerk : Design Tokens",
       id:"6",
       slug:"travelperk-design-tokens",
       isExternal: false,
