@@ -15,19 +15,35 @@ const ImageGallery = ({ images, columns }) => {
   const numberOfColumns = grid / columns;
 
   const renderedImages = images.map((image, index) => {
+    
     const colIndex = index % numberOfColumns;
-
-    const isFirstColumn = colIndex === 0;
-    const isLastColumn = colIndex === columns - 1;
+    let hasRightPadding = false;
+    let hasLeftPadding = false;
+    
+    console.log(image + " " + colIndex);
+    if (colIndex === 0) {
+      // First column
+      hasRightPadding = true;
+      hasLeftPadding = false;
+    } else if (colIndex === (numberOfColumns - 1)) {
+      // Last column
+      hasRightPadding = false;
+      hasLeftPadding = true;
+    } else {
+      // Middle columns
+      hasRightPadding = true;
+      hasLeftPadding = true;
+    }
 
     return (
       <GridBlock
         key={index}
         col="8"
         colMedium={columns}
-        pl={!isFirstColumn}
-        pr={!isLastColumn}
+        pl={hasLeftPadding}
+        pr={hasRightPadding}
         pb
+        pt
       >
         <MyImg src={imgPath + image} />
       </GridBlock>

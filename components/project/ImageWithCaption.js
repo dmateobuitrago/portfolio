@@ -7,7 +7,7 @@ import styled from "styled-components";
 const imgPath = "/static/images/";
 
 const Arrow = styled(Typography)`
-  ::before {
+  &::before {
     content: "↑";
   }
   @media screen and (min-width: ${(props) =>
@@ -18,9 +18,13 @@ const Arrow = styled(Typography)`
   }
 `;
 
-const GridBlockJustifyEnd = styled(GridBlock)`
+const CaptionContainer = styled(GridBlock)`
   flex-direction: column;
   justify-content: end;
+  padding-top: ${(props) => props.theme.baseUnit2};
+  @media screen and (min-width : ${props => props.theme.minBreakPoints.medium}){
+    padding-inline: ${(props) => props.theme.baseUnit2};
+  }
 `;
 
 class ImageWithCaption extends React.Component {
@@ -46,16 +50,16 @@ class ImageWithCaption extends React.Component {
 
   render() {
     return (
-      <OneBigColumn reverse>
+      <OneBigColumn>
         <GridBlock col="8" colMedium={this.getImageColumn()}>
           <img src={imgPath + this.props.image} />
         </GridBlock>
-        <GridBlockJustifyEnd col="8" colMedium={this.getCaptionColumn()} padding isGridContainer>
+        <CaptionContainer col="8" colMedium={this.getCaptionColumn()} isGridContainer>
           {this.renderArrow()}
           <Typography type="small" dark mb="0">
             {this.props.body}
           </Typography>
-        </GridBlockJustifyEnd>
+        </CaptionContainer>
       </OneBigColumn>
     );
   }
