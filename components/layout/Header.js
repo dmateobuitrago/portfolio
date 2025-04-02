@@ -33,7 +33,7 @@ const Header = ({ isHome }) => {
       <GridBlock col="8" colLarge="2" pr>
         <img src={imgPath + 'me/Portrait.png'} width={80} />
         <Typography type="subtitle" bold dark>
-          Mateo Buitrago Jara
+          Mateo<br/>Buitrago<br/>Jara
         </Typography>
         {renderDescription()}
       </GridBlock>

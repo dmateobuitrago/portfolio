@@ -9,18 +9,16 @@ const ReverseGridContainter = styled(GridContainer)`
   }
 `;
 
-const BigColum = styled(GridContainer)`
+const BigColumn = styled(GridContainer)`
   max-width: ${props => props.theme.maxBreakPoints.xLarge};
-  @media screen and (max-width: ${props => props.theme.maxBreakPoints.small}){
-    padding: ${props => props.theme.baseUnit};
-  }
-  @media screen and (max-width: ${props => props.theme.maxBreakPoints.medium}){
+  padding: ${props => props.theme.baseUnit2};
+  @media screen and (min-width: ${props => props.theme.minBreakPoints.medium}){
     padding: ${props => props.theme.baseUnit2};
   }
-  @media screen and (max-width: ${props => props.theme.maxBreakPoints.large}){
+  @media screen and (min-width: ${props => props.theme.minBreakPoints.large}){
     padding: ${props => props.theme.baseUnit4};
   }
-  @media screen and (max-width: ${props => props.theme.maxBreakPoints.xLarge}){
+  @media screen and (min-width: ${props => props.theme.minBreakPoints.xLarge}){
     padding: ${props => props.theme.baseUnit4};
   }
   margin: 0 auto;
@@ -32,20 +30,16 @@ class OneBigColumn extends React.Component {
     if(this.props.reverse){
       content=<ReverseGridContainter>{this.props.children}</ReverseGridContainter>
     } else {
-      content=<GridContainer>{this.props.children}</GridContainer>
+      content=<GridContainer gap={this.props.gap}>{this.props.children}</GridContainer>
     }
 
     return content;
   }
   render() {
     return (
-      <BigColum>
-        <GridBlock col="0" />
-        <GridBlock col="8">
+      <BigColumn>
           {this.renderContent()}
-        </GridBlock>
-        <GridBlock col="0"/>
-      </BigColum>
+      </BigColumn>
     );
   }
 }

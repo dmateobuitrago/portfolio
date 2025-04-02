@@ -41,7 +41,7 @@ class TitleAndText extends React.Component {
                 case "quote":
                     return (
                         <QuoteContainer padding>
-                            <Typography key={index} type="subtitle" dark italic>
+                            <Typography key={index} type="subtitle" dark>
                                 “{item.text}”
                             </Typography>
                         </QuoteContainer>
@@ -55,12 +55,12 @@ class TitleAndText extends React.Component {
     render() {
         return (
             <OneBigColumn>
-                <GridBlock col="8" colMedium="6" pt pr pl>
+                <GridBlock col="8" colMedium="6" pb>
                     <Typography type="subtitle" dark bold>
                         {this.props.title}
                     </Typography>
                 </GridBlock>
-                <GridBlock isGridContainer col="8" colMedium="6" pl pr pb gap>
+                <GridBlock isGridContainer col="8" colMedium="6" gap>
                     {this.renderContent(this.props.body)}
                 </GridBlock>
                 <GridBlock col="0" colMedium="2"></GridBlock>

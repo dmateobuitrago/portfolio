@@ -1,14 +1,13 @@
 
 export const data = {
   links: [
-    // ['instagram ↗', 'https://www.instagram.com/buitragojara'],
     ['about me', '/about'],
     ['linkedin ↗', 'https://www.linkedin.com/in/mateobuitrago/'],
     ['dmateobuitrago [at] gmail.com', 'mailto:dmateobuitrago@gmail.com'],
   ],
   projects: [
     {
-      title: "Travelperk : Checkout",
+      title: "TravelPerk : Checkout",
       id:"7",
       slug:"travelperk-checkout",
       tagline: "Reduced friction for people booking travel on TravelPerk, while enhancing design patterns.",
@@ -173,20 +172,20 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "I defined a set of patterns, that helped me design, take decisions and later help people to contribute to the page."
+              text: "I defined a set of patterns, that helped me design, take decisions and later help designers to contribute to the page."
             },
           ]
         },
         {
           type: "ImageWithCaption",
-          caption: "An improved layout, where the main content and actions are on the main column.",
+          caption: "An improved layout, that helped users focus on the main content and actions.",
           image: "checkout/06.png",
           layout: "half"
         },
         {
           type: "ImageWithCaption",
           caption: "An expand and collapse pattern, to surface primary content, while keeping secondary content accessible.",
-          image: "checkout/07.png",
+          image: "checkout/07.gif",
           layout: "half"
         },
         {
@@ -204,7 +203,7 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "Working with Flights, Trains, Hotels and Car rentals has the challenge to aim for consistency while keeping the particullarities of each one."
+              text: "Working with Flights, Trains, Hotels and Car rentals has the challenge to aim for consistency while keeping the particullarities of each one. Users wanted to have a clear overview of the service they were booking."
             },
           ]
         },
@@ -229,14 +228,38 @@ export const data = {
           columns: 2
         },
         {
+          type: "Divider"
+        },
+        {
           type: "TitleAndText",
-          title: "Continuous release",
+          title: "Reviewing and completing traveller info",
           content: [
             {
               type: "body",
-              text: "Yep, the design wasn't great"
+              text: "Booking travel requires some extra information, such a date of birth or a traveler document. It really depends. The redesigned checkout helped user to clearly review which information were they using to book, edit or add it in case it was missing."
             },
           ]
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Clearly prompting the users to add the required information was important to avoid frustration later when trying to finish the booking.",
+          image: "checkout/travellerDetails01.png",
+          layout: "half"
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "Once the information was added, it was clearly shown and labeled.",
+          image: "checkout/travellerDetails02.png",
+          layout: "half"
+        },
+        {
+          type: "ImageWithCaption",
+          caption: "The component also handled different type of personal information or limited access for other users.",
+          image: "checkout/travellerDetails03.png",
+          layout: "half"
+        },
+        {
+          type: "Divider"
         },
         {
           type: "TitleAndText",

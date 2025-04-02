@@ -7,11 +7,16 @@ const GridContainer = styled.div`
         flex-direction: column-reverse;
     `}
 
+     ${props => props.gap && `
+        gap: ${props.theme.baseUnit2};
+    `}
+
     img {
         max-width: 100%;
     }
     
+    
 `;
 
 
-export default (props) => <GridContainer className={props.className} reverse={props.reverse}>{props.children}</GridContainer>
+export default (props) => <GridContainer className={props.className} reverse={props.reverse} gap={props.gap}>{props.children}</GridContainer>

@@ -1,7 +1,7 @@
 export const tema = {
-    primary: '#053457',
-    secondary: '#FFEBDD',
-    background1: '#05345713',
+    primary: '#100F0F',
+    secondary: '#FFFCF0',
+    background1: '#F2F0E5',
     grid: 8,
     baseUnitHalf: '5px',
     baseUnit: '10px',
@@ -12,10 +12,10 @@ export const tema = {
     font:{
         fontFamily: "'Quador', Georgia, Times New Roman, serif",
         size:{
-            small: '16px',
+            small: '15px',
             medium: '20px',
-            large: '24px',
-            xLarge: '32px',
+            large: '30px',
+            xLarge: '40px',
             xxLarge: '60px',
         }
     },

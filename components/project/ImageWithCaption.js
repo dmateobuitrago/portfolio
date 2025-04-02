@@ -47,7 +47,7 @@ class ImageWithCaption extends React.Component {
   render() {
     return (
       <OneBigColumn reverse>
-        <GridBlock col="8" colMedium={this.getImageColumn()} padding>
+        <GridBlock col="8" colMedium={this.getImageColumn()}>
           <img src={imgPath + this.props.image} />
         </GridBlock>
         <GridBlockJustifyEnd col="8" colMedium={this.getCaptionColumn()} padding isGridContainer>

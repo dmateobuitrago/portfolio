@@ -40,20 +40,22 @@ class ProjectIntro extends React.Component {
   render() {
     return (
       <OneBigColumn>
-          <GridBlock col="8" padding>
-            <Typography type="title" dark bold>
+        <GridBlock col="8" gap isGridContainer>
+          <GridBlock col="8">
+            <Typography type="huge" dark bold>
               {this.props.title}
             </Typography>
-            <Typography type="subtitle" dark>
+            <Typography type="title" dark>
               {this.props.tagline}
             </Typography>
-            <Image src={imgPath + this.props.image} />
           </GridBlock>
+          <Image src={imgPath + this.props.image} />
+        </GridBlock>
         <GridContainer>
-          <GridBlock col="8" colSmall="8" colMedium="4" padding>
+          <GridBlock col="8" colSmall="8" colMedium="4">
             <DataPair name="tl;dr" value={this.props.tldr} />
           </GridBlock>
-          <GridBlock col="8" colSmall="8" colMedium="4" padding>
+          <GridBlock col="8" colSmall="8" colMedium="4">
             <SummaryContainer>{this.renderSummary()}</SummaryContainer>
           </GridBlock>
         </GridContainer>

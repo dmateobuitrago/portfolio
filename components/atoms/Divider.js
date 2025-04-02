@@ -4,8 +4,8 @@ const Divider = styled.div`
     width:100%;
     height: ${(props) =>
         props.size === "small"
-          ? props.theme.baseUnit4
-          : props.theme.baseUnit8};
+          ? props.theme.baseUnit2
+          : props.theme.baseUnit4};
     }
 ;`
 

@@ -10,17 +10,28 @@ const Base = styled.div`
 `;
 
 const Huge = styled(Base)`
-  font-size: ${(props) => props.theme.font.size.xxLarge};
+  font-size: ${(props) => props.theme.font.size.xLarge};
+  line-height: 1.1;
+  @media screen and (min-width: ${props => props.theme.minBreakPoints.large}){
+    font-size: ${(props) => props.theme.font.size.xxLarge};
+  }
 `;
 
 const Title = styled(Base)`
-  font-size: ${(props) => props.theme.font.size.xLarge};
-  line-height: 1.2;
+  font-size: ${(props) => props.theme.font.size.large};
+  line-height: 1.1;
+  @media screen and (min-width: ${props => props.theme.minBreakPoints.large}){
+    font-size: ${(props) => props.theme.font.size.xLarge};
+    line-height: 1.2;
+  }
 `;
 
 const Subtitle = styled(Base)`
-  font-size: ${(props) => props.theme.font.size.large};
-  line-height: 1.5;
+  font-size: ${(props) => props.theme.font.size.medium};
+  line-height: 1.1;
+  @media screen and (min-width: ${props => props.theme.minBreakPoints.large}){
+    font-size: ${(props) => props.theme.font.size.large};
+  }
 `;
 
 const Body = styled(Base)`
