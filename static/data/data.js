@@ -236,7 +236,7 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "Booking travel requires some extra information, such a date of birth or a traveler document. It really depends. The redesigned checkout helped user to clearly review which information were they using to book, edit or add it in case it was missing."
+              text: "Booking travel requires some extra information, such a date of birth or a traveler document. It really depends. The redesigned checkout helped users to clearly review which information were they using to book, edit or add it in case it was missing."
             },
           ]
         },
@@ -263,13 +263,22 @@ export const data = {
         },
         {
           type: "TitleAndText",
-          title: "How we managed to reduce friction",
+          title: "Responsive and mobile experience",
           content: [
             {
               type: "body",
-              text: "Yep, the design wasn't great"
+              text: "Although the main traffic from TravelPerk users came from desktop, we needed to make sure that the experience in a phone was optimal, mainly because our native app was transitioning to use more webviews, rather than native implementations."
             },
           ]
+        },
+        {
+          type: "ImageGallery",
+          images: [
+            "checkout/mobileCheckout01.png",
+            "checkout/mobileCheckout02.png",
+            "checkout/mobileCheckout03.png",
+          ],
+          columns: 2
         },
       ]
     },

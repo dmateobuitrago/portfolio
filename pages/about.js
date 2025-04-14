@@ -6,7 +6,7 @@ import GridBlock from "../components/atoms/GridBlock";
 
 const imgPath = "/static/images/";
 
-function calculateJobExperience(startDate = new Date("2017-01-01")) {
+function calculateJobExperience(startDate = new Date("2016-07-01")) {
   const now = new Date();
   const diffInMilliseconds = now - startDate;
   const diffInYears = diffInMilliseconds / (1000 * 60 * 60 * 24 * 365.25);
@@ -25,7 +25,7 @@ function About() {
             I'm Mateo
           </Typography>
           <Typography type="body" dark>
-            I've been working {calculateJobExperience()} years as a Product
+            I've been working {calculateJobExperience()} years in digital experiences, and about {calculateJobExperience(new Date("2018-07-01"))} as a Product
             Designer. My biggest experiences have been in the Business Travel
             Industry, with TravelPerk, and a Spanish peer-to-peer payment app
             called Verse.
@@ -44,14 +44,14 @@ function About() {
             I like Product Design
           </Typography>
           <Typography type="body" dark>
-            I really value knowing that my work is making an impact, that someone is using whatever I designed, that I'm maybe helping someone fill a form faster. Also is good to know you're making a company do better, but to be honest that's the least favorites of my reasons to be a Product Designer.
+            I really value knowing that my work is making an impact, that someone is using whatever I designed, that I'm maybe helping someone fill a form faster. Also is good to know you're work is actually helping a company grow.
           </Typography>
           <Divider />
           <Typography type="Subtitle" dark bold>
             I like UI
           </Typography>
           <Typography type="body" dark>
-            I come from a graphic design background, so I do my best to create visually appealing products. Also, I'm kind of a frustrated developer, so I like to mess a bit with code and help engineers to move paddings here and there. I coded this porftolio that you're reading.
+            I come from a Graphic Design background, so I do my best to create visually appealing products. Also, I'm kind of a frustrated developer, so I like to mess a bit with code and help engineers to move paddings here and there. I coded this porftolio that you're reading.
           </Typography>
           <Divider />
           <Typography type="Subtitle" dark bold>
