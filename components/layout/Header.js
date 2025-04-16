@@ -7,6 +7,7 @@ import MyLink from "../atoms/MyLink";
 import { data } from "../../static/data/data.js";
 import OneBigColumn from "./OneBigColumn";
 import styled from "styled-components";
+import GridContainer from "../atoms/GridContainer.js";
 
 const imgPath = "/static/images/";
 
@@ -16,13 +17,21 @@ const LinksBlock = styled(GridBlock)`
 `;
 
 const Header = ({ isHome }) => {
-  const renderLinks = () =>
-    data.links.map((item, index) => (
-        <MyLink key={index} href={item[1]}>{item[0]}</MyLink>
-    ));
+  const renderLinks = () => {
+    return (
+      <LinksBlock isGridContainer pt pb>
+        {data.links.map((item, index) => (
+          <MyLink key={index} href={item[1]}>
+            {item[0]}
+          </MyLink>
+        ))}
+      </LinksBlock>
+    );
+  };
+  
 
   const renderDescription = () => (
-    <Typography type="body" dark>
+    <Typography type="subtitle" dark>
       I’m a Senior Product Designer living in Barcelona. Currently working at
       TravelPerk.
     </Typography>
@@ -30,16 +39,14 @@ const Header = ({ isHome }) => {
 
   const renderHomeHeader = () => (
     <OneBigColumn>
-      <GridBlock col="8" colLarge="2" pr>
+      <GridContainer flexDirection="column">
         <img src={imgPath + 'me/Portrait.png'} width={80} />
-        <Typography type="subtitle" bold dark>
-          Mateo<br/>Buitrago<br/>Jara
+        <Typography type="title" bold dark>
+          Mateo Buitrago Jara
         </Typography>
         {renderDescription()}
-      </GridBlock>
-      <LinksBlock col="8" colLarge="6" isGridContainer pt>
         {renderLinks()}
-      </LinksBlock>
+      </GridContainer>
     </OneBigColumn>
   );
 

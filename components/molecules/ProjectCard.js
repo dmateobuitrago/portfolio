@@ -6,32 +6,40 @@ import GridContainer from "../atoms/GridContainer";
 import GridBlock from "../atoms/GridBlock";
 
 const StyledProjectCard = styled(GridContainer)`
-    @media screen and (max-width: ${(props) =>
-            props.theme.maxBreakPoints.medium}) {
+    @media screen and (max-width: ${(props) => props.theme.maxBreakPoints.medium}) {
         margin: ${(props) => props.theme.baseUnit4} auto !important;
     }
-    opacity: 0;
+
     ${(props) =>
         !props.show &&
         `
         opacity: 1;
-        top:0;
+        top: 0;
         transition: opacity 0.3s ease-in 1s;
     `}
 
     a {
+        display: block;
         color: inherit;
         text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
     }
 
     img,
     a {
         cursor: pointer;
     }
-`;
-
-const MyImg = styled.img`
-    max-width: 100%;
+        
+    &:hover {
+        background: white;
+        padding: ${(props) => props.theme.baseUnit2};
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+        transition: all 0.3s ease;
+        border-radius: 10px;
+    }
 `;
 
 const Placeholder = styled.div`
@@ -52,65 +60,46 @@ class ProjectCard extends React.Component {
     }
 
     renderImage(image) {
-        let imageElement;
-
-        if (this.state.isLoading) {
-            imageElement = <Placeholder />;
-        } else {
-            imageElement = <MyImg src={image} />;
-        }
-
-        return imageElement;
+        return this.state.isLoading ? <Placeholder /> : <img src={image} />;
     }
 
-    renderTitle() {
-        if (this.props.isExternal) {
+    renderCardContent() {
+        const { name, tagline, img } = this.props;
+
+        return (
+            <>
+                <GridBlock col="8" colMedium="4" colLarge="2" pr pb>
+                    <Typography mb="0" type="body" dark bold>
+                        {name}
+                    </Typography>
+                    <Typography type="body" dark>
+                        {tagline}
+                    </Typography>
+                </GridBlock>
+                <GridBlock col="8" colMedium="4" colLarge="6">
+                    {this.renderImage(img)}
+                </GridBlock>
+            </>
+        );
+    }
+
+    render() {
+        const { isExternal, externalUrl, slug } = this.props;
+        const content = <StyledProjectCard>{this.renderCardContent()}</StyledProjectCard>;
+
+        if (isExternal) {
             return (
-                <a href={this.props.externalUrl} target="_blank" rel="noopener noreferrer">
-                    {this.props.name}
+                <a href={externalUrl} target="_blank" rel="noopener noreferrer">
+                    {content}
                 </a>
             );
         } else {
             return (
-                <Link href="/[id]" as={`/${this.props.slug}`}>
-                    {this.props.name}
+                <Link href="/[id]" as={`/${slug}`} passHref legacyBehavior>
+                    <a>{content}</a>
                 </Link>
             );
         }
-    }
-
-    renderHero() {
-        if (this.props.isExternal) {
-          return(
-            <a href={this.props.externalUrl} target="_blank" rel="noopener noreferrer">
-                {this.renderImage(this.props.img)}
-            </a>
-          )
-        } else {
-          return(
-            <Link href="/[id]" as={`/${this.props.slug}`}>
-                {this.renderImage(this.props.img)}
-            </Link>
-          )
-        }
-    }
-
-    render() {
-        return (
-            <StyledProjectCard>
-                <GridBlock col="8" colMedium="4" colLarge="2" pr>
-                    <Typography mb="0" type="body" dark bold>
-                        {this.renderTitle()}
-                    </Typography>
-                    <Typography type="body" dark>
-                        {this.props.tagline}
-                    </Typography>
-                </GridBlock>
-                <GridBlock col="8" colMedium="4" colLarge="6">
-                    {this.renderHero()}
-                </GridBlock>
-            </StyledProjectCard>
-        );
     }
 }
 

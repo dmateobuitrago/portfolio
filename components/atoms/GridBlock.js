@@ -27,8 +27,11 @@ const Block = styled.div`
         display:flex;
         flex-wrap:wrap;
     `}
+
+    ${props => props.col && `
+        width: ${props => 100*props.$col/props.theme.grid}%;
+    `}
     
-    width: ${props => 100*props.$col/props.theme.grid}%;
     @media screen and (min-width: ${props => props.theme.minBreakPoints.small}){
         ${props => props.$colSmall && `
             width: ${100*props.$colSmall/props.theme.grid + '%'};

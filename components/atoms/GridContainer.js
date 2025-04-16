@@ -3,8 +3,8 @@ import styled from 'styled-components';
 const GridContainer = styled.div`
     display:flex;
     flex-wrap:wrap;
-    ${props => props.reverse && `
-        flex-direction: column-reverse;
+    ${props => props.flexDirection && `
+        flex-direction: ${props.flexDirection};
     `}
 
      ${props => props.gap && `
@@ -19,4 +19,4 @@ const GridContainer = styled.div`
 `;
 
 
-export default (props) => <GridContainer className={props.className} reverse={props.reverse} gap={props.gap}>{props.children}</GridContainer>
+export default (props) => <GridContainer className={props.className} flexDirection={props.flexDirection} gap={props.gap}>{props.children}</GridContainer>
