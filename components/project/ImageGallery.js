@@ -16,32 +16,15 @@ const ImageGallery = ({ images, columns }) => {
 
   const renderedImages = images.map((image, index) => {
     
-    const colIndex = index % numberOfColumns;
-    let hasRightPadding = false;
-    let hasLeftPadding = false;
-    
-    console.log(image + " " + colIndex);
-    if (colIndex === 0) {
-      // First column
-      hasRightPadding = true;
-      hasLeftPadding = false;
-    } else if (colIndex === (numberOfColumns - 1)) {
-      // Last column
-      hasRightPadding = false;
-      hasLeftPadding = true;
-    } else {
-      // Middle columns
-      hasRightPadding = true;
-      hasLeftPadding = true;
-    }
+    // To-do: Refactor this, cause it is adding paddings to all images, so it creates margin on the sides of the whole gallery and it doesn't show up aligned to the rest of the content. E.g. first and last image of the row has left and right margins
 
     return (
       <GridBlock
         key={index}
         col="8"
         colMedium={columns}
-        pl={hasLeftPadding}
-        pr={hasRightPadding}
+        pl
+        pr
         pb
         pt
       >

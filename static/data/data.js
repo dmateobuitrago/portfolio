@@ -280,6 +280,37 @@ export const data = {
           ],
           columns: 2
         },
+        {
+          type: "Divider",
+        },
+        {
+          type: "TitleAndText",
+          title: "Making it happen",
+          content: [
+            {
+              type: "body",
+              text: "We made sure to release value to costumers as fast as possible, splitting the release into milestone depending on the complexity of the requirements and the volume of bookings. So for example, we started with bookings with one service, while leaving for later bookings with multiple services (e.g. a flight and a hotel)."
+            },
+          ]
+        },
+        {
+          type: "VideoWithCaption",
+          caption: "Example of a live version of the checkout experience.",
+          video: "checkout/demo1.mov",
+        },
+        {
+          type: "Divider",
+        },
+        {
+          type: "TitleAndText",
+          title: "Impact",
+          content: [
+            {
+              type: "body",
+              text: "As of today, the redesign of the checkout page has proven that a) is more efficient, reducing the time on task for bookers and b) has less friction, reducing the amount of unexpected warnings (e.g. travel document missing) when attempting to book."
+            },
+          ]
+        },
       ]
     },
     {
