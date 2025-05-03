@@ -1,106 +1,87 @@
-import React from "react";
-import Link from "next/link";
+import React, { useState, useEffect } from "react";
 import Typography from "../../components/atoms/Typography";
 import styled from "styled-components";
-import GridContainer from "../atoms/GridContainer";
 import GridBlock from "../atoms/GridBlock";
+import Divider from "../atoms/Divider";
 
-const StyledProjectCard = styled(GridContainer)`
-    @media screen and (max-width: ${(props) => props.theme.maxBreakPoints.medium}) {
-        margin: ${(props) => props.theme.baseUnit4} auto !important;
-    }
+const StyledProjectCard = styled(GridBlock)`
+  a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
 
+  img {
+    max-width: 100%;
+  }
+
+  img,
+  a {
+    cursor: pointer;
+  }
+
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+  @media screen and (min-width: ${(props) =>
+      props.theme.minBreakPoints.medium}) {
     ${(props) =>
-        !props.show &&
-        `
-        opacity: 1;
-        top: 0;
-        transition: opacity 0.3s ease-in 1s;
-    `}
-
-    a {
-        display: block;
-        color: inherit;
-        text-decoration: none;
-    }
-
-    img {
-        max-width: 100%;
-    }
-
-    img,
-    a {
-        cursor: pointer;
-    }
-        
-    &:hover {
-        background: white;
-        padding: ${(props) => props.theme.baseUnit2};
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-        transition: all 0.3s ease;
-        border-radius: 10px;
-    }
+      props.theme.baseUnit &&
+      `
+            width: calc(50% - ${props.theme.baseUnit});
+        `}
+  }
 `;
 
 const Placeholder = styled.div`
-    height: 300px;
-    width: auto;
-    background: black;
-    opacity: 0.1;
+  height: 300px;
+  width: auto;
+  background: black;
+  opacity: 0.05;
 `;
 
-class ProjectCard extends React.Component {
-    constructor() {
-        super();
-        this.state = { isLoading: true };
-    }
+const ProjectCard = ({ name, tagline, img, isExternal, externalUrl, slug }) => {
+  const [isLoading, setIsLoading] = useState(true);
 
-    componentDidMount() {
-        this.setState({ isLoading: false });
-    }
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
 
-    renderImage(image) {
-        return this.state.isLoading ? <Placeholder /> : <img src={image} />;
-    }
+  const renderImage = () => {
+    return isLoading ? <Placeholder /> : <img src={img} alt={name} />;
+  };
 
-    renderCardContent() {
-        const { name, tagline, img } = this.props;
+  const content = (
+    <GridBlock col="8" padding>
+      <Typography mb="0" type="body" dark bold>
+        {name}
+      </Typography>
+      <Typography type="body" dark>
+        {tagline}
+      </Typography>
+      <Divider />
+      {renderImage()}
+    </GridBlock>
+  );
 
-        return (
-            <>
-                <GridBlock col="8" colMedium="4" colLarge="2" pr pb>
-                    <Typography mb="0" type="body" dark bold>
-                        {name}
-                    </Typography>
-                    <Typography type="body" dark>
-                        {tagline}
-                    </Typography>
-                </GridBlock>
-                <GridBlock col="8" colMedium="4" colLarge="6">
-                    {this.renderImage(img)}
-                </GridBlock>
-            </>
-        );
-    }
+  const href = isExternal ? externalUrl : `/${slug}`;
 
-    render() {
-        const { isExternal, externalUrl, slug } = this.props;
-        const content = <StyledProjectCard>{this.renderCardContent()}</StyledProjectCard>;
-
-        if (isExternal) {
-            return (
-                <a href={externalUrl} target="_blank" rel="noopener noreferrer">
-                    {content}
-                </a>
-            );
-        } else {
-            return (
-                <Link href="/[id]" as={`/${slug}`} passHref legacyBehavior>
-                    <a>{content}</a>
-                </Link>
-            );
-        }
-    }
-}
+  return (
+    <StyledProjectCard col="8" colMedium="4">
+      <a
+        href={href}
+        target={isExternal ? "_blank" : "_self"}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+      >
+        {content}
+      </a>
+    </StyledProjectCard>
+  );
+};
 
 export default ProjectCard;

@@ -32,7 +32,7 @@ const Header = ({ isHome }) => {
 
   const renderDescription = () => (
     <Typography type="subtitle" dark>
-      I’m a Senior Product Designer living in Barcelona. Currently working at
+      I’m a Senior Product Designer, currently working at
       TravelPerk.
     </Typography>
   );

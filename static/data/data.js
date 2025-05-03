@@ -10,7 +10,7 @@ export const data = {
       title: "TravelPerk : Checkout",
       id:"7",
       slug:"travelperk-checkout",
-      tagline: "Reduced friction for people booking travel on TravelPerk, while enhancing design patterns.",
+      tagline: "Reduced friction for people booking business travel.",
       image: "checkout/hero.png",
       isExternal: false,
       tldr: "We revamped the checkout experience on TravelPerk, in order to reduce friction by improving UX and clarity for people booking business trips, while building scalable design patterns.",
