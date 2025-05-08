@@ -2,6 +2,7 @@ export const tema = {
     primary: '#100F0F',
     secondary: '#FFFCF0',
     background1: '#F2F0E5',
+    border1: '1px solid #100F0F1A',
     grid: 8,
     baseUnitHalf: '5px',
     baseUnit: '10px',

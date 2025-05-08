@@ -23,7 +23,7 @@ function Index() {
       <OneBigColumn gap>
         <div style={{width:'100%'}}>
         <Typography type="subtitle" dark bold>
-          Work
+          Selected work
         </Typography>
         </div>
         <ProjectCard

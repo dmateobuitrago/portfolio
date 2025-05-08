@@ -23,10 +23,10 @@ const StyledProjectCard = styled(GridBlock)`
   transition: all 0.3s ease;
   border-radius: 10px;
   background: white;
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border: ${(props) => props.theme.border1};
 
   &:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.11);
   }
   @media screen and (min-width: ${(props) =>
       props.theme.minBreakPoints.medium}) {
