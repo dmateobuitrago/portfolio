@@ -11,9 +11,7 @@ const checkout = projects[0];
 const tokens = projects[1];
 const verse = projects[2];
 const juan = projects[3];
-// const print = projects[4];
-const broken = projects[6];
-// const tmb = projects[6];
+const broken = projects[4];
 
 const imgPath = "/static/images/";
 

@@ -64,7 +64,7 @@ const ProjectCard = ({ name, tagline, img, isExternal, externalUrl, slug }) => {
       <Typography type="body" dark>
         {tagline}
       </Typography>
-      <Divider />
+      <Divider size="small" />
       {renderImage()}
     </GridBlock>
   );
