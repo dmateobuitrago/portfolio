@@ -7,10 +7,31 @@ export const data = {
   ],
   projects: [
     {
+      title: "TravelPerk : Rebranding",
+      id:"8",
+      slug:"travelperk-rebrand",
+      tagline: "Redesigned key screens and design system for the new brand",
+      image: "rebranding/hero.png",
+      isExternal: false,
+      tldr: "TravelPerk was launching a new brand, so I led the redesign of the design system and key screens—like the homepage—to bring the new identity to life.",
+      summary: {
+        year: "2024-25",
+        role: "product designer",
+        team: "designers and web engineers across the org"
+      },
+      content: [
+        {
+          type: "VideoWithCaption",
+          caption: "Rebranded homepage, showcasing the new brand and cool transitions.",
+          video: "rebranding/desktop_home.mov",
+        },
+      ]
+    },
+    {
       title: "TravelPerk : Checkout",
       id:"7",
       slug:"travelperk-checkout",
-      tagline: "Reduced friction for people booking travel on TravelPerk, while enhancing design patterns.",
+      tagline: "Reduced friction for people booking business travel.",
       image: "checkout/hero.png",
       isExternal: false,
       tldr: "We revamped the checkout experience on TravelPerk, in order to reduce friction by improving UX and clarity for people booking business trips, while building scalable design patterns.",
@@ -686,233 +707,6 @@ export const data = {
           image: "juan/presentation.png",
         },
       ]
-    },
-    {
-      title: "Print.eat",
-      id: "2",
-      slug: "print-eat",
-      isExternal: false,
-      tagline: "How would we eat in 2080? ",
-      tags: "speculative design",
-      image: "printeat/hero.png",
-      tldr:
-        "The planet is suffering and as a society we need to change our habits in order to save it. Within a more controlled dynamics, where meat and imported fruits are almost forbidden, we would adapt our dietary habits and thanks to technology and food printing we would be able to enjoy every meal.",
-      summary: {
-        year: "2019",
-        timeframe: "6 weeks",
-        tools: "keynote, sketch, pen & paper",
-        team: "Rodrigo Salmerón and Vasudha Mundra",
-        client: "school project at harbour.space",
-        role: "brand and concept, ui design"
-      },
-      content: [
-        {
-          type: "TitleAndText",
-          title: "The brief",
-          content: [
-            {
-              type: "body",
-              text: "The year is 2080. Our planet is in the best shape it's been in sixty years. It's recovering from the ecological emergency of 2020 and, as a global society, we're managing natural resources better thanks to a new economy."
-            },
-            {
-              type: "body",
-              text: "Design and develop innovation concepts (products, services, experiences) that generate and redefine personal wellbeing through this new economy. Your new-to-the-world concepts will act as proof of people and the planet living in balance."
-            } 
-          ]
-        },
-        {
-          type: "Divider"
-        },
-        {
-          type: "TitleAndText",
-          title: "Research",
-          content: [
-            {
-              type: "body",
-              text: "To approach this future design project, we did research to find out how would a preferred future would looke like and which challenges we will have to face as a society. We did this through:"
-            },
-            {
-              type: "list",
-              list: [
-                "Desk research: news articles, scientific papers, documentaries, etc",
-                "Interviews with: Environmental scientists, Biologists, Lawyers, Internationalists, Organic shops owners, Common people",
-              ]
-            }
-          ]
-        },
-        {
-          type: "Divider"
-        },
-        {
-          type: "BigImage",
-          image: "printeat/research.jpg",
-        },
-        {
-          type: "Divider"
-        },
-        {
-          type: "TitleAndText",
-          title: "Opportunities - How our future would look like?",
-          content: [
-            {
-              type: "body",
-              text: "One of the main takeaways of the research is to clearly define a problem to identify opportunities. The areas we decided to focus were:"
-            },
-            {
-              type: "list",
-              list: [
-                "Dietary Shift: Livestock is responsible for over 15% of greenhouse gas emissions. 70% of global agricultural land is used for livestock production. All of this while 800 million people live chronically hungry, this cropland use is unacceptable.",
-                "The closer the better: Local farming requires fewer chemicals, water, energy, and transportation compared to large scale agricultural practices that depend on heavy pesticides, monoculture, and account for 70% of Earth's fresh water usage.",
-              ]
-            }
-          ]
-        },
-        {
-          type: "TitleAndText",
-          title: "2080: New dietary habits",
-          content: [
-            {
-              type: "list",
-              list: [
-                "A local farm in every neighbourhood",
-                "A membership to belong to the shared community",
-                "A communal kitchen for every farm",
-                "Meat is expensive",
-                "Availability of foreign ingredients is limited",
-                "Creating dishes and cooking has become dull"
-              ]
-            }
-          ]
-        },
-        {
-          type: "TitleAndText",
-          title: "2080: New age, new needs",
-          content: [
-            {
-              type: "body",
-              text: "Cooking and eating has become boring in 2080. The joy of tasting has been dissapearing while we saved the planet. New ways of creating food will be needed and here's where our service was born. "
-            }
-          ]
-        },
-        {
-          type: "Divider"
-        },
-        {
-          type: "TitleAndText",
-          title: "Our solution for the preferred future: Print.eat",
-          content: [
-            {
-              type: "body",
-              text: "An on demand 3D food printing platform that helps people innovate."
-            },
-            {
-              type: "list",
-              list: [
-                "Create new food and flavors",
-                "Print it in your shared kitchen",
-                "Cook it or take it to your favorite restaurant"
-              ]
-            }
-          ]
-        },
-        {
-          type: "Divider"
-        },
-        {
-          type: "ImageWithCaption",
-          image: "printeat/printeat.gif",
-          caption: "Logo, typography and color palette."
-        },
-        {
-          type: "Divider"
-        },
-        {
-          type: "TitleAndText",
-          title: "Create",
-          content: [
-            {
-              type: "body",
-              text: "We allow chefs and any person to experiment, play and crete new food and flavors never seen before. They will be able to have a small personal printer, when they can try their creations. Later they will be able to publish them in the Print.ear marketplace."
-            }
-          ]
-        },
-        {
-          type: "ImageWithCaption",
-          caption: "Personal printer for chefs and creators",
-          image: "printeat/printer.png",
-        },
-        {
-          type: "ImageWithCaption",
-          caption: "",
-          image: "printeat/printer ui.png",
-        },
-        {
-          type: "Divider"
-        },
-        {
-          type: "TitleAndText",
-          title: "Print"
-        },
-        {
-          type: "ImageWithCaption",
-          caption: "People will be able to browse and find new recipes and flavors.",
-          image: "printeat/marketplace 1.png",
-        },
-        {
-          type: "ImageWithCaption",
-          caption: "As soon as they decide what to get, they can place a printing order that later can be pick in their commnual kitchen",
-          image: "printeat/marketplace 2.png",
-        },
-        {
-          type: "TitleAndText",
-          title: "Enjoy",
-          // content: [
-          //   {
-          //     type: "body",
-          //     text: "TBD."
-          //   }
-          // ]
-        },
-        {
-          type: "ImageWithCaption",
-          caption: "People will pick their orders in the commnual kitchen, ready to cook.",
-          image: "printeat/kitchen.png",
-        },
-        {
-          type: "ImageWithCaption",
-          caption: "",
-          image: "printeat/paperbag.png",
-        },
-        {
-          type: "Divider"
-        },
-        {
-          type: "BigImage",
-          image: "printeat/bonappetit.png",
-        },
-        {
-          type: "Divider"
-        },
-      ]
-    },
-    {
-      title: "TMB Trivia",
-      id: "4",
-      slug: "tmb-trivia",
-      isExternal: false,
-      tagline: "Daily challenges for Barcelona's public transport system ",
-      tags: "branding and graphic design",
-      image: "tmb/hero.png",
-      tldr:
-        "Commuting shouldn't be the same boring thing everyday. With the TMB Daily Trivia we bring fun and competition between riders, while they can learn about the city.",
-      summary: {
-        year: "2019",
-        timeframe: "3 weeks",
-        tools: "Skecth, pen & paper, Keynote",
-        team: "Alex Sasov, Bilal Shabbir, Felix Peeck",
-        client: "school project at harbour.space",
-        role: "concepting, art direction, ui design"
-      }
     },
     {
       title: "Broken Symmetry",

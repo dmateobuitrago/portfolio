@@ -19,16 +19,15 @@ const Huge = styled(Base)`
 
 const Title = styled(Base)`
   font-size: ${(props) => props.theme.font.size.large};
-  line-height: 1.1;
+  line-height: 1.5;
   @media screen and (min-width: ${props => props.theme.minBreakPoints.large}){
     font-size: ${(props) => props.theme.font.size.xLarge};
-    line-height: 1.2;
   }
 `;
 
 const Subtitle = styled(Base)`
   font-size: ${(props) => props.theme.font.size.medium};
-  line-height: 1.1;
+  line-height: 1.5;
   @media screen and (min-width: ${props => props.theme.minBreakPoints.large}){
     font-size: ${(props) => props.theme.font.size.large};
   }

@@ -37,7 +37,7 @@ class OneBigColumn extends React.Component {
   }
   render() {
     return (
-      <BigColumn>
+      <BigColumn className={this.props.className}>
           {this.renderContent()}
       </BigColumn>
     );

@@ -1,25 +1,29 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import ProjectCard from "../components/molecules/ProjectCard";
-import OneBigColum from "../components/layout/OneBigColumn";
-import Divider from "../components/atoms/Divider";
+import OneBigColumn from "../components/layout/OneBigColumn";
 import { data } from "../static/data/data";
+import Typography from "../components/atoms/Typography";
+import GridBlock from "../components/atoms/GridBlock";
 
 const projects = data.projects;
 const checkout = projects[0];
 const tokens = projects[1];
 const verse = projects[2];
 const juan = projects[3];
-// const print = projects[4];
-const broken = projects[6];
-// const tmb = projects[6];
+const broken = projects[4];
 
 const imgPath = "/static/images/";
 
 function Index() {
   return (
     <Layout home={true}>
-      <OneBigColum>
+      <OneBigColumn gap>
+        <div style={{width:'100%'}}>
+        <Typography type="subtitle" dark bold>
+          Selected work
+        </Typography>
+        </div>
         <ProjectCard
           name={checkout.title}
           tagline={checkout.tagline}
@@ -30,7 +34,6 @@ function Index() {
           isExternal={checkout.isExternal}
           externalUrl={checkout.externalUrl}
         />
-        <Divider />
         <ProjectCard
           name={tokens.title}
           tagline={tokens.tagline}
@@ -41,7 +44,6 @@ function Index() {
           isExternal={tokens.isExternal}
           externalUrl={tokens.externalUrl}
         />
-        <Divider />
         <ProjectCard
           name={verse.title}
           tagline={verse.tagline}
@@ -51,7 +53,6 @@ function Index() {
           id={verse.id}
           isExternal={verse.isExternal}
         />
-        <Divider />
         <ProjectCard
           name={juan.title}
           tagline={juan.tagline}
@@ -61,7 +62,6 @@ function Index() {
           id={juan.id}
           isExternal={juan.isExternal}
         />
-        <Divider />
         <ProjectCard
           name={broken.title}
           tagline={broken.tagline}
@@ -72,8 +72,7 @@ function Index() {
           isExternal={broken.isExternal}
           externalUrl={broken.externalUrl}
         />
-        <Divider />
-      </OneBigColum>
+      </OneBigColumn>
     </Layout>
   );
 }
