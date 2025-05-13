@@ -30,7 +30,7 @@ class OneBigColumn extends React.Component {
     if(this.props.reverse){
       content=<ReverseGridContainter>{this.props.children}</ReverseGridContainter>
     } else {
-      content=<GridContainer gap={this.props.gap}>{this.props.children}</GridContainer>
+      content=<GridContainer $gap={this.props.gap}>{this.props.children}</GridContainer>
     }
 
     return content;
