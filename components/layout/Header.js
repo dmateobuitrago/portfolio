@@ -39,7 +39,7 @@ const Header = ({ isHome }) => {
 
   const renderHomeHeader = () => (
     <OneBigColumn>
-      <GridContainer flexDirection="column">
+      <GridContainer $flexDirection="column">
         <img src={imgPath + 'me/Portrait.png'} width={80} />
         <Typography type="title" bold dark>
           Mateo Buitrago Jara
