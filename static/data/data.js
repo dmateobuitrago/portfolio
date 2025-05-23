@@ -148,27 +148,37 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "The homepage was a key surface to bring the brand to life. I designed a refreshed version that combined expressive, aesthetic choices with practical UX improvements.",
+              text: "The homepage was a key surface to bring the brand to life. I designed a refreshed version that combined aesthetic choices with practical UX improvements.",
             },
             {
               type: "list",
               list: [
-                "Brought in brand color and new iconography for a bolder identity",
+                "Brought in brand color and new iconography through the top selector and greeting",
                 "Optimized layout for common flows, for example the majority of bookings are for one traveller",
                 "Improved interaction and discoverability (e.g. train discount selector)",
               ],
             },
           ],
         },
-                {
+        {
           type: "ImageGallery",
           images: [
-            "rebrand/homepage01.png",
-            "rebrand/homepage02.png",
-            "rebrand/homepage03.png",
-            "rebrand/homepage04.png",
+            "rebrand/homeFlightsDesktop.png",
+            "rebrand/homeStaysDesktop.png",
+            "rebrand/homeTrainsDesktop.png",
+            "rebrand/homeCarsDesktop.png",
           ],
           columns: 4,
+        },
+        {
+          type: "ImageGallery",
+          images: [
+            "rebrand/homeFlightsMobile.png",
+            "rebrand/homeStaysMobile.png",
+            "rebrand/homeTrainsMobile.png",
+            "rebrand/homeCarsMobile.png",
+          ],
+          columns: 2,
         },
         {
           type: "VideoWithCaption",
