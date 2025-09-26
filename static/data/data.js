@@ -323,12 +323,21 @@ export const data = {
           type: "Divider",
         },
         {
-          type: "TitleAndText",
+          type: "ImpactCallOut",
           title: "Impact",
+          subtitle: "A continuous release strategy helped us to compare the old checkout with the new one, and see the impact of the changes.",
           content: [
             {
-              type: "body",
-              text: "As of today, the redesign of the checkout page has proven that a) is more efficient, reducing the time on task for bookers and b) has less friction, reducing the amount of unexpected warnings (e.g. travel document missing) when attempting to book."
+              top_content: "↓ time on task",
+              bottom_content: "From 900s to 50s"
+            },
+            {
+              top_content: "↑ conversion rate",
+              bottom_content: "From 80% to 95%"
+            },
+            {
+              top_content: "↓ friction",
+              bottom_content: "Less booking attempts with warnings (for example missing mandatory fields)"
             },
           ]
         },
