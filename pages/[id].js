@@ -3,6 +3,7 @@ import Layout from "../components/layout/Layout";
 import { data } from "../static/data/data";
 import ProjectIntro from "../components/project/ProjectIntro";
 import TitleAndText from "../components/project/TitleAndText";
+import ImpactCallOut from "../components/project/ImpactCallOut";
 import BigImage from "../components/project/BigImage";
 import ImageWithCaption from "../components/project/ImageWithCaption";
 import VideoWithCaption from "../components/project/VideoWithCaption";
@@ -16,6 +17,10 @@ class Project extends React.Component {
 
   renderTitleAndText(item, index) {
     return <TitleAndText key={index} title={item.title} body={item.content} />;
+  }
+
+  renderImpactCallOut(item, index) {
+    return <ImpactCallOut key={index} title={item.title} subtitle={item.subtitle} body={item.content} />;
   }
 
   renderImageWithCaption(item, index) {
@@ -45,6 +50,9 @@ class Project extends React.Component {
       switch (type) {
         case "TitleAndText":
           renderElement.push( this.renderTitleAndText(item, index));
+          break;
+        case "ImpactCallOut":
+          renderElement.push( this.renderImpactCallOut(item, index));
           break;
         case "ImageWithCaption":
           renderElement.push( this.renderImageWithCaption(item, index));
