@@ -3,11 +3,11 @@ import styled from 'styled-components';
 const GridContainer = styled.div`
     display:flex;
     flex-wrap:wrap;
-    ${props => props.flexDirection && `
-        flex-direction: ${props.flexDirection};
+    ${props => props.$flexDirection && `
+        flex-direction: ${props.$flexDirection};
     `}
 
-     ${props => props.gap && `
+     ${props => props.$gap && `
         gap: ${props.theme.baseUnit2};
     `}
 
@@ -19,4 +19,4 @@ const GridContainer = styled.div`
 `;
 
 
-export default (props) => <GridContainer className={props.className} flexDirection={props.flexDirection} gap={props.gap}>{props.children}</GridContainer>
+export default (props) => <GridContainer className={props.className} $flexDirection={props.$flexDirection} $gap={props.$gap}>{props.children}</GridContainer>

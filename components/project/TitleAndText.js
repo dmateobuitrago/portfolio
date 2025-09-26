@@ -26,8 +26,8 @@ class TitleAndText extends React.Component {
             switch (item.type) {
                 case "body":
                     return (
-                        <GridBlock>
-                            <Typography key={index} type="body" dark>
+                        <GridBlock key={index}>
+                            <Typography type="body" dark>
                                 {item.text}
                             </Typography>
                         </GridBlock>
@@ -40,8 +40,8 @@ class TitleAndText extends React.Component {
                     );
                 case "quote":
                     return (
-                        <QuoteContainer padding>
-                            <Typography key={index} type="subtitle" dark>
+                        <QuoteContainer key={index} padding>
+                            <Typography type="subtitle" dark>
                                 “{item.text}”
                             </Typography>
                         </QuoteContainer>
