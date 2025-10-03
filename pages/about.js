@@ -31,7 +31,7 @@ function About() {
             called Verse.
           </Typography>
           <Divider />
-          <Typography type="Subtitle" dark bold>
+          <Typography type="subtitle" dark bold>
             I'm living in Barcelona
           </Typography>
           <Typography type="body" dark>
@@ -40,14 +40,14 @@ function About() {
             mediterranean dream.
           </Typography>
           <Divider />
-          <Typography type="Subtitle" dark bold>
+          <Typography type="subtitle" dark bold>
             I like Product Design
           </Typography>
           <Typography type="body" dark>
             I really value knowing that my work is making an impact, that someone is using whatever I designed, that I'm maybe helping someone fill a form faster. Also is good to know you're work is actually helping a company grow.
           </Typography>
           <Divider />
-          <Typography type="Subtitle" dark bold>
+          <Typography type="subtitle" dark bold>
             I like UI
           </Typography>
           <Typography type="body" dark>
