@@ -1,6 +1,7 @@
 export const data = {
   links: [
     ["about me", "/about"],
+    ["how I work with AI", "/how-i-work-with-ai"],
     ["linkedin ↗", "https://www.linkedin.com/in/mateobuitrago/"],
     ["dmateobuitrago [at] gmail.com", "mailto:dmateobuitrago@gmail.com"],
   ],
