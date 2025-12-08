@@ -19,13 +19,15 @@ function About() {
     <Layout>
       <OneBigColumn>
         <GridBlock col="8" colMedium="6" pt pr pl>
-          <img src={imgPath + 'me/Portrait.png'} width={160} />
-          <Divider size="small"/>
+          <img src={imgPath + "me/Portrait.png"} width={160} />
+          <Divider size="small" />
           <Typography type="title" dark bold>
             I'm Mateo
           </Typography>
           <Typography type="body" dark>
-            I've been working {calculateJobExperience()} years in digital experiences, and about {calculateJobExperience(new Date("2018-07-01"))} as a Product
+            I've been working {calculateJobExperience()} years in digital
+            experiences, and about{" "}
+            {calculateJobExperience(new Date("2018-07-01"))} as a Product
             Designer. My biggest experiences have been in the Business Travel
             Industry, with TravelPerk, and a Spanish peer-to-peer payment app
             called Verse.
@@ -44,21 +46,30 @@ function About() {
             I like Product Design
           </Typography>
           <Typography type="body" dark>
-            I really value knowing that my work is making an impact, that someone is using whatever I designed, that I'm maybe helping someone fill a form faster. Also is good to know you're work is actually helping a company grow.
+            I really value knowing that my work is making an impact, that
+            someone is using whatever I designed, that I'm maybe helping someone
+            fill a form faster. Also is good to know you're work is actually
+            helping a company grow.
           </Typography>
           <Divider />
           <Typography type="subtitle" dark bold>
             I like UI
           </Typography>
           <Typography type="body" dark>
-            I come from a Graphic Design background, so I do my best to create visually appealing products. Also, I'm kind of a frustrated developer, so I like to mess a bit with code and help engineers to move paddings here and there. I coded this porftolio that you're reading.
+            I come from a Graphic Design background, so I do my best to create
+            visually appealing products. Also, I'm kind of a frustrated
+            developer, so I like to mess a bit with code and help engineers to
+            move paddings here and there. I coded this porftolio that you're
+            reading.
           </Typography>
           <Divider />
-          <Typography type="Subtitle" dark bold>
+          <Typography type="subtitle" dark bold>
             I like being part of a team
           </Typography>
           <Typography type="body" dark>
-            We are humans beings, we like to be part of something. I enjoy collaborating with talented, but more importantly nice people. I'll be nice too, if I can help you, I will.
+            We are humans beings, we like to be part of something. I enjoy
+            collaborating with talented, but more importantly nice people. I'll
+            be nice too, if I can help you, I will.
           </Typography>
           <Divider />
         </GridBlock>

@@ -7,11 +7,11 @@ import Typography from "../components/atoms/Typography";
 import GridBlock from "../components/atoms/GridBlock";
 
 const projects = data.projects;
-const checkout = projects[0];
-const tokens = projects[1];
-const verse = projects[2];
-const juan = projects[3];
-const broken = projects[4];
+const rebranding = projects[0];
+const checkout = projects[1];
+const tokens = projects[2];
+const verse = projects[3];
+const juan = projects[4];
 
 const imgPath = "/static/images/";
 
@@ -19,10 +19,10 @@ function Index() {
   return (
     <Layout home={true}>
       <OneBigColumn gap>
-        <div style={{width:'100%'}}>
-        <Typography type="subtitle" dark bold>
-          Selected work
-        </Typography>
+        <div style={{ width: "100%" }}>
+          <Typography type="subtitle" dark bold>
+            Selected work
+          </Typography>
         </div>
         <ProjectCard
           name={checkout.title}
@@ -33,6 +33,16 @@ function Index() {
           id={checkout.id}
           isExternal={checkout.isExternal}
           externalUrl={checkout.externalUrl}
+        />
+        <ProjectCard
+          name={rebranding.title}
+          tagline={rebranding.tagline}
+          tag={rebranding.tags}
+          slug={rebranding.slug}
+          img={imgPath + rebranding.image}
+          id={rebranding.id}
+          isExternal={rebranding.isExternal}
+          externalUrl={rebranding.externalUrl}
         />
         <ProjectCard
           name={tokens.title}
@@ -52,25 +62,6 @@ function Index() {
           img={imgPath + verse.image}
           id={verse.id}
           isExternal={verse.isExternal}
-        />
-        <ProjectCard
-          name={juan.title}
-          tagline={juan.tagline}
-          tag={juan.tags}
-          slug={juan.slug}
-          img={imgPath + juan.image}
-          id={juan.id}
-          isExternal={juan.isExternal}
-        />
-        <ProjectCard
-          name={broken.title}
-          tagline={broken.tagline}
-          tag={broken.tags}
-          slug={broken.slug}
-          img={imgPath + broken.image}
-          id={broken.id}
-          isExternal={broken.isExternal}
-          externalUrl={broken.externalUrl}
         />
       </OneBigColumn>
     </Layout>

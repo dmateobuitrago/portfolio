@@ -28,19 +28,18 @@ const Header = ({ isHome }) => {
       </LinksBlock>
     );
   };
-  
 
   const renderDescription = () => (
     <Typography type="subtitle" dark>
-      I’m a Senior Product Designer, currently working at
-      TravelPerk.
+      I’m a Senior Product Designer, currently working at Perk (formerly
+      TravelPerk).
     </Typography>
   );
 
   const renderHomeHeader = () => (
     <OneBigColumn>
       <GridContainer $flexDirection="column">
-        <img src={imgPath + 'me/Portrait.png'} width={80} />
+        <img src={imgPath + "me/Portrait.png"} width={80} />
         <Typography type="title" bold dark>
           Mateo Buitrago Jara
         </Typography>
