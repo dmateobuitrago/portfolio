@@ -515,19 +515,21 @@ export const data = {
         {
           type: "ImpactCallOut",
           title: "Impact",
-          subtitle: "A continuous release strategy helped us to compare the old checkout with the new one, and see the impact of the changes.",
+          subtitle:
+            "A continuous release strategy helped us to compare the old checkout with the new one, and see the impact of the changes.",
           content: [
             {
               top_content: "↓ time on task",
-              bottom_content: "From 900s to 50s"
+              bottom_content: "From 900s to 50s",
             },
             {
               top_content: "↑ conversion rate",
-              bottom_content: "From 80% to 95%"
+              bottom_content: "From 80% to 95%",
             },
             {
               top_content: "↓ friction",
-              bottom_content: "Less booking attempts with warnings (for example missing mandatory fields)"
+              bottom_content:
+                "Less booking attempts with warnings (for example missing mandatory fields)",
             },
           ],
         },
@@ -924,6 +926,191 @@ export const data = {
         client: "Monotype - D&AD New Blood Awards",
         role: "concepting and art direction",
       },
+    },
+    {
+      title: "Perk: Improving filtering experience",
+      id: "9",
+      slug: "perk-filtering",
+      tagline: "A constant effort to increase customer satisfaction",
+      image: "perk-filtering/hero.png",
+      isExternal: false,
+      tldr: "Through careful analysis of customer feedback and AI-powered insights, we identified and improved key pain points in our flight filtering experience, resulting in measurable decreases in customer detractors and improved satisfaction scores.",
+      summary: {
+        year: "2025",
+        role: "product designer",
+        team: "collaborated with PM, engineers, researchers and designers across the org",
+      },
+      content: [
+        {
+          type: "TitleAndText",
+          title: "Context",
+          content: [
+            {
+              type: "body",
+              text: "In the past years, I've been working in a team with the mission to improve the booking experience at Perk: how business travellers book flights, hotels, trains and cars in order to increase their satisfaction and make sure they stay as our customers.",
+            },
+          ],
+        },
+        {
+          type: "Divider",
+        },
+        {
+          type: "TitleAndText",
+          title: "Making sense of customer feedback",
+          content: [
+            {
+              type: "body",
+              text: "From our customer feedback surveys (Customer Effort Score, NPS) we knew our booking experience wasn't meeting their expectations. Our challenge was to understand why and mainly what could we do about it.",
+            },
+            {
+              type: "body",
+              text: "With the help of my Product Manager, the data team and AI, we identified the most impactful areas of opportunities:",
+            },
+            {
+              type: "list",
+              list: [
+                "Filters are not behaving as expected and users find them unintuitive.",
+                "The current search experience is not personalised and doesn't take into account traveller preferences",
+                "Customers complain that they don't understand the travel policy or are confused why some offers are marked in policy and others aren't.",
+              ],
+            },
+            {
+              type: "quote",
+              text: "I used AI to make sense of hundreds, if not thousands, of customer comments about our experience.",
+            },
+          ],
+        },
+        {
+          type: "Divider",
+        },
+        {
+          type: "TitleAndText",
+          title: "Filtering flight offers: Devil is in details",
+          content: [
+            {
+              type: "body",
+              text: "Our flight filtering feature covers most of their customer needs and is at par of other players in the industry like Google Flights or Kayak. However, customer finds it frustrating or fiddly to use. The trick wasn't to add more ways to filter, but improve the ones we currently have.",
+            },
+            {
+              type: "body",
+              text: "By carefully reviewing customer feedback, observing users sessions and mindfully using the platform, we were able to make some meaningful improvements.",
+            },
+          ],
+        },
+        {
+          type: "TitleAndText",
+          title: "Persisting filters",
+          content: [
+            {
+              type: "body",
+              text: "We realised that customers were finding themselves applying filters again and again, as they updated their search parameters (e.g. changing a date to see more options).",
+            },
+            {
+              type: "body",
+              text: "We defined some simple but relevant logic on how to persist filters as customers explore different dates or locations for their upcoming travel.",
+            },
+          ],
+        },
+        {
+          type: "VideoWithCaption",
+          caption:
+            "Example of how filters now persist when customers update their search parameters",
+          video: "perk-filtering/persisting-filters.mov",
+        },
+        {
+          type: "TitleAndText",
+          title: "The time filter",
+          content: [
+            {
+              type: "body",
+              text: "Filtering flights just worked, but it was fiddly to use. We didn't need (nor had the capacity) to rebuilt it, so we identified and made some improvements:",
+            },
+            {
+              type: "list",
+              list: [
+                "Localised the times. Our US customers were suffering and the initial implementation had a hard coded military time.",
+                "Improved the usability of the handler, by increasing the tap/drag area.",
+                "Added Morning, Afternoon, Night shortcuts. We knew most of business travellers prefer to flight in the morning.",
+              ],
+            },
+            {
+              type: "quote",
+              text: "With the help of Cursor I made some of the changes myself, creating a PR and pushing it to production. Other improvements, I was able to prototype with code and later pass it to our engineers so it comply with our coding standards.",
+            },
+          ],
+        },
+        {
+          type: "VideoWithCaption",
+          caption:
+            "Improved time filter with localized times and better usability",
+          video: "perk-filtering/time-filter.mov",
+        },
+        {
+          type: "ImageWithCaption",
+          caption:
+            "Before and after comparison of the time filter improvements",
+          image: "perk-filtering/time-filter-comparison.png",
+        },
+        {
+          type: "TitleAndText",
+          title: "Optimising for mobile",
+          content: [
+            {
+              type: "body",
+              text: "Our filtering experience on mobile was time consuming and inefficient. Users needed to go filter by filter, while in the best in class mobile apps it wasn't like that.",
+            },
+            {
+              type: "body",
+              text: "We designed and contributed a brand new Mobile Filters Modal to our design system, and implemented it in our Flight Search Funnel.",
+            },
+            {
+              type: "quote",
+              text: "Again, with the help of AI I was able to prototype a Mobile Filters Modal component. It helped to convey the idea to engineers, but the implementation was not near close to our coding standards.",
+            },
+          ],
+        },
+        {
+          type: "ImageWithCaption",
+          caption:
+            "New Mobile Filters Modal designed for the flight search experience",
+          image: "perk-filtering/mobile-filters.png",
+        },
+        {
+          type: "VideoWithCaption",
+          caption: "Mobile filtering experience in action",
+          video: "perk-filtering/mobile-demo.mov",
+        },
+        {
+          type: "Divider",
+        },
+        {
+          type: "TitleAndText",
+          title: "Reduction of detractors",
+          content: [
+            {
+              type: "body",
+              text: "After releasing all of this incremental improvements, we were able to see a decrease on our detractors on NPS and CES, specifically a within the Search Filters category.",
+            },
+            {
+              type: "body",
+              text: "This proved to be a huge win for us, since tying improvements to a quantitative metric was historically difficult and we were able to isolate improvements in the platform and prove impact to the rest of the business.",
+            },
+          ],
+        },
+        {
+          type: "Divider",
+        },
+        {
+          type: "TitleAndText",
+          title: "Learning",
+          content: [
+            {
+              type: "body",
+              text: "My main learning from this project is that we don't always need a new shiny project or feature to prove impact. Often, initiatives to built a new feature from scratch can feel more exciting, but when reviewing what is there already and making a constant and consistent effort to improve the experience pays back in the long run.",
+            },
+          ],
+        },
+      ],
     },
   ],
 };
