@@ -1,72 +1,70 @@
-import React from 'react';
-import Typography from '../atoms/Typography';
-import OneBigColumn from '../layout/OneBigColumn';
-import GridBlock from '../atoms/GridBlock';
+import React from "react";
+import Typography from "../atoms/Typography";
+import OneBigColumn from "../layout/OneBigColumn";
+import GridBlock from "../atoms/GridBlock";
 import styled from "styled-components";
 
 const QuoteContainer = styled(GridBlock)`
-    background: ${props => props.theme.background1};
-    border-radius: ${props => props.theme.baseUnitHalf};
-`
+  background: ${(props) => props.theme.background1};
+  border-radius: ${(props) => props.theme.baseUnitHalf};
+  border: ${(props) => props.theme.border1};
+`;
 
 class TitleAndText extends React.Component {
+  renderList(listItems) {
+    return listItems.map((listItem, index) => (
+      <Typography key={index} type="body" dark>
+        * {listItem}
+      </Typography>
+    ));
+  }
 
-    renderList(listItems) {
-        return listItems.map((listItem, index) => (
-            <Typography key={index} type="body" dark>
-                * {listItem}
-            </Typography>
-        ));
-    }
+  renderContent(content) {
+    if (!content) return;
 
-    renderContent(content) {
-        if (!content) return;
+    return content.map((item, index) => {
+      switch (item.type) {
+        case "body":
+          return (
+            <GridBlock key={index}>
+              <Typography type="body" dark>
+                {item.text}
+              </Typography>
+            </GridBlock>
+          );
+        case "list":
+          return (
+            <GridBlock key={index}>{this.renderList(item.list)}</GridBlock>
+          );
+        case "quote":
+          return (
+            <QuoteContainer padding key={index} fullWidth>
+              <Typography type="body" dark>
+                “{item.text}”
+              </Typography>
+            </QuoteContainer>
+          );
+        default:
+          return null;
+      }
+    });
+  }
 
-        return content.map((item, index) => {
-            switch (item.type) {
-                case "body":
-                    return (
-                        <GridBlock key={index}>
-                            <Typography type="body" dark>
-                                {item.text}
-                            </Typography>
-                        </GridBlock>
-                    );
-                case "list":
-                    return (
-                        <GridBlock key={index}>
-                            {this.renderList(item.list)}
-                        </GridBlock>
-                    );
-                case "quote":
-                    return (
-                        <QuoteContainer key={index} padding>
-                            <Typography type="subtitle" dark>
-                                “{item.text}”
-                            </Typography>
-                        </QuoteContainer>
-                    );
-                default:
-                    return null;
-            }
-        });
-    }
-
-    render() {
-        return (
-            <OneBigColumn>
-                <GridBlock col="8" colMedium="6" pb>
-                    <Typography type="subtitle" dark bold>
-                        {this.props.title}
-                    </Typography>
-                </GridBlock>
-                <GridBlock isGridContainer col="8" colMedium="6" gap>
-                    {this.renderContent(this.props.body)}
-                </GridBlock>
-                <GridBlock col="0" colMedium="2"></GridBlock>
-            </OneBigColumn>
-        );
-    }
+  render() {
+    return (
+      <OneBigColumn>
+        <GridBlock col="8" colMedium="6" pb>
+          <Typography type="subtitle" dark bold>
+            {this.props.title}
+          </Typography>
+        </GridBlock>
+        <GridBlock isGridContainer col="8" colMedium="6" gap>
+          {this.renderContent(this.props.body)}
+        </GridBlock>
+        <GridBlock col="0" colMedium="2"></GridBlock>
+      </OneBigColumn>
+    );
+  }
 }
 
 export default TitleAndText;

@@ -52,7 +52,7 @@ class ProjectIntro extends React.Component {
           <Image src={imgPath + this.props.image} />
         </GridBlock>
         <GridContainer>
-          <GridBlock col="8" colSmall="8" colMedium="4">
+          <GridBlock col="8" colSmall="8" colMedium="4" pr>
             <DataPair name="tl;dr" value={this.props.tldr} />
           </GridBlock>
           <GridBlock col="8" colSmall="8" colMedium="4">

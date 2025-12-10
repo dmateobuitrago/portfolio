@@ -11,7 +11,7 @@ const rebranding = projects[0];
 const checkout = projects[1];
 const tokens = projects[2];
 const verse = projects[3];
-const juan = projects[4];
+const perkFiltering = projects[6];
 
 const imgPath = "/static/images/";
 
@@ -33,6 +33,15 @@ function Index() {
           id={checkout.id}
           isExternal={checkout.isExternal}
           externalUrl={checkout.externalUrl}
+        />
+        <ProjectCard
+          name={perkFiltering.title}
+          tagline={perkFiltering.tagline}
+          tag={perkFiltering.tags}
+          slug={perkFiltering.slug}
+          img={imgPath + perkFiltering.image}
+          id={perkFiltering.id}
+          isExternal={perkFiltering.isExternal}
         />
         <ProjectCard
           name={rebranding.title}
