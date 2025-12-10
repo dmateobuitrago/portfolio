@@ -930,9 +930,9 @@ export const data = {
     {
       title: "Perk: Improving filtering experience",
       id: "9",
-      slug: "perk-filtering",
+      slug: "filters",
       tagline: "A constant effort to increase customer satisfaction",
-      image: "perk-filtering/hero.png",
+      image: "filters/hero.png",
       isExternal: false,
       tldr: "Through careful analysis of customer feedback and AI-powered insights, we identified and improved key pain points in our flight filtering experience, resulting in measurable decreases in customer detractors and improved satisfaction scores.",
       summary: {
@@ -964,19 +964,15 @@ export const data = {
             },
             {
               type: "body",
-              text: "With the help of my Product Manager, the data team and AI, we identified the most impactful areas of opportunities:",
-            },
-            {
-              type: "list",
-              list: [
-                "Filters are not behaving as expected and users find them unintuitive.",
-                "The current search experience is not personalised and doesn't take into account traveller preferences",
-                "Customers complain that they don't understand the travel policy or are confused why some offers are marked in policy and others aren't.",
-              ],
+              text: "Collaborating with Product Designers, Product Managers and AI, we identified several areas of opportunities. One of them was the filtering experience.",
             },
             {
               type: "quote",
-              text: "I used AI to make sense of hundreds, if not thousands, of customer comments about our experience.",
+              text: "It was a pain to find the flights I wanted.  The defaults didnt stick. My choices didnt stick when I had to come back to it after a period of time.",
+            },
+            {
+              type: "quote",
+              text: "Selecting departure & arrival times was confusing, the layover/# of stops kind of confusing as well. I think its the sliders moving at both ends.",
             },
           ],
         },
@@ -985,11 +981,11 @@ export const data = {
         },
         {
           type: "TitleAndText",
-          title: "Filtering flight offers: Devil is in details",
+          title: "Devil is in details",
           content: [
             {
               type: "body",
-              text: "Our flight filtering feature covers most of their customer needs and is at par of other players in the industry like Google Flights or Kayak. However, customer finds it frustrating or fiddly to use. The trick wasn't to add more ways to filter, but improve the ones we currently have.",
+              text: "Our flight filtering feature covered most of their customer use cases and is at par of other players in the industry like Google Flights or Kayak. However, customer finds it frustrating or fiddly to use. The trick wasn't to add more ways to filter, but improve the ones we currently have.",
             },
             {
               type: "body",
@@ -999,7 +995,7 @@ export const data = {
         },
         {
           type: "TitleAndText",
-          title: "Persisting filters",
+          title: "Improvement 1: Persisting filters",
           content: [
             {
               type: "body",
@@ -1015,45 +1011,54 @@ export const data = {
           type: "VideoWithCaption",
           caption:
             "Example of how filters now persist when customers update their search parameters",
-          video: "perk-filtering/persisting-filters.mov",
+          video: "filters/persisting-filters.mov",
         },
         {
           type: "TitleAndText",
-          title: "The time filter",
+          title: "Improvement 2: Time filter",
           content: [
             {
               type: "body",
-              text: "Filtering flights just worked, but it was fiddly to use. We didn't need (nor had the capacity) to rebuilt it, so we identified and made some improvements:",
+              text: "Filtering flight times just worked, but it was fiddly to use. We didn't need (nor had the capacity) to rebuilt it, so we identified and made some powerful tweaks to the time filter:",
             },
             {
               type: "list",
               list: [
-                "Localised the times. Our US customers were suffering and the initial implementation had a hard coded military time.",
-                "Improved the usability of the handler, by increasing the tap/drag area.",
-                "Added Morning, Afternoon, Night shortcuts. We knew most of business travellers prefer to flight in the morning.",
+                "Localised the times. Our US customers were suffering since we had a hard coded military time.",
+                "Improved the usability, by increasing the tap/drag area of the handler and increased the steps from 30 minutes to 15 minutes, since users didn't need so much control.",
+                "Updated the layout to make it easier to understand while the time was changed.",
               ],
             },
-            {
-              type: "quote",
-              text: "With the help of Cursor I made some of the changes myself, creating a PR and pushing it to production. Other improvements, I was able to prototype with code and later pass it to our engineers so it comply with our coding standards.",
-            },
           ],
-        },
-        {
-          type: "VideoWithCaption",
-          caption:
-            "Improved time filter with localized times and better usability",
-          video: "perk-filtering/time-filter.mov",
         },
         {
           type: "ImageWithCaption",
           caption:
             "Before and after comparison of the time filter improvements",
-          image: "perk-filtering/time-filter-comparison.png",
+          image: "filters/usability-improvements.png",
         },
         {
           type: "TitleAndText",
-          title: "Optimising for mobile",
+          title: "Improvement 3: Time presets",
+          content: [
+            {
+              type: "body",
+              text: "Rarely, travellers want to flight in an specific hour, but they have a preference on which time or the day to flight, to adjust to their business trip plans.",
+            },
+            {
+              type: "body",
+              text: "We wanted to streamline that decision with a Morning, Afternoon or Night preset.",
+            },
+          ],
+        },
+        {
+          type: "VideoWithCaption",
+          caption: "How can users quickly set time filters using presets",
+          video: "filters/time-presets.mov",
+        },
+        {
+          type: "TitleAndText",
+          title: "Improvement 4: Optimising mobile experience",
           content: [
             {
               type: "body",
@@ -1061,39 +1066,58 @@ export const data = {
             },
             {
               type: "body",
-              text: "We designed and contributed a brand new Mobile Filters Modal to our design system, and implemented it in our Flight Search Funnel.",
-            },
-            {
-              type: "quote",
-              text: "Again, with the help of AI I was able to prototype a Mobile Filters Modal component. It helped to convey the idea to engineers, but the implementation was not near close to our coding standards.",
+              text: "We designed and contributed a brand new <FiltersModal/> to our design system, and implemented it in our Flight Search Funnel.",
             },
           ],
         },
         {
           type: "ImageWithCaption",
           caption:
-            "New Mobile Filters Modal designed for the flight search experience",
-          image: "perk-filtering/mobile-filters.png",
+            "This component specs enabled this to be a smooth contribution to our design system",
+          image: "filters/mobile-filters.png",
         },
         {
           type: "VideoWithCaption",
           caption: "Mobile filtering experience in action",
-          video: "perk-filtering/mobile-demo.mov",
+          video: "filters/mobile-demo.mp4",
         },
         {
           type: "Divider",
         },
         {
           type: "TitleAndText",
-          title: "Reduction of detractors",
+          title: "Working with AI",
           content: [
             {
               type: "body",
-              text: "After releasing all of this incremental improvements, we were able to see a decrease on our detractors on NPS and CES, specifically a within the Search Filters category.",
+              text: "I took this opportunity to explore prototyping within our real code base to speed up time to deliver, achieving some merges to production and sparkling conversation with engineers about AI-assisted code.",
             },
+          ],
+        },
+        {
+          type: "ImageWithCaption",
+          caption:
+            "With the help of AI-assisted tools, I was able to do some improvements and push to production.",
+          image: "filters/ai-code.png",
+        },
+        {
+          type: "ImageWithCaption",
+          caption:
+            "However, when the code went beyond my knowledge and AI wasn't up to our company standards, it was better for an engineer to finish the implementation.",
+          image: "filters/ai-code2.png",
+        },
+        {
+          type: "Divider",
+        },
+        {
+          type: "ImpactCallOut",
+          title: "Impact: Reduction of detractors",
+          subtitle:
+            "After releasing all of this incremental improvements, we were able to see a decrease on our detractors, specifically a within the Search Filters area.",
+          content: [
             {
-              type: "body",
-              text: "This proved to be a huge win for us, since tying improvements to a quantitative metric was historically difficult and we were able to isolate improvements in the platform and prove impact to the rest of the business.",
+              top_content: "↓ detractors complaining about filters",
+              bottom_content: "From 2% to 0.5% per month",
             },
           ],
         },

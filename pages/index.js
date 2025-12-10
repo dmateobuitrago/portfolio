@@ -35,6 +35,15 @@ function Index() {
           externalUrl={checkout.externalUrl}
         />
         <ProjectCard
+          name={perkFiltering.title}
+          tagline={perkFiltering.tagline}
+          tag={perkFiltering.tags}
+          slug={perkFiltering.slug}
+          img={imgPath + perkFiltering.image}
+          id={perkFiltering.id}
+          isExternal={perkFiltering.isExternal}
+        />
+        <ProjectCard
           name={rebranding.title}
           tagline={rebranding.tagline}
           tag={rebranding.tags}
@@ -62,15 +71,6 @@ function Index() {
           img={imgPath + verse.image}
           id={verse.id}
           isExternal={verse.isExternal}
-        />
-        <ProjectCard
-          name={perkFiltering.title}
-          tagline={perkFiltering.tagline}
-          tag={perkFiltering.tags}
-          slug={perkFiltering.slug}
-          img={imgPath + perkFiltering.image}
-          id={perkFiltering.id}
-          isExternal={perkFiltering.isExternal}
         />
       </OneBigColumn>
     </Layout>
