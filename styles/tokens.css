@@ -1,0 +1,32 @@
+/* Breakpoints (hardcode these in media queries — CSS vars don't work inside @media):
+   small:  451px
+   medium: 769px
+   large:  961px
+   xlarge: 1281px
+*/
+
+:root {
+  --color-primary: #100F0F;
+  --color-secondary: #FFFCF0;
+
+  --font-family: 'Quador', Georgia, 'Times New Roman', serif;
+  --font-family-heading: 'Inter', sans-serif;
+
+  --font-size-small: 15px;
+  --font-size-medium: 20px;
+  --font-size-large: 30px;
+  --font-size-xlarge: 40px;
+  --font-size-xxlarge: 60px;
+
+  --space-half: 5px;
+  --space-1: 10px;
+  --space-2: 20px;
+  --space-4: 40px;
+  --space-8: 80px;
+  --space-12: 120px;
+
+  --bp-small: 451px;
+  --bp-medium: 769px;
+  --bp-large: 961px;
+  --bp-xlarge: 1281px;
+}
