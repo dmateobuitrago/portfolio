@@ -2,6 +2,7 @@ import App from "next/app";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import { tema } from "../styles/tema";
+import "../styles/tokens.css";
 
 export default class MyApp extends App {
   render() {
