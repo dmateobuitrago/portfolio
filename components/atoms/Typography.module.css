@@ -1,0 +1,48 @@
+.base {
+  font-family: var(--font-family);
+  font-weight: 300;
+  text-align: left;
+}
+
+/* Variant and modifier classes override .base via source order — keep them below .base */
+
+.dark  { color: var(--color-primary); }
+.light { color: var(--color-secondary); }
+.bold  { font-weight: 700; }
+
+.huge {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xlarge);
+  line-height: 1.1;
+}
+@media screen and (min-width: 961px) {
+  .huge { font-size: var(--font-size-xxlarge); }
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-large);
+  line-height: 1.5;
+}
+@media screen and (min-width: 961px) {
+  .title { font-size: var(--font-size-xlarge); }
+}
+
+.subtitle {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-medium);
+  line-height: 1.5;
+}
+@media screen and (min-width: 961px) {
+  .subtitle { font-size: var(--font-size-large); }
+}
+
+.body {
+  font-size: var(--font-size-medium);
+  line-height: 1.5;
+}
+
+.small {
+  font-size: var(--font-size-small);
+  line-height: 1.5;
+}
