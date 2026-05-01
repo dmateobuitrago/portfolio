@@ -9,7 +9,8 @@ import Link from "next/link";
 import MyLink from "../atoms/MyLink";
 
 const FooterBlock = styled.div`
-  padding: ${(props) => props.theme.baseUnit};
+  padding-top: ${(props) => props.theme.baseUnit4};
+  padding-bottom: ${(props) => props.theme.baseUnit4};
 `;
 
 const LinksBlock = styled(GridBlock)`

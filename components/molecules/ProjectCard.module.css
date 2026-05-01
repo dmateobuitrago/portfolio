@@ -1,0 +1,17 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-2);
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.content img {
+  border-radius: var(--border-radius-1);
+}

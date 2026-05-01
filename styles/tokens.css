@@ -20,9 +20,13 @@
   --space-half: 5px;
   --space-1: 10px;
   --space-2: 20px;
+  --space-3: 30px;
   --space-4: 40px;
   --space-8: 80px;
   --space-12: 120px;
+
+  --border-radius-1: 10px;
+  --border-radius-2: 20px;
 
   --bp-small: 451px;
   --bp-medium: 769px;

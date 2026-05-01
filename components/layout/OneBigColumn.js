@@ -11,19 +11,11 @@ const ReverseGridContainter = styled(GridContainer)`
 `;
 
 const BigColumn = styled(GridContainer)`
-  max-width: ${(props) => props.theme.maxBreakPoints.large};
-  padding: ${(props) => props.theme.baseUnit2};
-  @media screen and (min-width: ${(props) =>
-      props.theme.minBreakPoints.medium}) {
+  width: 100%;
+  max-width: ${(props) => props.theme.minBreakPoints.large};
+  @media screen and (max-width: ${(props) =>
+      props.theme.maxBreakPoints.large}) {
     padding: ${(props) => props.theme.baseUnit2};
-  }
-  @media screen and (min-width: ${(props) =>
-      props.theme.minBreakPoints.large}) {
-    padding: ${(props) => props.theme.baseUnit4};
-  }
-  @media screen and (min-width: ${(props) =>
-      props.theme.minBreakPoints.xlarge}) {
-    padding: ${(props) => props.theme.baseUnit4};
   }
   margin: 0 auto;
 `;

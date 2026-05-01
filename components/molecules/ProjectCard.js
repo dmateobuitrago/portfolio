@@ -3,6 +3,7 @@ import Typography from "../../components/atoms/Typography";
 import styled from "styled-components";
 import GridBlock from "../atoms/GridBlock";
 import Divider from "../atoms/Divider";
+import styles from "./ProjectCard.module.css";
 
 const StyledProjectCard = styled(GridBlock)`
   a {
@@ -21,20 +22,12 @@ const StyledProjectCard = styled(GridBlock)`
   }
 
   transition: all 0.3s ease;
-  border-radius: 10px;
+  border-radius: 20px;
   background: white;
   border: ${(props) => props.theme.border1};
 
   &:hover {
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.11);
-  }
-  @media screen and (min-width: ${(props) =>
-      props.theme.minBreakPoints.medium}) {
-    ${(props) =>
-      props.theme.baseUnit &&
-      `
-            width: calc(50% - ${props.theme.baseUnit});
-        `}
   }
 `;
 
@@ -57,22 +50,23 @@ const ProjectCard = ({ name, tagline, img, isExternal, externalUrl, slug }) => {
   };
 
   const content = (
-    <GridBlock col="8" padding>
-      <Typography mb="0" type="body" dark bold>
-        {name}
-      </Typography>
-      <Typography type="body" dark>
-        {tagline}
-      </Typography>
-      <Divider size="small" />
+    <div className={styles.content}>
+      <div>
+        <Typography type="body" dark bold>
+          {name}
+        </Typography>
+        <Typography type="body" dark>
+          {tagline}
+        </Typography>
+      </div>
       {renderImage()}
-    </GridBlock>
+    </div>
   );
 
   const href = isExternal ? externalUrl : `/${slug}`;
 
   return (
-    <StyledProjectCard col="8" colMedium="4">
+    <StyledProjectCard col="8" colMedium="8">
       <a
         href={href}
         target={isExternal ? "_blank" : "_self"}
