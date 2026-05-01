@@ -1,17 +1,68 @@
+.card {
+  width: 100%;
+  border-radius: var(--border-radius-2);
+  background: white;
+  border: var(--border);
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.cardLinked {
+  cursor: pointer;
+  position: relative;
+  bottom: 0;
+  transition: all 0.3s ease;
+}
+
+.cardLinked a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.cardLinked:hover {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.11);
+  bottom: 2px;
+}
+
+.placeholder {
+  height: 300px;
+  background: black;
+  opacity: 0.05;
+}
+
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--space-4);
   padding: var(--space-2);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 2fr 2fr;
   }
 }
 
 .content img {
   border-radius: var(--border-radius-1);
+}
+
+.readCaseStudy::after {
+  content: "→";
+  position: relative;
+  left: 2px;
+  transition: left 0.3s ease-out;
+}
+
+.cardLinked:hover .readCaseStudy::after {
+  left: 6px;
+}
+
+.textContent {
+  display: grid;
+  grid-template-rows: [title] auto [description] 1fr [cta] auto;
 }

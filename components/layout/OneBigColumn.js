@@ -12,7 +12,7 @@ const ReverseGridContainter = styled(GridContainer)`
 
 const BigColumn = styled(GridContainer)`
   width: 100%;
-  max-width: ${(props) => props.theme.minBreakPoints.large};
+  max-width: ${(props) => props.theme.maxBreakPoints.large};
   @media screen and (max-width: ${(props) =>
       props.theme.maxBreakPoints.large}) {
     padding: ${(props) => props.theme.baseUnit2};

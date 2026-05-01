@@ -1,80 +1,73 @@
 import React, { useState, useEffect } from "react";
 import Typography from "../../components/atoms/Typography";
-import styled from "styled-components";
-import GridBlock from "../atoms/GridBlock";
-import Divider from "../atoms/Divider";
 import styles from "./ProjectCard.module.css";
 
-const StyledProjectCard = styled(GridBlock)`
-  a {
-    display: block;
-    color: inherit;
-    text-decoration: none;
-  }
+// Props:
+//   name        string  — project title
+//   tagline     string  — one-line description
+//   img         string  — image path
+//   slug        string  — internal route (e.g. "my-project")
+//   isExternal  bool    — link to externalUrl instead of slug
+//   externalUrl string  — full URL when isExternal is true
 
-  img {
-    max-width: 100%;
-  }
-
+const ProjectCard = ({
+  name,
+  tagline,
   img,
-  a {
-    cursor: pointer;
-  }
-
-  transition: all 0.3s ease;
-  border-radius: 20px;
-  background: white;
-  border: ${(props) => props.theme.border1};
-
-  &:hover {
-    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.11);
-  }
-`;
-
-const Placeholder = styled.div`
-  height: 300px;
-  width: auto;
-  background: black;
-  opacity: 0.05;
-`;
-
-const ProjectCard = ({ name, tagline, img, isExternal, externalUrl, slug }) => {
+  slug,
+  isExternal = false,
+  externalUrl,
+}) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     setIsLoading(false);
   }, []);
 
-  const renderImage = () => {
-    return isLoading ? <Placeholder /> : <img src={img} alt={name} />;
-  };
+  const href = isExternal ? externalUrl : slug ? `/${slug}` : null;
+  const hasLink = Boolean(href);
 
   const content = (
     <div className={styles.content}>
-      <div>
+      <div className={styles.textContent}>
         <Typography type="body" dark bold>
           {name}
         </Typography>
         <Typography type="body" dark>
           {tagline}
         </Typography>
+        {hasLink && (
+          <Typography className={styles.readCaseStudy} type="body" dark>
+            Read case study
+          </Typography>
+        )}
       </div>
-      {renderImage()}
+      {isLoading ? (
+        <div className={styles.placeholder} />
+      ) : (
+        <img src={img} alt={name} />
+      )}
     </div>
   );
 
-  const href = isExternal ? externalUrl : `/${slug}`;
+  const cardClass = [styles.card, hasLink && styles.cardLinked]
+    .filter(Boolean)
+    .join(" ");
 
   return (
-    <StyledProjectCard col="8" colMedium="8">
-      <a
-        href={href}
-        target={isExternal ? "_blank" : "_self"}
-        rel={isExternal ? "noopener noreferrer" : undefined}
-      >
-        {content}
-      </a>
-    </StyledProjectCard>
+    <div className={cardClass}>
+      {hasLink ? (
+        <a
+          href={href}
+          target={isExternal ? "_blank" : "_self"}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+        >
+          {content}
+        </a>
+      ) : (
+        content
+      )}
+    </div>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from "react";
-import {tema} from "./tema";
+import { tema } from "./tema";
 
 let theStyles = `
   @font-face {
@@ -43,13 +43,6 @@ let theStyles = `
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-  }
-  a,
-  a:hover,
-  a:focus,
-  a:visited{
-    text-decoration: none;
-    color: inherit;
   }
   /* HTML5 display-role reset for older browsers */
   article, aside, details, figcaption, figure, 

@@ -13,8 +13,9 @@ const projects = data.projects;
 const rebranding = projects[0];
 const checkout = projects[1];
 const tokens = projects[2];
-const verse = projects[3];
 const perkFiltering = projects[6];
+const bookingConfirmation = projects[7];
+const nameCorrections = projects[8];
 
 const imgPath = "/static/images/";
 
@@ -25,19 +26,16 @@ function Index() {
         <Intro />
         <div className={styles.projectGroup}>
           <div>
-            <Typography type="title" bold dark>
+            <Typography type="subtitle" bold dark>
               Improved business travel
             </Typography>
             <Typography type="body" dark>
-              Perk (2021 - Today)
+              Travelling for work can be overwhelming. My mission was to deliver
+              a friction less experience when booking travel, one where our
+              customers can rely and spend as little time as possible to succeed
+              in their actual jobs.
             </Typography>
           </div>
-          <Typography type="body" dark>
-            Travelling for work can be overwhelming. My mission was to deliver a
-            friction less experience when booking travel, one where our
-            customers can rely and spend as little time as possible to succeed
-            in their actual jobs.
-          </Typography>
           <ProjectCard
             name={checkout.title}
             tagline={checkout.tagline}
@@ -47,6 +45,13 @@ function Index() {
             id={checkout.id}
             isExternal={checkout.isExternal}
             externalUrl={checkout.externalUrl}
+          />
+          <ProjectCard
+            name={bookingConfirmation.title}
+            tagline={bookingConfirmation.tagline}
+            tag={bookingConfirmation.tags}
+            img={imgPath + bookingConfirmation.image}
+            id={bookingConfirmation.id}
           />
           <ProjectCard
             name={perkFiltering.title}
@@ -60,18 +65,15 @@ function Index() {
         </div>
         <div className={styles.projectGroup}>
           <div>
-            <Typography type="title" bold dark>
+            <Typography type="subtitle" bold dark>
               Scaled Perk’s design foundations
             </Typography>
             <Typography type="body" dark>
-              Perk (2021 - 2024)
+              I had the opportunity to work in a dedicated role to scale Perk’s
+              design system, having a rebrand in the horizon and later brought
+              to life that new identity into the web product.
             </Typography>
           </div>
-          <Typography type="body" dark>
-            I had the opportunity to work in a dedicated role to scale Perk’s
-            design system, having a rebrand in the horizon and later brought to
-            life that new identity into the web product.
-          </Typography>
           <ProjectCard
             name={tokens.title}
             tagline={tokens.tagline}
@@ -91,6 +93,27 @@ function Index() {
             id={rebranding.id}
             isExternal={rebranding.isExternal}
             externalUrl={rebranding.externalUrl}
+          />
+        </div>
+        <div className={styles.projectGroup}>
+          <div>
+            <Typography type="subtitle" bold dark>
+              Reducing support tickets through clearer UX
+            </Typography>
+            <Typography type="body" dark>
+              Perk's customer care team handles thousands of tickets that
+              shouldn't exist — avoidable mistakes and confusion that clear UX
+              can prevent. I worked across multiple initiatives to reduce that
+              load, giving support agents more capacity for the issues that
+              actually need a human.
+            </Typography>
+          </div>
+          <ProjectCard
+            name={nameCorrections.title}
+            tagline={nameCorrections.tagline}
+            tag={nameCorrections.tags}
+            img={imgPath + nameCorrections.image}
+            id={nameCorrections.id}
           />
         </div>
       </OneBigColumn>
