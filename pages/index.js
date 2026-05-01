@@ -5,6 +5,7 @@ import OneBigColumn from "../components/layout/OneBigColumn";
 import { data } from "../static/data/data";
 import Typography from "../components/atoms/Typography";
 import GridBlock from "../components/atoms/GridBlock";
+import Intro from "./components/Intro";
 
 const projects = data.projects;
 const rebranding = projects[0];
@@ -19,6 +20,7 @@ function Index() {
   return (
     <Layout home={true}>
       <OneBigColumn gap>
+        <Intro></Intro>
         <div style={{ width: "100%" }}>
           <Typography type="subtitle" dark bold>
             Selected work

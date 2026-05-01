@@ -20,7 +20,7 @@ const Header = ({ isHome }) => {
   const renderLinks = () => {
     return (
       <LinksBlock isGridContainer pt pb>
-        {data.links.map((item, index) => (
+        {data.navBarLinks.map((item, index) => (
           <MyLink key={index} href={item[1]}>
             {item[0]}
           </MyLink>
@@ -29,29 +29,20 @@ const Header = ({ isHome }) => {
     );
   };
 
-  const renderDescription = () => (
-    <Typography type="subtitle" dark>
-      I’m a Senior Product Designer, currently working at Perk (formerly
-      TravelPerk).
-    </Typography>
-  );
-
   const renderHomeHeader = () => (
     <OneBigColumn>
-      <GridContainer $flexDirection="column">
-        <img src={imgPath + "me/Portrait.png"} width={80} />
-        <Typography type="title" bold dark>
+      <GridContainer $flexDirection="row">
+        <Typography type="body" bold dark>
           Mateo Buitrago Jara
         </Typography>
-        {renderDescription()}
         {renderLinks()}
       </GridContainer>
     </OneBigColumn>
   );
 
-  const renderNavHeader = () => (
+  const renderBackNavigation = () => (
     <OneBigColumn>
-      <Typography type="subtitle" bold dark>
+      <Typography type="body" bold dark>
         <Link href="/">← back</Link>
       </Typography>
     </OneBigColumn>
@@ -60,8 +51,9 @@ const Header = ({ isHome }) => {
   return (
     <header>
       <Divider />
-      {isHome ? renderHomeHeader() : renderNavHeader()}
+      {renderHomeHeader()}
       <Divider />
+      {isHome ? "" : renderBackNavigation()}
     </header>
   );
 };

@@ -1,5 +1,9 @@
 export const data = {
-  links: [
+  navBarLinks: [
+    ["about me", "/about"],
+    ["how I work with AI", "/how-i-work-with-ai"],
+  ],
+  footerLinks: [
     ["about me", "/about"],
     ["how I work with AI", "/how-i-work-with-ai"],
     ["linkedin ↗", "https://www.linkedin.com/in/mateobuitrago/"],
