@@ -16,9 +16,11 @@ const Header = ({ isHome }) => {
     return (
       <div className={styles.linksBlock}>
         {data.navBarLinks.map((item, index) => (
-          <MyLink key={index} href={item[1]}>
-            {item[0]}
-          </MyLink>
+          <Typography type="small" dark>
+            <Link className="textLink" key={index} href={item[1]}>
+              {item[0]}
+            </Link>
+          </Typography>
         ))}
       </div>
     );
@@ -27,9 +29,18 @@ const Header = ({ isHome }) => {
   return (
     <OneBigColumn>
       <div className={styles.navBar}>
-        <Typography type="body" bold dark>
-          Mateo Buitrago Jara
-        </Typography>
+        {isHome ? (
+          <Typography type="small" bold dark>
+            Mateo Buitrago Jara
+          </Typography>
+        ) : (
+          <Typography type="small" dark>
+            <Link className="textLink" href="/">
+              ← Home
+            </Link>
+          </Typography>
+        )}
+
         {renderLinks()}
       </div>
     </OneBigColumn>

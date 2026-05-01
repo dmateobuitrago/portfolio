@@ -1,12 +1,12 @@
 export const data = {
   navBarLinks: [
-    ["about me", "/about"],
-    ["how I work with AI", "/how-i-work-with-ai"],
+    ["About me", "/about"],
+    ["How I work with AI", "/how-i-work-with-ai"],
   ],
   footerLinks: [
-    ["about me", "/about"],
-    ["how I work with AI", "/how-i-work-with-ai"],
-    ["linkedin ↗", "https://www.linkedin.com/in/mateobuitrago/"],
+    ["About me", "/about"],
+    ["How I work with AI", "/how-i-work-with-ai"],
+    ["Linkedin ↗", "https://www.linkedin.com/in/mateobuitrago/"],
     ["dmateobuitrago [at] gmail.com", "mailto:dmateobuitrago@gmail.com"],
   ],
   projects: [
@@ -1143,6 +1143,36 @@ export const data = {
           ],
         },
       ],
+    },
+    {
+      title: "Booking confirmation",
+      id: "10",
+      slug: "booking-confirmation",
+      tagline:
+        "Cut perceived wait time from 40s to 2s in a flow where booking outcomes arrive asynchronously. Clearer error recovery paths lifted booking completion from 40% to 50%.",
+      image: "booking-confirmation/hero.png",
+      isExternal: false,
+      tldr: "TBA",
+      summary: {
+        year: "2025 - 2026",
+        role: "product designer",
+        team: "collaborated with PM, engineers",
+      },
+    },
+    {
+      title: "Name corrections",
+      id: "110",
+      slug: "name-corrections",
+      tagline:
+        "Helped bookers to add their “correct” name, to avoid issues at flight check-in or even boarding. /n Reduced this type of contacts by 25%",
+      image: "name-corrections/hero.png",
+      isExternal: false,
+      tldr: "TBA",
+      summary: {
+        year: "2025 - 2026",
+        role: "product designer",
+        team: "collaborated with PM, engineers",
+      },
     },
   ],
 };

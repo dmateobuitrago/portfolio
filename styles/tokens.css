@@ -8,6 +8,8 @@
 :root {
   --color-primary: #100f0f;
   --color-secondary: #fffcf0;
+  --color-hover: #100f0f1a;
+  --color-pressed: #100f0f3a;
 
   --font-family: "Quador", Georgia, "Times New Roman", serif;
 
@@ -24,6 +26,8 @@
   --space-4: 40px;
   --space-8: 80px;
   --space-12: 120px;
+
+  --border: 1px solid #100f0f1a;
 
   --border-radius-1: 10px;
   --border-radius-2: 20px;

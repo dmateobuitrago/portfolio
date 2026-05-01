@@ -1,0 +1,14 @@
+a.textLink {
+  text-decoration: none;
+  color: var(--color-primary);
+  padding-inline: var(--space-1);
+  padding-top: var(--space-half);
+  padding-bottom: var(--space-half);
+  border-radius: var(--border-radius-1);
+  transition: 0.3s ease-out;
+}
+
+a.textLink:hover {
+  background-color: var(--color-hover);
+  transition: 0.3s ease-in;
+}
