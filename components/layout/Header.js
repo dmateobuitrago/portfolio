@@ -6,63 +6,33 @@ import Link from "next/link";
 import MyLink from "../atoms/MyLink";
 import { data } from "../../static/data/data.js";
 import OneBigColumn from "./OneBigColumn";
-import styled from "styled-components";
+import styles from "./Header.module.css";
 import GridContainer from "../atoms/GridContainer.js";
 
 const imgPath = "/static/images/";
 
-const LinksBlock = styled(GridBlock)`
-  align-items: flex-end;
-  gap: ${(props) => props.theme.baseUnit2};
-`;
-
 const Header = ({ isHome }) => {
   const renderLinks = () => {
     return (
-      <LinksBlock isGridContainer pt pb>
-        {data.links.map((item, index) => (
+      <div className={styles.linksBlock}>
+        {data.navBarLinks.map((item, index) => (
           <MyLink key={index} href={item[1]}>
             {item[0]}
           </MyLink>
         ))}
-      </LinksBlock>
+      </div>
     );
   };
 
-  const renderDescription = () => (
-    <Typography type="subtitle" dark>
-      I’m a Senior Product Designer, currently working at Perk (formerly
-      TravelPerk).
-    </Typography>
-  );
-
-  const renderHomeHeader = () => (
+  return (
     <OneBigColumn>
-      <GridContainer $flexDirection="column">
-        <img src={imgPath + "me/Portrait.png"} width={80} />
-        <Typography type="title" bold dark>
+      <div className={styles.navBar}>
+        <Typography type="body" bold dark>
           Mateo Buitrago Jara
         </Typography>
-        {renderDescription()}
         {renderLinks()}
-      </GridContainer>
+      </div>
     </OneBigColumn>
-  );
-
-  const renderNavHeader = () => (
-    <OneBigColumn>
-      <Typography type="subtitle" bold dark>
-        <Link href="/">← back</Link>
-      </Typography>
-    </OneBigColumn>
-  );
-
-  return (
-    <header>
-      <Divider />
-      {isHome ? renderHomeHeader() : renderNavHeader()}
-      <Divider />
-    </header>
   );
 };
 

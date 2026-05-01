@@ -1,5 +1,9 @@
 export const data = {
-  links: [
+  navBarLinks: [
+    ["about me", "/about"],
+    ["how I work with AI", "/how-i-work-with-ai"],
+  ],
+  footerLinks: [
     ["about me", "/about"],
     ["how I work with AI", "/how-i-work-with-ai"],
     ["linkedin ↗", "https://www.linkedin.com/in/mateobuitrago/"],
@@ -7,10 +11,11 @@ export const data = {
   ],
   projects: [
     {
-      title: "TravelPerk : Rebranding",
+      title: "Rebranding",
       id: "8",
       slug: "travelperk-rebrand",
-      tagline: "Bringing a new brand identity to life",
+      tagline:
+        "Used the token system to push TravelPerk's new brand through the entire product — improved components, screens redesigns in a single launch day, zero issues.",
       image: "rebrand/hero.png",
       isExternal: false,
       tldr: "We translated TravelPerk’s new brand into product, overhauling our design system and key screens like the homepage. I led early explorations and helped drive scalable decisions across typography, components, and interaction models on the web platform.",
@@ -207,10 +212,11 @@ export const data = {
       ],
     },
     {
-      title: "TravelPerk : Checkout",
+      title: "Checkout redesign",
       id: "7",
       slug: "travelperk-checkout",
-      tagline: "Reduced friction for people booking business travel",
+      tagline:
+        "Improved conversion from 85% to 90% and cut time on task by 88% — while building a checkout foundation the team could keep improving without starting over.",
       image: "checkout/hero.png",
       isExternal: false,
       tldr: "We revamped the checkout experience on TravelPerk, in order to reduce friction by improving UX and clarity for people booking business trips, while building scalable design patterns.",
@@ -536,11 +542,12 @@ export const data = {
       ],
     },
     {
-      title: "TravelPerk : Design Tokens",
+      title: "Design Tokens",
       id: "6",
       slug: "travelperk-design-tokens",
       isExternal: false,
-      tagline: "Designed and built the structure to manage design tokens",
+      tagline:
+        "Built the design token system from scratch — a single source of truth for color, type, and spacing across web, mobile, and Figma.",
       image: "tokens/hero.png",
       tldr: "Design tokens store the foundational design decisions, such as colors or text styles, in a single source of truth; so they can be used consistently across platforms (web, Android, iOS, Figma, etc).",
       summary: {
@@ -928,10 +935,11 @@ export const data = {
       },
     },
     {
-      title: "Perk: Improving filtering experience",
+      title: "Improved flights filters",
       id: "9",
       slug: "filters",
-      tagline: "A constant effort to increase customer satisfaction",
+      tagline:
+        "Increased customer satisfaction, through detailed and consistent efforts to help travellers find the flight the need.",
       image: "filters/hero.png",
       isExternal: false,
       tldr: "Through careful analysis of customer feedback and AI-powered insights, we identified and improved key pain points in our flight filtering experience, resulting in measurable decreases in customer detractors and improved satisfaction scores.",
