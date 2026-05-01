@@ -6,11 +6,10 @@
 */
 
 :root {
-  --color-primary: #100F0F;
-  --color-secondary: #FFFCF0;
+  --color-primary: #100f0f;
+  --color-secondary: #fffcf0;
 
-  --font-family: 'Quador', Georgia, 'Times New Roman', serif;
-  --font-family-heading: 'Inter', sans-serif;
+  --font-family: "Quador", Georgia, "Times New Roman", serif;
 
   --font-size-small: 15px;
   --font-size-medium: 20px;

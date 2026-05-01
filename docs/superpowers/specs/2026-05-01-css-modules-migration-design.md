@@ -17,10 +17,10 @@ Create `styles/tokens.css` declaring all design tokens as CSS custom properties 
 
 ```css
 :root {
-  --color-primary: #100F0F;
-  --color-secondary: #FFFCF0;
-  --font-family: 'Quador', Georgia, serif;
-  --font-family-heading: 'Inter', sans-serif;
+  --color-primary: #100f0f;
+  --color-secondary: #fffcf0;
+  --font-family: "Quador", Georgia, serif;
+  --font-family: "Inter", sans-serif;
   --font-size-small: 15px;
   --font-size-medium: 20px;
   --font-size-large: 30px;
@@ -39,9 +39,18 @@ Create `styles/tokens.css` declaring all design tokens as CSS custom properties 
 }
 ```
 
+> **Note:** CSS custom properties cannot be used inside `@media` query values — `@media (min-width: var(--bp-large))` is invalid. Breakpoints must be hardcoded in each CSS Module:
+>
+> ```css
+> @media screen and (min-width: 961px) { ... }
+> ```
+>
+> The `--bp-*` variables are still useful for non-media-query uses (e.g. `max-width` on a container), but media queries need the raw values. Keep the four breakpoint values (`451px`, `769px`, `961px`, `1281px`) in a comment at the top of `tokens.css` as a reference.
+
 Import once in `_app.js`:
+
 ```js
-import '../styles/tokens.css'
+import "../styles/tokens.css";
 ```
 
 ## Per-Component Migration Pattern
@@ -73,6 +82,7 @@ No `clsx` or other helper needed.
 ## Cleanup (future, optional)
 
 Once all desired components are migrated, remove in one commit:
+
 - `styled-components` and `babel-plugin-styled-components` packages
 - `ThemeProvider` from `_app.js`
 - `ServerStyleSheet` from `_document.js`
@@ -86,6 +96,7 @@ Once all desired components are migrated, remove in one commit:
 ## Component Migration Candidates
 
 Easy to migrate (layout wrappers, project components):
+
 - `components/layout/Footer.js`
 - `components/layout/Header.js`
 - `components/layout/Layout.js`
@@ -107,5 +118,6 @@ Easy to migrate (layout wrappers, project components):
 - `components/atoms/Typography.js`
 
 Skip (stay as styled-components):
+
 - `components/atoms/GridBlock.js`
 - `components/atoms/GridContainer.js`

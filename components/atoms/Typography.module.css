@@ -6,35 +6,44 @@
 
 /* Variant and modifier classes override .base via source order — keep them below .base */
 
-.dark  { color: var(--color-primary); }
-.light { color: var(--color-secondary); }
-.bold  { font-weight: 700; }
+.dark {
+  color: var(--color-primary);
+}
+.light {
+  color: var(--color-secondary);
+}
+.bold {
+  font-weight: 700;
+}
 
 .huge {
-  font-family: var(--font-family-heading);
   font-size: var(--font-size-xlarge);
   line-height: 1.1;
 }
 @media screen and (min-width: 961px) {
-  .huge { font-size: var(--font-size-xxlarge); }
+  .huge {
+    font-size: var(--font-size-xxlarge);
+  }
 }
 
 .title {
-  font-family: var(--font-family-heading);
   font-size: var(--font-size-large);
   line-height: 1.5;
 }
 @media screen and (min-width: 961px) {
-  .title { font-size: var(--font-size-xlarge); }
+  .title {
+    font-size: var(--font-size-xlarge);
+  }
 }
 
 .subtitle {
-  font-family: var(--font-family-heading);
   font-size: var(--font-size-medium);
   line-height: 1.5;
 }
 @media screen and (min-width: 961px) {
-  .subtitle { font-size: var(--font-size-large); }
+  .subtitle {
+    font-size: var(--font-size-large);
+  }
 }
 
 .body {

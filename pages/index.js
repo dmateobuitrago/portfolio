@@ -20,7 +20,7 @@ function Index() {
   return (
     <Layout home={true}>
       <OneBigColumn gap>
-        <Intro></Intro>
+        <Intro />
         <div style={{ width: "100%" }}>
           <Typography type="subtitle" dark bold>
             Selected work
