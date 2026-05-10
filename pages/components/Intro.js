@@ -16,7 +16,7 @@ function Intro() {
         I’m a Senior Product Designer with +7 years of experience
       </Typography>
       <Typography type="subtitle" dark>
-        I craft and build digital products that improves people day-to-day and
+        I craft digital products that improves people's day-to-day and
         translate to business impact.
       </Typography>
     </div>

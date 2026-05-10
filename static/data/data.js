@@ -15,7 +15,7 @@ export const data = {
       id: "8",
       slug: "travelperk-rebrand",
       tagline:
-        "Used the token system to push TravelPerk's new brand through the entire product — improved components, screens redesigns in a single launch day, zero issues.",
+        "Implemented TravelPerk's new brand through the entire web product — improved components, screens redesigns for a single day launch.",
       image: "rebrand/hero.png",
       isExternal: false,
       tldr: "We translated TravelPerk’s new brand into product, overhauling our design system and key screens like the homepage. I led early explorations and helped drive scalable decisions across typography, components, and interaction models on the web platform.",
