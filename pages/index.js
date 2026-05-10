@@ -30,10 +30,9 @@ function Index() {
               Improved business travel
             </Typography>
             <Typography type="body" dark>
-              Travelling for work can be overwhelming. My mission was to deliver
-              a friction less experience when booking travel, one where our
-              customers can rely and spend as little time as possible to succeed
-              in their actual jobs.
+              My mission was to deliver a friction-less experience when business
+              travelers, one where Perk customers can rely and spend as little
+              time as possible, so they can succeed in their real jobs.
             </Typography>
           </div>
           <ProjectCard
@@ -69,9 +68,9 @@ function Index() {
               Scaled Perk’s design foundations
             </Typography>
             <Typography type="body" dark>
-              I had the opportunity to work in a dedicated role to scale Perk’s
-              design system, having a rebrand in the horizon and later brought
-              to life that new identity into the web product.
+              I maintained and scaled Perk’s design system, setting it up for
+              successful a rebrand where I brought to life a new identity into
+              the web product.
             </Typography>
           </div>
           <ProjectCard
@@ -103,9 +102,8 @@ function Index() {
             <Typography type="body" dark>
               Perk's customer care team handles thousands of tickets that
               shouldn't exist — avoidable mistakes and confusion that clear UX
-              can prevent. I worked across multiple initiatives to reduce that
-              load, giving support agents more capacity for the issues that
-              actually need a human.
+              can prevent. I worked across multiple initiatives to reduce those
+              tickets, optimising cost to serve.
             </Typography>
           </div>
           <ProjectCard

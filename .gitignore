@@ -1,2 +1,5 @@
 node_modules
 .next
+
+# OS X temp files
+.DS_Store

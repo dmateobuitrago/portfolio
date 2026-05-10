@@ -22,9 +22,11 @@ const renderLinks = () => {
   return (
     <LinksBlock isGridContainer pt pb>
       {data.footerLinks.map((item, index) => (
-        <MyLink key={index} href={item[1]}>
-          {item[0]}
-        </MyLink>
+        <Typography type="small" dark>
+          <Link className="textLink" key={index} href={item[1]}>
+            {item[0]}
+          </Link>
+        </Typography>
       ))}
     </LinksBlock>
   );
