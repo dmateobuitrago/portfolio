@@ -30,7 +30,7 @@ class ProjectIntro extends React.Component {
         summary.push(
           <GridBlock key={key} col="4" colSmall="4" colMedium="4">
             <DataPair name={key} value={s[key]} />
-          </GridBlock>
+          </GridBlock>,
         );
       }
     }
@@ -41,24 +41,16 @@ class ProjectIntro extends React.Component {
     return (
       <OneBigColumn>
         <GridBlock col="8" gap isGridContainer>
+          <Image src={imgPath + this.props.image} />
           <GridBlock col="8">
             <Typography type="huge" dark bold>
               {this.props.title}
             </Typography>
-            <Typography type="title" dark>
+            <Typography type="subtitle" dark>
               {this.props.tagline}
             </Typography>
           </GridBlock>
-          <Image src={imgPath + this.props.image} />
         </GridBlock>
-        <GridContainer>
-          <GridBlock col="8" colSmall="8" colMedium="4" pr>
-            <DataPair name="tl;dr" value={this.props.tldr} />
-          </GridBlock>
-          <GridBlock col="8" colSmall="8" colMedium="4">
-            <SummaryContainer>{this.renderSummary()}</SummaryContainer>
-          </GridBlock>
-        </GridContainer>
       </OneBigColumn>
     );
   }
