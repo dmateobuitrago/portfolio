@@ -318,24 +318,8 @@ export const data = {
         {
           type: "ImageWithCaption",
           caption:
-            "The heuristic review was the opportunity for each designer and PM to raise issues from their domain but weren't able to prioritize.",
-          image: "checkout/03.png",
-        },
-        {
-          type: "ImageWithCaption",
-          caption:
             "With help from our researcher, we triangulated the findings with customer feedback and grouped the issues. Giving each one a clear name and severity rating helped the message land across the team.",
           image: "checkout/04.png",
-        },
-        {
-          type: "TitleAndText",
-          title: "Prioritization",
-          content: [
-            {
-              type: "body",
-              text: "From the heuristic review, several initiatives were prioritized, like improving booking speed, or fixing ambigous booking confirmation. But for the sake of this case study, I'll focus on the checkout redesign",
-            },
-          ],
         },
         {
           type: "Divider",
@@ -509,6 +493,9 @@ export const data = {
               text: "We made sure to release value to costumers as fast as possible, splitting the release into milestone depending on the complexity of the requirements and the volume of bookings. So for example, we started with bookings with one service, while leaving for later bookings with multiple services (e.g. a flight and a hotel).",
             },
           ],
+        },
+        {
+          type: "Divider",
         },
         {
           type: "VideoWithCaption",
@@ -1164,7 +1151,7 @@ export const data = {
       id: "110",
       slug: "name-corrections",
       tagline:
-        "Helped bookers to add their “correct” name, to avoid issues at flight check-in or even boarding. /n Reduced this type of contacts by 25%",
+        "Helped bookers to add their “correct” name, to avoid issues at flight check-in or even boarding. Reduced this type of tickets by 50%",
       image: "name-corrections/hero.png",
       isExternal: false,
       tldr: "TBA",
