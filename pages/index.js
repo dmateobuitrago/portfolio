@@ -65,12 +65,30 @@ function Index() {
         <div className={styles.projectGroup}>
           <div>
             <Typography type="subtitle" bold dark>
+              Reducing support tickets through clearer UX
+            </Typography>
+            <Typography type="body" dark>
+              Perk's customer care team handles thousands of tickets that that
+              clear UX can prevent. I worked across multiple initiatives to
+              reduce those tickets, optimising cost to serve.
+            </Typography>
+          </div>
+          <ProjectCard
+            name={nameCorrections.title}
+            tagline={nameCorrections.tagline}
+            tag={nameCorrections.tags}
+            img={imgPath + nameCorrections.image}
+            id={nameCorrections.id}
+          />
+        </div>
+        <div className={styles.projectGroup}>
+          <div>
+            <Typography type="subtitle" bold dark>
               Scaled Perk’s design foundations
             </Typography>
             <Typography type="body" dark>
               I maintained and scaled Perk’s design system, setting it up for
-              successful a rebrand where I brought to life a new identity into
-              the web product.
+              successful a rebrand.
             </Typography>
           </div>
           <ProjectCard
@@ -92,26 +110,6 @@ function Index() {
             id={rebranding.id}
             isExternal={rebranding.isExternal}
             externalUrl={rebranding.externalUrl}
-          />
-        </div>
-        <div className={styles.projectGroup}>
-          <div>
-            <Typography type="subtitle" bold dark>
-              Reducing support tickets through clearer UX
-            </Typography>
-            <Typography type="body" dark>
-              Perk's customer care team handles thousands of tickets that
-              shouldn't exist — avoidable mistakes and confusion that clear UX
-              can prevent. I worked across multiple initiatives to reduce those
-              tickets, optimising cost to serve.
-            </Typography>
-          </div>
-          <ProjectCard
-            name={nameCorrections.title}
-            tagline={nameCorrections.tagline}
-            tag={nameCorrections.tags}
-            img={imgPath + nameCorrections.image}
-            id={nameCorrections.id}
           />
         </div>
       </OneBigColumn>
