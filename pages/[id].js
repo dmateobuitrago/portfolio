@@ -67,7 +67,7 @@ class Project extends React.Component {
           renderElement.push( this.renderImageGallery(item, index));
           break;
         case "Divider":
-          renderElement.push(<Divider/>);
+          renderElement.push(<Divider key={index} size={item.size}/>);
           break;
         }
     });

@@ -216,7 +216,7 @@ export const data = {
       id: "7",
       slug: "travelperk-checkout",
       tagline:
-        "Improved conversion from 85% to 90% and cut time on task by 88% — while building a checkout foundation the team could keep improving without starting over.",
+        "Improved conversion from 80% to 95% and cut time on task by 94% — while building a checkout foundation for scale.",
       image: "checkout/hero.png",
       isExternal: false,
       tldr: "We revamped the checkout experience on TravelPerk, in order to reduce friction by improving UX and clarity for people booking business trips, while building scalable design patterns.",
@@ -241,11 +241,11 @@ export const data = {
         },
         {
           type: "TitleAndText",
-          title: "The problem from the user perspective",
+          title: "The problem",
           content: [
             {
               type: "body",
-              text: "At TravelPerk, we used continuous feedback tools like NPS and CES, but noticed key insights weren’t reaching the right teams. Some of the biggest issues in our area were:",
+              text: "We used continuous feedback tools like NPS and CES surveys to understand where our experience was falling short. Some of the biggest issues in our area were:",
             },
             {
               type: "list",
@@ -257,7 +257,7 @@ export const data = {
             },
             {
               type: "body",
-              text: "We we're getting low scores and comments like:",
+              text: "We were getting comments like:",
             },
             {
               type: "quote",
@@ -267,58 +267,47 @@ export const data = {
               type: "quote",
               text: "It's never really clear if the booking is finalised or not!",
             },
-          ],
-        },
-        {
-          type: "Divider",
-        },
-        {
-          type: "TitleAndText",
-          title: "The problem from the design perspective",
-          content: [
             {
               type: "body",
-              text: "The booking experience was far from optimal. An design that didn't scale well and several teams working on it, wasn't helping users complete their bookings smoothly. ",
+              text: "Looking at the checkout page itself, it was easy to see why. A design that worked well when TravelPerk started hadn't kept up with new product offerings and a growing team — the page was handling too many use cases and user types, with feature overload and no clear structure.",
             },
           ],
         },
         {
+          type: "Divider",
+          size: "small",
+        },
+        {
           type: "ImageWithCaption",
           caption:
-            "A checkout page that worked when TravelPerk started worked well, but with time, new products offerings and a growing team, the page needed a review.",
+            "A checkout page that worked when TravelPerk started, but with time, new product offerings and a growing team, the page needed a review.",
           image: "checkout/01.png",
         },
         {
-          type: "ImageWithCaption",
-          caption:
-            "The page was handling too many use cases and user types, leading to feature overload and a lack of clear structure.",
-          image: "checkout/02.png",
+          type: "Divider",
+          size: "small",
         },
         {
           type: "Divider",
         },
         {
           type: "TitleAndText",
-          title: "Heuristic review and reserach triangulation ",
+          title: "How we picked what to fix",
           content: [
             {
               type: "body",
-              text: "We knew checkout wasn’t working great, but needed proof and a way to make it clear to the rest of the team. So we:",
+              text: "We knew checkout wasn’t working well, but we needed a way to prioritize what to fix first and make the case to the rest of the team. So we ran a heuristic review with designers and PMs, then cross-checked it against customer feedback — NPS, CES, past research and Fullstory sessions.",
             },
             {
-              type: "list",
-              list: [
-                "Ran a heuristic review with designers and PMs",
-                "Cross-checked it with user feedback (NPS, CES, research, Fullstory)",
-                "Summarized and prioritized the key issues",
-              ],
+              type: "body",
+              text: "Collaboration with UX researched, I grouped the issues we found and gave each one a name and a severity rating, which helped the message land across the teams.",
             },
           ],
         },
         {
           type: "ImageWithCaption",
           caption:
-            "With help from our researcher, we triangulated the findings with customer feedback and grouped the issues. Giving each one a clear name and severity rating helped the message land across the team.",
+            "We triangulated heuristic findings with customer feedback and grouped the issues, giving each one a clear name and severity rating.",
           image: "checkout/04.png",
         },
         {
@@ -326,31 +315,21 @@ export const data = {
         },
         {
           type: "TitleAndText",
-          title: "Early validation with customers",
+          title: "The idea",
           content: [
             {
               type: "body",
-              text: "We put together a first version of a revamped checkout page, prioritizing two things:",
-            },
-            {
-              type: "list",
-              list: [
-                "Making it clear that this was the last step to complete the booking",
-                "A layout that helped users to efficiently review and fill any missing information",
-              ],
+              text: "With that list in hand, we put together a first version of a redesigned checkout page, focused on two things: making it clear this was the last step to complete the booking, and a layout that helped people review and fill in any missing information efficiently.",
             },
             {
               type: "body",
-              text: "And with that concept, we run a research study to make sure we were in the right direction. We found that:",
-            },
-            {
-              type: "list",
-              list: [
-                "Users preferred the new checkout concept for its clearer, step-by-step flow and helpful confirmations.",
-                "However, they found parts of the information repetitive.",
-              ],
+              text: "We tested that concept with customers. They preferred the new checkout for its clearer, step-by-step flow and helpful confirmations. But they also told us some of the information felt repetitive — which became the thing to solve for as we built out the rest of the page.",
             },
           ],
+        },
+        {
+          type: "Divider",
+          size: "small",
         },
         {
           type: "ImageWithCaption",
@@ -363,34 +342,43 @@ export const data = {
         },
         {
           type: "TitleAndText",
-          title: "Design direction and scalable patterns",
+          title: "Putting it into practice",
           content: [
             {
               type: "body",
-              text: "I defined a set of patterns, that helped me design, take decisions and later help designers to contribute to the page.",
+              text: "From there, the work was about applying that idea consistently: less repetition, one clear flow. I defined a set of patterns that helped me design, make decisions, and later helped other designers contribute to the page.",
             },
           ],
         },
         {
+          type: "Divider",
+          size: "small",
+        },
+        {
           type: "ImageWithCaption",
           caption:
-            "An improved layout, that helped users focus on the main content and actions.",
+            "An improved layout that helped users focus on the main content and actions.",
           image: "checkout/06.png",
-          layout: "half",
+        },
+        {
+          type: "Divider",
+          size: "small",
         },
         {
           type: "ImageWithCaption",
           caption:
-            "An expand and collapse pattern, to surface primary content, while keeping secondary content accessible.",
+            "An expand and collapse pattern, to keep primary content visible while keeping secondary content within reach.",
           image: "checkout/07.gif",
-          layout: "half",
+        },
+        {
+          type: "Divider",
+          size: "small",
         },
         {
           type: "ImageWithCaption",
           caption:
-            "A sticky price breakdown, always visible to give piece of mind while booking.",
+            "A sticky price breakdown, always visible to give peace of mind while booking.",
           image: "checkout/08.png",
-          layout: "half",
         },
         {
           type: "Divider",
@@ -401,7 +389,7 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "Working with Flights, Trains, Hotels and Car rentals has the challenge to aim for consistency while keeping the particullarities of each one. Users wanted to have a clear overview of the service they were booking.",
+              text: "Flights, trains, hotels and car rentals each have their own quirks, but users wanted a clear, consistent overview of whatever they were booking — without repeating the same details across cards.",
             },
           ],
         },
@@ -423,10 +411,11 @@ export const data = {
             "checkout/StayCardExpanded.png",
             "checkout/CarCardExpanded.png",
           ],
-          columns: 2,
+          columns: 4,
         },
         {
           type: "Divider",
+          size: "small",
         },
         {
           type: "TitleAndText",
@@ -434,33 +423,35 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "Booking travel requires some extra information, such a date of birth or a traveler document. It really depends. The redesigned checkout helped users to clearly review which information were they using to book, edit or add it in case it was missing.",
+              text: "Booking travel often requires extra information — a date of birth, a travel document — depending on the trip. The redesigned checkout made it clear which information was already uploaded, and let people add what was missing when needed.",
             },
           ],
         },
         {
+          type: "Divider",
+          size: "small",
+        },
+        {
           type: "ImageWithCaption",
           caption:
-            "Clearly prompting the users to add the required information was important to avoid frustration later when trying to finish the booking.",
+            "Clearly prompting users to add required information helped avoid frustration later, when trying to finish the booking.",
           image: "checkout/travellerDetails01.png",
-          layout: "half",
         },
         {
           type: "ImageWithCaption",
           caption:
-            "Once the information was added, it was clearly shown and labeled.",
+            "Once information was added, it was clearly shown and labeled.",
           image: "checkout/travellerDetails02.png",
-          layout: "half",
         },
         {
           type: "ImageWithCaption",
           caption:
-            "The component also handled different type of personal information or limited access for other users.",
+            "The component also handled different types of personal information, and limited access for other users.",
           image: "checkout/travellerDetails03.png",
-          layout: "half",
         },
         {
           type: "Divider",
+          size: "small",
         },
         {
           type: "TitleAndText",
@@ -468,7 +459,7 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "Although the main traffic from TravelPerk users came from desktop, we needed to make sure that the experience in a phone was optimal, mainly because our native app was transitioning to use more webviews, rather than native implementations.",
+              text: "Most TravelPerk traffic came from desktop, but our native app was moving more of its flows to webviews, so the mobile experience needed to hold up just as well.",
             },
           ],
         },
@@ -486,16 +477,17 @@ export const data = {
         },
         {
           type: "TitleAndText",
-          title: "Making it happen",
+          title: "Continuous release and learning",
           content: [
             {
               type: "body",
-              text: "We made sure to release value to costumers as fast as possible, splitting the release into milestone depending on the complexity of the requirements and the volume of bookings. So for example, we started with bookings with one service, while leaving for later bookings with multiple services (e.g. a flight and a hotel).",
+              text: "We released this in stages, starting with single-service bookings and leaving multi-service bookings (like a flight plus a hotel) for later, based on complexity and booking volume. That gradual rollout also let us compare the old checkout with the new one directly.",
             },
           ],
         },
         {
           type: "Divider",
+          size: "small",
         },
         {
           type: "VideoWithCaption",
@@ -509,7 +501,7 @@ export const data = {
           type: "ImpactCallOut",
           title: "Impact",
           subtitle:
-            "A continuous release strategy helped us to compare the old checkout with the new one, and see the impact of the changes.",
+            "The new checkout was clearer to go through and faster to complete — while we built a surface for scale.",
           content: [
             {
               top_content: "↓ time on task",
