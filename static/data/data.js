@@ -216,7 +216,7 @@ export const data = {
       id: "7",
       slug: "travelperk-checkout",
       tagline:
-        "Improved conversion from 85% to 90% and cut time on task by 88% — while building a checkout foundation the team could keep improving without starting over.",
+        "Improved conversion from 85% to 90% and cut time on task by 88% — while building a checkout foundation for scale.",
       image: "checkout/hero.png",
       isExternal: false,
       tldr: "We revamped the checkout experience on TravelPerk, in order to reduce friction by improving UX and clarity for people booking business trips, while building scalable design patterns.",

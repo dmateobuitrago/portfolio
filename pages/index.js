@@ -27,12 +27,12 @@ function Index() {
         <div className={styles.projectGroup}>
           <div>
             <Typography type="subtitle" bold dark>
-              Improved business travel
+              Improving business travel
             </Typography>
             <Typography type="body" dark>
-              My mission was to deliver a friction-less experience when business
-              travelers, one where Perk customers can rely and spend as little
-              time as possible, so they can succeed in their real jobs.
+              My mission is to deliver a friction-less experience for business
+              travelers. One where they can rely and spend as little time as
+              possible, so they can succeed in their real jobs.
             </Typography>
           </div>
           <ProjectCard
