@@ -1143,10 +1143,10 @@ export const data = {
       id: "110",
       slug: "name-corrections",
       tagline:
-        "Helped bookers to add their “correct” name, to avoid issues at flight check-in or even boarding. Reduced this type of tickets by 50%",
+        "Helped bookers to add their “correct” name, to avoid issues at flight check-in or even boarding. Reduced this type of customer care tickets by 50%",
       image: "name-corrections/hero.png",
       isExternal: false,
-      tldr: "TODO: Name correction tickets add +0.17 to contact ratio and take 45+ minutes each to resolve. We tackled this with a series of checkout improvements that encourage bookers to check and edit traveller names, plus a fix for how special characters are handled.",
+      tldr: "Name correction tickets counted +0.24 to contact ratio (900 tickets/week) and take 45+ minutes each to resolve. We tackled this with a series of checkout improvements that encourage bookers to check and edit traveller names, plus a fix for how special characters are handled.",
       summary: {
         year: "2025 - 2026",
         role: "product designer",
@@ -1159,25 +1159,30 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "When a flight booking is made, the name sent to the provider doesn't always match the traveller's legal name on their passport. Once a booking is made, fixing the name is expensive: it takes Customer Care 45+ minutes on average, and in some cases airlines won't allow the correction at all.",
+              text: "When a flight booking is made, the traveller name needs to match their legal name on a document. Once a booking is made, fixing the name is expensive for Perk:",
             },
             {
               type: "list",
               list: [
-                "Name corrections add +0.17 to contact ratio, with 45+ minutes AHT per ticket",
-                "79% of name correction cases happen when the booker isn't the traveller",
+                "Name corrections add +0.24 to customer care contact ratio (~900 tickets per week)",
+                "Handling time per ticket is +45min",
               ],
             },
             {
               type: "body",
-              text: "Most of these tickets come from flight bookings where no travel document was provided, so the booking falls back to the traveller's profile name - often a preferred name, not their legal one. The fact that the majority of cases happen when the booker isn't the traveller made it clear this wasn't just a typo problem - it was a visibility problem.",
+              text: "Most of these tickets come from flight bookings where no travel document was provided, so the booking falls back to the traveller's profile name - often a preferred name, not their legal one.",
             },
           ],
         },
         {
+          type: "Divider",
+          size: "small",
+        },
+        {
           type: "ImageWithCaption",
-          caption: "TODO: add image - hero/overview of the name corrections problem (e.g. Looker chart of contact ratio, or a booking with a mismatched name)",
-          image: "name-corrections/hero.png",
+          caption:
+            "A traveller asking for a name correction after booking a flight booking",
+          image: "name-corrections/example.png",
         },
         {
           type: "Divider",
@@ -1188,14 +1193,23 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "When we looked at where name corrections were coming from, one pattern stood out - bookings that had a travel document attached almost never ran into this problem. That made the first solution feel obvious: if having a document on file solves it, why not require one for every booking? It's the kind of fix that looks airtight from the data alone, and it became our starting point.",
+              text: "When we looked at where name corrections were coming from, one pattern stood out - bookings that had a travel document attached almost never ran into this problem.",
+            },
+            {
+              type: "body",
+              text: "That made the first solution feel obvious: if having a document on file solves it, why not require one for every booking? It's the kind of fix that looks airtight from the data alone, and it became our starting point.",
             },
           ],
         },
         {
+          type: "Divider",
+          size: "small",
+        },
+        {
           type: "ImageWithCaption",
-          caption: "TODO: add image - early concept of forcing a travel document at checkout",
-          image: "name-corrections/hypothesis-placeholder.png",
+          caption:
+            "Early concept of forcing a travel document at checkout. It was more of a configuration change, rather than a UX one.",
+          image: "name-corrections/document-idea.png",
         },
         {
           type: "Divider",
@@ -1217,42 +1231,67 @@ export const data = {
               list: [
                 "~150 problem cases per week",
                 "~4,000 bookings per week affected by a new requirement",
-                "Other OTAs only require documents for international flights",
+                "Other platforms only require documents for international flights",
               ],
             },
           ],
-        },
-        {
-          type: "ImageWithCaption",
-          caption: "TODO: add image - competitive analysis of other OTAs / quantitative breakdown (4,000 vs 150)",
-          image: "name-corrections/analysis-placeholder.png",
         },
         {
           type: "Divider",
         },
         {
           type: "TitleAndText",
-          title: "A lighter-touch solution",
+          title: "An UX driven solution",
           content: [
             {
               type: "body",
-              text: "So the question became: how do we get the same outcome - a correct name on the booking - without adding a step for everyone? The traveller's name was already there, but it was buried inside a details modal that most bookers never opened.",
+              text: "So the question became: how do we get the same outcome - a correct name on the booking - without adding a step for everyone? The way to add it was already there, but it was buried inside a modal that most bookers never opened.",
             },
             {
               type: "body",
-              text: "We added a checkbox prompting bookers to confirm the name matched the traveller's legal name, and made that name visible without extra clicks. The next step builds on this directly - exposing the name fields inline on checkout, so reviewing and editing happens in place.",
+              text: "When the user was booking for someone else we added a checkbox prompting bookers to confirm the name matched the traveller's legal name.",
+            },
+            {
+              type: "body",
+              text: "We also exposed the name fields inline on checkout, so reviewing and editing happens in place.",
             },
           ],
         },
         {
-          type: "ImageWithCaption",
-          caption: "TODO: add image - checkout checkbox and improved traveller name visibility",
-          image: "name-corrections/checkbox-placeholder.png",
+          type: "Divider",
+          size: "small",
         },
         {
           type: "ImageWithCaption",
-          caption: "TODO: add image - inline editable name fields at checkout (next phase)",
-          image: "name-corrections/inline-fields-placeholder.png",
+          caption: "Improved traveller name edition visibility",
+          image: "name-corrections/idea-1.png",
+        },
+        {
+          type: "Divider",
+          size: "small",
+        },
+        {
+          type: "ImageWithCaption",
+          caption:
+            "Whenever booking for someone else, bookers are requested to confirm the name matches a travel document.",
+          image: "name-corrections/idea-2.png",
+        },
+        {
+          type: "Divider",
+        },
+        {
+          type: "TitleAndText",
+          title: "The HR integration issue",
+          content: [
+            {
+              type: "body",
+              text: "There was an extra layer of complexity here: nearly 60% of our customers manage their employees through HR integrations, and those tools often store preferred names rather than legal names (Dave instead of David, for example). So profile names weren't just sometimes wrong - for most of our customer base, they came from a system we didn't control.",
+            },
+            {
+              type: "body",
+              text: "For users with an HR sync, any edits made on checkout were previously overwritten the next time the integration ran - so the same correction had to be made on every trip. We worked with engineering to make sure an edited name took precedence over the synced one, so a correction made once would stick.",
+            },
+          ],
         },
         {
           type: "Divider",
@@ -1263,27 +1302,37 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "A smaller piece of this - around 4% of cases - came down to how special characters get handled. Some providers would turn a character like \"ä\" into \"a\" instead of \"ae\", and reject the booking outright. That's a backend fix rather than a UI one: correcting the normalisation logic when a travel document is added, and showing a clear message if a character is going to change.",
+              text: 'A smaller piece of this - around 4% of cases - came down to how special characters get handled. Some providers would turn a character like "ä" into "a" instead of "ae", and reject the booking outright. That\'s a backend fix rather than a UI one: correcting the normalisation logic when a travel document is added, and showing a clear message if a character is going to change.',
             },
           ],
         },
         {
           type: "ImageWithCaption",
-          caption: "TODO: add image - special character normalisation message at document upload",
-          image: "name-corrections/special-characters-placeholder.png",
+          caption: "Special character normalisation message on booking attemp",
+          image: "name-corrections/special-characters.png",
+        },
+        {
+          type: "Divider",
+          size: "small",
+        },
+        {
+          type: "ImageWithCaption",
+          caption:
+            "We also improved the guidance for bookers to refer to the Machine readable zone of a document, which has the correct A to Z characters.",
+          image: "name-corrections/tips-modal.png",
         },
         {
           type: "Divider",
         },
         {
           type: "ImpactCallOut",
-          title: "Results so far",
+          title: "Impact",
           subtitle:
-            "The first set of changes - the checkbox and improved visibility - went live at the end of March. By the time we checked the numbers in May, the contact ratio had already dropped, before the inline editing or special character fix had even shipped.",
+            "By the time we checked the numbers, the contact ratio had already dropped, eliminating a",
           content: [
             {
               top_content: "↓ name corrections contact ratio",
-              bottom_content: "From 0.17 (Jan) to 0.12 (March)",
+              bottom_content: "From 0.24 (May 25') to 0.10 (May 26')",
             },
           ],
         },
@@ -1296,7 +1345,7 @@ export const data = {
           content: [
             {
               type: "body",
-              text: "What stuck with me from this project is that the data pointing toward \"documents reduce mismatches\" was true - but it didn't account for the cost of applying that fix everywhere. Comparing against what other platforms do, and running the numbers on our own bookings, turned a sweeping requirement into a much smaller, more targeted change. And that smaller change is already showing results.",
+              text: 'What stuck with me from this project is that the data pointed towards one approach: "documents reduce mismatches". But it didn\'t account for the cost of applying that fix everywhere. Comparing against what other platforms do, and running the numbers on our own bookings, turned a sweeping requirement into a UX change, more targeted change. And that change is showed results.',
             },
           ],
         },
