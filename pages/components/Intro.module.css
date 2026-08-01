@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   gap: var(--space-2);
-  height: 80vh;
+  height: calc(100vh - 62px);
 }
 
 .top {
