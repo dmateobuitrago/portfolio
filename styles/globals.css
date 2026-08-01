@@ -12,3 +12,12 @@ a.textLink:hover {
   background-color: var(--color-hover);
   transition: 0.3s ease-in;
 }
+
+:root {
+  /* duration */
+  --animation-duration-quick: 300ms;
+  --animation-duration-moderate: 500ms;
+
+  /* ease */
+  --animation-ease-quick: cubic-bezier(0.5, 0, 0.42, 1.14);
+}

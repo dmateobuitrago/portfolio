@@ -12,13 +12,15 @@ function Intro() {
           I’m Mateo
         </Typography>
       </div>
-      <Typography type="subtitle" dark>
-        I’m a Senior Product Designer with +7 years of experience
-      </Typography>
-      <Typography type="subtitle" dark>
-        I craft digital products that improves people's day-to-day and
-        translate to business impact.
-      </Typography>
+      <div className={styles.taglines}>
+        <Typography className={styles.tagline} type="subtitle" dark>
+          I’m a Senior Product Designer with +7 years of experience
+        </Typography>
+        <Typography className={styles.tagline} type="subtitle" dark>
+          I craft digital products that improves people's day-to-day and
+          translate to business impact.
+        </Typography>
+      </div>
     </div>
   );
 }
