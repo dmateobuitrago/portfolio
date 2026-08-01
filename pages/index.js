@@ -30,9 +30,9 @@ function Index() {
               Improving business travel
             </Typography>
             <Typography type="body" dark>
-              My mission is to deliver a friction-less experience for business
-              travelers. One where they can rely and spend as little time as
-              possible, so they can succeed in their real jobs.
+              At Perk, my mission is to deliver a friction-less experience for
+              business travelers. One where they can rely and spend as little
+              time as possible, so they can succeed in their real jobs.
             </Typography>
           </div>
           <ProjectCard
