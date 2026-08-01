@@ -41,9 +41,9 @@ function Index() {
             trigger: element,
             toggleActions: "play none none none",
             start: "top 75%",
-            // end: "top 20%",
+            end: "top 20%",
             // scrub: true,
-            markers: true,
+            // markers: true,
           },
         });
       });
